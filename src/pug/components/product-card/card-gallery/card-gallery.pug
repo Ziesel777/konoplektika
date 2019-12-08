@@ -1,4 +1,7 @@
-.card-gallery.col-sm-6
+.card-gallery.col-sm-6.js-card-gallery
+	.card-gallery__icons
+		img(src="/assets/img/card-gallery/ico_eco.svg", alt="")
+		img(src="/assets/img/card-gallery/ico_bio.svg", alt="")
 
 	.swiper-container.gallery-top.js-gallery-top
 		.swiper-wrapper.gallery-preview-wrapper.js-preview-wrapper
@@ -10,10 +13,12 @@
 			.swiper-slide.gallery__slide(style="background-image:url(/assets/img/card-gallery/Photo-intetnet-17.jpg)")
 
 	.gallery-bottom
-		.swiper-button-prev.btn-thumbs-prev.js-btn-thumbs-prev
+		.btn-thumbs-prev.js-btn-thumbs-prev
+			img(src="/assets/img/card-gallery/left_arrow.svg", alt="")
 
 		.swiper-container.gallery-thumbs.js-gallery-thumbs
 			.swiper-wrapper.gallery-thumbs-wrapper.js-thumbs-wrapper
 				// Тут js-ом вставляются слайды из топа
 
-		.swiper-button-next.btn-thumbs-next.js-btn-thumbs-next
+		.btn-thumbs-next.js-btn-thumbs-next
+			img(src="/assets/img/card-gallery/right_arrow.svg", alt="")
