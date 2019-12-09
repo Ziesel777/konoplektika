@@ -2,14 +2,45 @@
     box-sizing: border-box;
     position: relative;
 
-    font-family: "HelveticaRegular";
+    font-family: $mainFontFamily;
 
     h2,
     .h2{
         color: #111111;
-        font-size: 23px;
+        font-size: 1.4375rem;
         font-weight: 700;
-        line-height: 28px;
+        line-height: 1.75rem;
+    }
+
+    p,
+    .p{
+        font-size: 0.8125rem;
+        color: $neutral-regular;
+    }
+
+    &__btn {
+        display: inline-block;
+        cursor: pointer;
+
+        box-shadow: 0 3px 30px rgba(0, 0, 0, 0.13);
+        border-radius: 7px;
+        color: $neutral-regular;
+        font-size: 0.875rem;
+        
+        padding: 10px 15px;
+
+        transition: all .2s;
+
+        &:hover{
+            // background-color: lighten($success-color, $amount: 20%);
+            box-shadow: 0 3px 30px rgba(0, 0, 0, 0.3);
+            color: lighten($neutral-regular, $amount: 20%);
+        }
+
+        &.active {
+            background-color: $success-color;
+            color: $default-color;
+        }
     }
 }
 

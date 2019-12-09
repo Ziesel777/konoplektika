@@ -1,3 +1,47 @@
 .card-buy-info.col-sm-6
-    h2.h2.card-buy-info__title|Масло конопляное Extra Virgin
-        span.star-rating(data-rating="4")|****
+    .block-desc
+        h2.block-desc__title-card|Масло конопляное Extra Virgin
+            span.star-rating(data-rating="4")|****
+
+        p.block-desc__title|Состав
+        p|100% Масло конопляное нерафинированное.
+
+        p.block-desc__title|Пищевая ценность на 100 гр. продукта
+        p|Линоленовая кислота (Омега-3) - 16,73 гр.
+        p|Линоленовая кислота (Омега-6) - 50,93 гр.
+        p|Олеиновая кислота (Омега-9) - 9,42 гр.
+
+        p.block-desc__title|Энергетическая ценность на 100 гр. продукта
+        p|900 ккал/3768 кДж.
+
+        a(href="#").block-desc__link|Подробнее &rarr;
+
+    .block-prop
+        .block-prop__size
+            //- <button type="radio" class="btn btn-success">Успех</button>
+            .product-card__btn|100 мл.
+            .product-card__btn.active|250 мл.
+            .product-card__btn|250 мл. x 4
+            .product-card__btn|3 л.
+
+        .block-prop__num
+            .btn-num
+                img(src="/assets/img/card-buy-info/minus.svg", alt="")
+            .num-value|1
+            .btn-num
+                img(src="/assets/img/card-buy-info/plus.svg", alt="")
+
+    .block-price|Итого:
+        span|340 руб.
+
+    .block-submit
+        button.product-card__btn(type="submit")|В корзину
+        .payment(style="background-image:url(/assets/img/card-buy-info/apple_pay.png)")
+        .payment(style="background-image:url(/assets/img/card-buy-info/google_pay.png)")
+        .payment(style="background-image:url(/assets/img/card-buy-info/mastercard.png)")
+
+
+
+
+
+

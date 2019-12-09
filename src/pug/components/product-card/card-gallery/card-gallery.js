@@ -5,10 +5,10 @@ $(() => {
 	let topSlides = $('.js-preview-wrapper').html();
 	$('.js-thumbs-wrapper').html(topSlides);
 
-	$('.js-card-gallery').height($('.js-card-gallery').width() * 1.1);
-	$(window).resize(function () { 
-		$('.js-card-gallery').height($('.js-card-gallery').width() * 1.1);
-	});
+	// $('.js-card-gallery').height($('.js-card-gallery').width() * 1.1);
+	// $(window).resize(function () { 
+	// 	$('.js-card-gallery').height($('.js-card-gallery').width() * 1.1);
+	// });
 
 	let galleryThumbs = new Swiper('.js-gallery-thumbs', {
 		spaceBetween: 10,

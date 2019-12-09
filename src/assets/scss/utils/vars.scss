@@ -1,9 +1,10 @@
 // Font
 $mainFont                : 'Montserrat', Helvetica, Arial, sans-serif;
+$mainFontFamily          : "HelveticaRegular";
 
 // Size
 $mainFontColor           : #101010;
-$mainFontSize            : 18px;
+$mainFontSize            : 16px;
 $mainFontWeight          : 400;
 $mainLineHeight          : 1.4;
 
@@ -16,7 +17,7 @@ $smPhoneWidth            : 320px;
 // Main color
 $default-color           : #ffffff;
 $primary-color           : #444ce0;
-$success-color           : #26de81;
+$success-color           : #63d544; // ++
 $danger-color            : #fc5c65;
 $warning-color           : #fed330;
 $light-color             : #999999;
