@@ -34,13 +34,23 @@
 
     .block-prop{
         margin-top: 52px;
+        
         &__size{
+            position: relative;
             display: flex;
             flex-wrap: wrap;
             margin-bottom: 2rem - 0.8125rem;
             .product-card__btn {
                 margin-right: 0.8125rem;
                 margin-bottom: 0.8125rem;
+            }
+            input{
+                position: absolute;
+                left: -9999px;
+                &:checked + .product-card__btn{
+                    background-color: $success-color;
+                    color: $default-color;
+                }
             }
         }
 
@@ -52,13 +62,16 @@
             margin-bottom: 39px;
 
             .num-value{
-                // color:$neutral-regular;
+                background-color: $default-color;
+                max-width: 3rem;
                 font-size: 1rem;
                 font-weight: 700;
+                text-align: center;
                 padding: 0 15px;
             }
 
             .btn-num{
+                cursor: pointer;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -71,8 +84,11 @@
                 background-color: rgba(179, 180, 181, 0.2);
                 border: 1px solid #ffffff;
 
+                user-select: none;
+
                 transition: all 0.2s;
                 img{
+                    cursor: pointer;
                     object-fit: contain;
                 }
                 &:hover{
@@ -107,15 +123,15 @@
         display: flex;
         align-items: center;
 
-        margin-top: 4rem;
+        margin-top: 2.8rem;
 
         .product-card__btn{
             background-color: $success-color;
             color: $default-color;
-
+            margin: 1.2rem 0;
             margin-right: 1.75rem;
             padding: 1.1875rem 3.875rem;
-            
+
             &:active{
                 background-color: lighten($success-color, $amount: 12%);
             }

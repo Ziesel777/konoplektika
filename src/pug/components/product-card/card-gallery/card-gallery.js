@@ -10,10 +10,10 @@ $(() => {
 	// 	$('.js-card-gallery').height($('.js-card-gallery').width() * 1.1);
 	// });
 
-	// $('.js-card-gallery').height($('.card-buy-info').height());
-	// $(window).resize(function () { 
-	// 	$('.js-card-gallery').height($('.card-buy-info').height());
-	// });
+	$('.js-card-gallery').height($('.card-buy-info').height());
+	$(window).resize(function () { 
+		$('.js-card-gallery').height($('.card-buy-info').height());
+	});
 
 	let galleryThumbs = new Swiper('.js-gallery-thumbs', {
 		spaceBetween: 10,

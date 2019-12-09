@@ -1,4 +1,4 @@
-.card-buy-info.col-sm-6
+form.card-buy-info.col-sm-6
     .block-desc
         h2.block-desc__title-card|Масло конопляное Extra Virgin
             span.star-rating(data-rating="4")|****
@@ -18,23 +18,35 @@
 
     .block-prop
         .block-prop__size
-            //- <button type="radio" class="btn btn-success">Успех</button>
-            .product-card__btn|100 мл.
-            .product-card__btn.active|250 мл.
-            .product-card__btn|250 мл. x 4
-            .product-card__btn|3 л.
+            .div
+                input.js-prop__size(type="radio", name="prop-size" id="prop1" data-price="200")
+                label.product-card__btn(for="prop1")|100 мл.
+            .div
+                input.js-prop__size(type="radio", name="prop-size" id="prop2" data-price="340" checked)
+                label.product-card__btn(for="prop2")|250 мл.
+            .div
+                input.js-prop__size(type="radio", name="prop-size" id="prop3" data-price="1156")
+                label.product-card__btn(for="prop3")|250 мл. x 4
+            .div
+                input.js-prop__size(type="radio", name="prop-size" id="prop4" data-price="2999")
+                label.product-card__btn(for="prop4")|3 л.
+
+        .block-prop__size
+            input(type="radio", name="")
 
         .block-prop__num
-            .btn-num
+            .btn-num.js-btn-num(data-type="-")
                 img(src="/assets/img/card-buy-info/minus.svg", alt="")
-            .num-value|1
-            .btn-num
+
+            input.num-value.js-num-value(type="text" name="num" value="1" disabled)
+
+            .btn-num.js-btn-num(data-type="+")
                 img(src="/assets/img/card-buy-info/plus.svg", alt="")
 
-    .block-price|Итого:
+    .block-price.js-block-price|Итого:
         span|340 руб.
 
-    .block-submit
+    .block-submit.js-block-submit
         button.product-card__btn(type="submit")|В корзину
         .payment(style="background-image:url(/assets/img/card-buy-info/apple_pay.png)")
         .payment(style="background-image:url(/assets/img/card-buy-info/google_pay.png)")

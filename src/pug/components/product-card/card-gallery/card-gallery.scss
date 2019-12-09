@@ -6,6 +6,7 @@ $height_top:100% - $height_thumbs;
 
 .card-gallery {
     position: relative;
+    user-select: none;
     // border: 1px solid #80808083;
     height: $hCardGallery;
 
@@ -36,6 +37,8 @@ $height_top:100% - $height_thumbs;
     }
 
     .gallery-top {
+        cursor: pointer;
+
         height: $height_top;
         width: 100%;
 
@@ -49,6 +52,8 @@ $height_top:100% - $height_thumbs;
     }
 
     .gallery-bottom {
+        cursor: pointer;
+
         height: $height_thumbs;
         display: flex;
 
@@ -69,7 +74,7 @@ $height_top:100% - $height_thumbs;
             align-items: center;
 
             transition: all 0.3s;
-            
+
             img{
                 height: 10%;
                 transition: all 0.3s;
