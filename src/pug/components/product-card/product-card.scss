@@ -12,6 +12,12 @@
         line-height: 1.75rem;
     }
 
+    h3,
+    .h3 {
+        font-size: 1.4375rem;
+        font-weight: 400;
+    }
+
     p,
     .p{
         font-size: 0.8125rem;
@@ -51,3 +57,5 @@
 //Components Block
 @import './card-gallery/card-gallery.scss';
 @import './card-buy-info/card-buy-info.scss';
+@import './card-offers/card-offers.scss';
+@import './card-desc/card-desc.scss';
