@@ -1,4 +1,9 @@
 .card-desc {
+    &.col-sm-12,
+    .col-sm-6 {
+        padding: 0;
+    }
+
     &__selects {
         display: flex;
         justify-content: center;
@@ -50,5 +55,67 @@
 
     .about-item {
         display: flex;
+        // &__desc,
+        // &__img {
+        //     width: 50%
+        // }
+
+        &__desc {
+            padding-left: 6.625rem;
+
+            h3 {
+                width: 20rem;
+                margin-bottom: 2.3rem;
+
+                color: $neutral-regular;
+                letter-spacing: 1.5px;
+                line-height: 2rem;
+            }
+
+            p {
+                font-size: 0.875rem;
+                font-weight: 400;
+                line-height: 1.75rem;
+                color: $neutral-secondary;
+            }
+
+            .desc-down {
+                margin-top: 3.625rem;
+
+                span {
+                    color: $success-color;
+                    font-weight: 700;
+                    margin-right: 0.625rem;
+                }
+
+                a{
+                    margin-left: 3rem;
+                    text-decoration: none;
+                    transition: all .2s;
+                    span{
+                        font-weight: 400;
+                    }
+
+                    &:hover{
+                        opacity: .6;
+                    }
+                }
+
+                img {
+                    margin-right: 0.5rem;
+                }
+            }
+        }
+
+        &__img {
+            position: relative;
+            padding-left: 3.875rem;
+            img{
+                position: absolute;
+                width: 100%;
+                bottom: -2rem;
+            }
+        }
+
     }
 }
