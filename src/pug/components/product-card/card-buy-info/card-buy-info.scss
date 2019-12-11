@@ -7,6 +7,10 @@
         // padding-left: 5%;
     }
 
+    .star-rating {
+        margin-left: 0.6rem;
+    }
+
     .block-desc{
         &__title-card{
             margin: 0;
@@ -127,10 +131,15 @@
 
         .product-card__btn{
             background-color: $success-color;
+            box-shadow: 0 3px 30px rgba(68, 193, 35, 0.5);
             color: $default-color;
             margin: 1.2rem 0;
             margin-right: 1.75rem;
             padding: 1.1875rem 3.875rem;
+
+            &:hover{
+                box-shadow: 0 3px 30px rgba(68, 193, 35, 0.8);
+            }
 
             &:active{
                 background-color: lighten($success-color, $amount: 12%);

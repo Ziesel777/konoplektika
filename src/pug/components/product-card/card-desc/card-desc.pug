@@ -9,7 +9,7 @@
         .select-item
             input(type="radio", name="card-desc", id="select-item-3")
             label.select-item__text(for="select-item-3")|Отзывы
-    
+
     // О товаре
     .card-desc__about
         .about-item
@@ -37,6 +37,7 @@
 
             .about-item__img
                 img(src="/assets/img/card-desc/seeds.png", alt="")
+
         .about-item
             .about-item__youtube(style="background-image: url(//i.ytimg.com/vi/akkvAehH3Vg/hqdefault.jpg)")
                 .video-title
@@ -50,9 +51,10 @@
                     li|Антиоксиданты - предотвращают преждевременное увядание кожи и разглаживают морщины.
                     li|Хлорофилл - способствует борьбе организма с онкологическими заболеваниями.
                     li|Аминокислоты - восстанавливают работу печени и укрепляют центральную нервную систему.
-    
+    // ----end---- О товаре
+
     // Рецепты
-    - 
+    -
         let recipes = [
             {
                 url:'/assets/img/card-desc/recipes/potatoes.jpg',
@@ -87,11 +89,14 @@
                             span||
                             .div
                                 img(src="/assets/img/card-desc/recipes/time.svg", alt="")
-                                |!{item.time} min
+                                |!{item.time} минут
                         .item-title|!{item.title}
                         .item-text
                             span|Ингредиенты:
-                            |!{item.ingridients}
+                            |  !{item.ingridients}
+        .btn__wrapper
+            .product-card__btn|Все рецепты
+    // ----end---- Рецепты
 
 
 

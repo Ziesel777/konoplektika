@@ -211,6 +211,8 @@
     &__recipes {
         margin-top: 8.4rem;
 
+
+
         .recipes__wrapper{
             display: flex;
         }
@@ -239,6 +241,7 @@
         .item-prop {
             display: flex;
             width: 100% * 2/3;
+            min-width: 15rem;
 
             margin-bottom: 1.625rem;
             margin-top: 1.625rem;
@@ -247,7 +250,7 @@
             border-radius: 5px;
             background-color: #f5f7f8;
 
-            
+
             .div {
                 display: inline-block;
                 flex:1;
@@ -259,12 +262,11 @@
 
             span {
                 margin-right: 4px;
-                // margin-left: 1rem;
             }
         }
         .item-title{
             margin-bottom: 1rem;
-            color:$success-color;
+            color: darken($success-color, $amount: 10%);
             text-transform: uppercase;
             font-family: "Bloc";
             font-size: 1.125rem;
@@ -272,9 +274,43 @@
             letter-spacing: 1.17px;
             line-height: 1.1875rem;
         }
-        
-        .item-text {
 
+        .item-text {
+            font-size: 0.8125rem;
+            font-weight: 400;
+            line-height: 1.4375rem;
+            color: darken($neutral-secondary, $amount: 10%);
+            font-family: Montserrat,Helvetica,Arial,sans-serif;
+
+            span {
+                font-size: 0.9375rem;
+                font-weight: 700;
+                color:$success-color;
+            }
+        }
+
+        .btn__wrapper {
+            display: flex;
+            justify-content: center;
+        }
+        .product-card__btn {
+            margin-top: 3rem;
+            padding: 1rem 3.25rem;
+
+            border: 2px solid;
+            box-shadow: none;
+            color: darken($success-color, $amount: 10%);
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.25rem;
+            &:hover {
+                box-shadow: 0 3px 30px rgba(68, 193, 35, 0.2);
+                opacity: .8;
+            }
+            &:active {
+                transform: scale(.95);
+                box-shadow: 0 3px 30px rgba(68, 193, 35, 0.6);
+            }
         }
     }
 }
