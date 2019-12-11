@@ -1,19 +1,15 @@
 // Fonts here
 // see more: https://github.com/vedees/webpack-template/blob/master/README.md#import-js-files
 
-@import url(//db.onlinewebfonts.com/c/0ea65cd1ac6de6f623510dc25b742223?family=BlocC);
-
-
 @font-face {
-    font-family: "BlocC";
-    src: url("//db.onlinewebfonts.com/t/0ea65cd1ac6de6f623510dc25b742223.eot");
-    src: url("//db.onlinewebfonts.com/t/0ea65cd1ac6de6f623510dc25b742223.eot?#iefix") format("embedded-opentype"),
-    url("//db.onlinewebfonts.com/t/0ea65cd1ac6de6f623510dc25b742223.woff2") format("woff2"),
-    url("//db.onlinewebfonts.com/t/0ea65cd1ac6de6f623510dc25b742223.woff") format("woff"),
-    url("//db.onlinewebfonts.com/t/0ea65cd1ac6de6f623510dc25b742223.ttf") format("truetype"),
-    url("//db.onlinewebfonts.com/t/0ea65cd1ac6de6f623510dc25b742223.svg#BlocC") format("svg");
+    font-family: "Bloc";
+    src: url("/assets/fonts/Bloc/Bloc.eot");
+    src: url("/assets/fonts/Bloc/Bloc.eot?#iefix")format("embedded-opentype"),
+    url("/assets/fonts/Bloc/Bloc.woff") format("woff"),
+    url("/assets/fonts/Bloc/Bloc.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal
 }
-
 
 @font-face {
     font-family: "HelveticaRegular";

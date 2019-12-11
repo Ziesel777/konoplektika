@@ -9,7 +9,6 @@
         justify-content: center;
 
         margin-top: 3.5rem;
-        margin-bottom: 6.75rem;
 
         .select-item {
             position: relative;
@@ -20,6 +19,9 @@
 
             font-size: 1.4rem;
             font-weight: 600;
+            font-family: "Bloc";
+            letter-spacing: 0.125rem;
+
             font: $mainFontColor;
 
             &__text{
@@ -53,69 +55,226 @@
         }
     }
 
-    .about-item {
-        display: flex;
-        // &__desc,
-        // &__img {
-        //     width: 50%
-        // }
+    &__about {
+        display: none;
+        .about-item {
+            display: flex;
+            margin-top: 6.75rem;
 
-        &__desc {
-            padding-left: 6.625rem;
-
-            h3 {
-                width: 20rem;
-                margin-bottom: 2.3rem;
-
-                color: $neutral-regular;
-                letter-spacing: 1.5px;
-                line-height: 2rem;
+            &__desc, &__img,
+            &__youtube, &__behoof {
+                width: 50%;
             }
 
-            p {
+            &__desc {
+                padding-left: 6.625rem;
+
+                h3 {
+                    width: 20rem;
+                    margin-bottom: 2.3rem;
+
+                    color: $neutral-regular;
+                    letter-spacing: 1.5px;
+                    line-height: 2rem;
+                    font-family: "Bloc";
+                }
+
+                p {
+                    font-size: 0.875rem;
+                    font-weight: 400;
+                    line-height: 1.75rem;
+                    color: $neutral-secondary;
+                }
+
+                .desc-down {
+                    margin-top: 3.625rem;
+
+                    span {
+                        color: $success-color;
+                        font-weight: 700;
+                        margin-right: 0.625rem;
+                    }
+
+                    a{
+                        margin-left: 3rem;
+                        text-decoration: none;
+                        transition: all .2s;
+                        span{
+                            font-weight: 400;
+                        }
+
+                        &:hover{
+                            opacity: .6;
+                        }
+                    }
+
+                    img {
+                        margin-right: 0.5rem;
+                    }
+                }
+            }
+            &__img {
+                position: relative;
+                padding-left: 3.875rem;
+                img{
+                    position: absolute;
+                    width: 100%;
+                    bottom: -2rem;
+                }
+            }
+
+            &__youtube {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                height: 359px;
+                border-radius: 8px;
+
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+
+                .video-title {
+                    position: relative;
+
+                    a,p {
+                        display: block;
+                        color: $default-color;
+                    }
+                    .video-play {
+                        height: 4rem;
+                        width: 4rem;
+                        margin:auto;
+
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: contain;
+
+                        transition: all .2s;
+                        &:hover{
+                            transform: scale(1.1);
+                            opacity: .8;
+                        }
+                        &:active {
+                            transform: scale(0.95);
+                            opacity: .9;
+                        }
+                    }
+                    p {
+                        margin-top: 1.625rem;
+
+                        font-size: 1.25rem;
+                        font-weight: 400;
+                        font-family: "Bloc";
+
+                        letter-spacing: 1.3px;
+                        line-height: 2rem;
+                    }
+                }
+
+                &::before {
+                    position: absolute;
+                    content: " ";
+                    height: 100%;
+                    width: 100%;
+                    background-color: rgba(99, 213, 68, 0.61);
+                    opacity: 0.47;
+                }
+            }
+            &__behoof {
+                display: flex;
+                align-items: center;
+
+                padding-left: 8.25rem;
+
+                color:$neutral-regular;
                 font-size: 0.875rem;
                 font-weight: 400;
-                line-height: 1.75rem;
-                color: $neutral-secondary;
-            }
+                line-height: 1.4375rem;
 
-            .desc-down {
-                margin-top: 3.625rem;
-
-                span {
-                    color: $success-color;
-                    font-weight: 700;
-                    margin-right: 0.625rem;
+                ul {
+                    list-style-image: url(/assets/img/card-desc/marker-circle.svg);
                 }
 
-                a{
-                    margin-left: 3rem;
-                    text-decoration: none;
-                    transition: all .2s;
-                    span{
-                        font-weight: 400;
+                li {
+                    margin-bottom: 1.125rem;
+                    &:nth-last-of-type(1) {
+                        margin: 0;
                     }
-
-                    &:hover{
-                        opacity: .6;
-                    }
-                }
-
-                img {
-                    margin-right: 0.5rem;
                 }
             }
         }
+    }
 
-        &__img {
-            position: relative;
-            padding-left: 3.875rem;
+    &__recipes {
+        margin-top: 8.4rem;
+
+        .recipes__wrapper{
+            display: flex;
+        }
+
+        .info-block{
+            padding-left: 9px;
+            color:$neutral-secondary;
+        }
+
+        .recipes-item {
+            width: (100%/3);
+            margin-right: 26px;
+
+            .item-img {
+                width:100%;
+                height: 224px;
+
+                border-radius: 8px;
+
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+        }
+
+        .item-prop {
+            display: flex;
+            width: 100% * 2/3;
+
+            margin-bottom: 1.625rem;
+            margin-top: 1.625rem;
+            padding: 9px 14px;
+
+            border-radius: 5px;
+            background-color: #f5f7f8;
+
+            
+            .div {
+                display: inline-block;
+                flex:1;
+            }
+
             img{
-                position: absolute;
-                width: 100%;
-                bottom: -2rem;
+                margin-right: 0.5rem;
+            }
+
+            span {
+                margin-right: 4px;
+                // margin-left: 1rem;
             }
         }
+        .item-title{
+            margin-bottom: 1rem;
+            color:$success-color;
+            text-transform: uppercase;
+            font-family: "Bloc";
+            font-size: 1.125rem;
+            font-weight: 400;
+            letter-spacing: 1.17px;
+            line-height: 1.1875rem;
+        }
+        
+        .item-text {
 
+        }
     }
 }

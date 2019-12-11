@@ -57,6 +57,7 @@
   },
   "dependencies": {
     "jquery": "^3.4.1",
+    "magnific-popup": "^1.1.0",
     "swiper": "^5.2.1",
     "vue": "^2.6.10"
   }

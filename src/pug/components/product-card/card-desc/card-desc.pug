@@ -9,9 +9,11 @@
         .select-item
             input(type="radio", name="card-desc", id="select-item-3")
             label.select-item__text(for="select-item-3")|Отзывы
+    
+    // О товаре
     .card-desc__about
         .about-item
-            .about-item__desc.col-sm-6
+            .about-item__desc
                 h3|Произведено из отборных семян конопли
 
                 p|  Методом холодного отжима, обладает теплым жёлтым цветом,
@@ -24,7 +26,7 @@
                 p.desc-down
                     span
                         img(src="/assets/img/card-desc/license.svg", alt="")
-                        |Лицензия товара 
+                        |Лицензия товара
                     ||
                     span
                     |1,2 Мб
@@ -33,5 +35,63 @@
                             img(src="/assets/img/card-desc/arrow_down.svg", alt="")
                             |Скачать
 
-            .about-item__img.col-sm-6
+            .about-item__img
                 img(src="/assets/img/card-desc/seeds.png", alt="")
+        .about-item
+            .about-item__youtube(style="background-image: url(//i.ytimg.com/vi/akkvAehH3Vg/hqdefault.jpg)")
+                .video-title
+                    a.video-play.js-video-play(href="http://www.youtube.com/watch?v=akkvAehH3Vg", style="background-image: url(/assets/img/card-desc/video-play.svg)")
+                    p|с пользой о здоровье
+
+            .about-item__behoof
+                ul
+                    li|Улучшает обмен веществ и способствует усилению иммунных свойств организма.
+                    li|Фитостеролы и фолиевая кислота - обеспечивают в норме период вынашивания ребенка у беременных.
+                    li|Антиоксиданты - предотвращают преждевременное увядание кожи и разглаживают морщины.
+                    li|Хлорофилл - способствует борьбе организма с онкологическими заболеваниями.
+                    li|Аминокислоты - восстанавливают работу печени и укрепляют центральную нервную систему.
+    
+    // Рецепты
+    - 
+        let recipes = [
+            {
+                url:'/assets/img/card-desc/recipes/potatoes.jpg',
+                title:'КЛЁЦКИ КАРТОФЕЛЬНЫЕ',
+                time:'40',
+                ingridients:'Картофельное пюре, полстакана ржаной муки или пшеничной муки, конопляное масло, яйца, луковица, соль,тмин.',
+            },
+            {
+                url:'/assets/img/card-desc/recipes/avocado-salad.jpg',
+                title:'САЛАТ С АВОКАДО И МАКАРОНАМИ',
+                time:'20',
+                ingridients:'макароны, чеснок, перец чили, красный лук, горчица, масло конопляное, масло льняное, уксус, лайм, авокадо, базилик, морская соль, черный перец.',
+            },
+            {
+                url:'/assets/img/card-desc/recipes/cranberry-smoothie.jpg',
+                title:'СМУЗИ С КЛЮКВОЙ И ЧЕРНИКОЙ',
+                time:'15',
+                ingridients:'черника или ежевика, клюквенный сок, конопляное масло.',
+            },
+        ]
+
+    .card-desc__recipes
+        .recipes__wrapper
+            each item in recipes
+                .recipes-item
+                    .item-img(style=`background-image: url(${item.url})`)
+                    .info-block
+                        .item-prop
+                            .div
+                                img(src="/assets/img/card-desc/recipes/cutlery.svg", alt="")
+                                |6 порций
+                            span||
+                            .div
+                                img(src="/assets/img/card-desc/recipes/time.svg", alt="")
+                                |!{item.time} min
+                        .item-title|!{item.title}
+                        .item-text
+                            span|Ингредиенты:
+                            |!{item.ingridients}
+
+
+
