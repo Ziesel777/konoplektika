@@ -1,0 +1,130 @@
+.card-addition {
+    margin-top: 136px;
+
+    &__title {
+        text-align: center;
+
+        .title-category {
+            color: $success-color;
+            font-family: "Bloc";
+            font-size: 18px;
+            font-weight: 400;
+            letter-spacing: 1.17px;
+        }
+        .title-head {
+            margin-top: 11px;
+
+            color: $mainFontColor;
+            font-size: 23px;
+            font-weight: 400;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+
+        height: 340px;
+        width: 100%;
+
+        margin-top: 63px;
+
+        .addition-item {
+            position: relative;
+
+            display: flex;
+            flex-direction: column;
+
+            height: 100%;
+            width: (100%/4);
+
+            text-align: center;
+
+            padding: 26px;
+            padding-bottom: 14px;
+
+            transition: all .3s;
+
+            .item-img {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                flex:1;
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+            .item-title {
+                margin-top: 17px;
+
+                color:$mainFontColor;
+                font-size: 0.8125rem;
+                font-weight: 400;
+                line-height: 16px;
+            }
+
+            .item-size {
+                color: $neutral-secondary;
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 20px;
+            }
+
+            .item-price {
+                font-weight: 700;
+                line-height: 25px;
+            }
+
+            .item-btn {
+
+                display: flex;
+
+                transform: scale(0);
+                opacity: 0;
+
+                padding: 13px 21px;
+
+                box-shadow: 0 3px 23px rgba(0, 0, 0, 0.16);
+                border-radius: 7px;
+                background-color: $default-color;
+
+                transition: all .3s;
+                span {
+                    margin: 0 21px;
+                    color: $neutral-placeholder
+                }
+
+                a svg path{
+                    fill: $neutral-secondary;
+                    stroke: $neutral-secondary;
+
+                    transition: all .3s;
+                }
+
+                a{
+                    &:hover {
+                        svg path{
+                            fill: $success-color;
+                            stroke: $success-color;
+                        }
+                    }
+                    &:active {
+                        transform: scale(.9);
+                    }
+                }
+            }
+
+            &:hover {
+                box-shadow: 0 3px 23px rgba(0, 0, 0, 0.07);
+                border-radius: 7px;
+                background-color: $default-color;
+
+                .item-btn {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
