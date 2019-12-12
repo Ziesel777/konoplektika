@@ -1,3 +1,6 @@
+// отступ от навигации
+$mt_select: 6.75rem;
+
 .card-desc {
     &.col-sm-12,
     .col-sm-6 {
@@ -59,7 +62,7 @@
         display: none;
         .about-item {
             display: flex;
-            margin-top: 6.75rem;
+            margin-top: $mt_select;
 
             &__desc, &__img,
             &__youtube, &__behoof {
@@ -209,9 +212,9 @@
     }
 
     &__recipes {
-        margin-top: 8.4rem;
+        display: none;
 
-
+        margin-top: $mt_select;
 
         .recipes__wrapper{
             display: flex;
@@ -311,6 +314,133 @@
                 transform: scale(.95);
                 box-shadow: 0 3px 30px rgba(68, 193, 35, 0.6);
             }
+        }
+    }
+
+    &__reviews {
+        display:none;
+        position: relative;
+        margin-top: $mt_select;
+        padding: 44px 48px 60px 55px;
+
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.09);
+        font-size: 0.875rem;
+
+        // Голова отзывов
+        h3 {
+            font-weight: 700;
+        }
+
+        .reviews-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .reviews-head__title,
+        .reviews-head,
+        .star-rating,
+        .num-rews {
+            display: flex;
+            align-items: center;
+        }
+
+        .star-rating,
+        .num-rews {
+            color: lighten($neutral-secondary, $amount: 10%);
+            font-weight: 700;
+        }
+
+        .star-rating{
+            margin-left: 3rem;
+            span {
+                margin-left: 0.5rem;
+            }
+        }
+
+        .num-rews {
+            margin-left: 2.375rem;
+            img {
+                margin-right: 0.5rem;
+            }
+        }
+
+        .product-card__btn {
+            padding: 1rem 2.25rem;
+
+            background-color: $success-color;
+            color:$default-color;
+
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.25rem;
+            &:hover {
+                box-shadow: 0 3px 30px rgba(68, 193, 35, 0.5);
+                // opacity: .8;
+            }
+            &:active {
+                box-shadow: 0 3px 30px rgba(68, 193, 35, 0.8);
+                transform: scale(.95);
+            }
+        }
+        // ----END----Голова отзывов
+
+        // Отзывы
+        .reviews-wrapper {
+
+        }
+        .rew-item {
+            position: relative;
+            display: flex;
+            margin-top: 3rem;
+
+            .item__rating {
+                // min-width: max-content;
+                width: 8rem;
+            }
+            .star-rating {
+                margin: 0;
+                width: max-content;
+            }
+            .rew-date {
+                width: max-content;
+                margin-top: 0.875rem;
+                color:$neutral-secondary;
+            }
+
+            .read-more {
+                position: absolute;
+                bottom: -0.875rem;
+                right: 0;
+
+                font-size: 0.875rem;
+                font-weight: 700;
+
+                color:$neutral-secondary;
+                text-decoration: none;
+
+                transition: all .2s;
+                &:hover {
+                    opacity: .7;
+                }
+            }
+        }
+
+        .item__text {
+            padding-left: 2.5rem;
+            width: calc(100%-8rem);
+        }
+        .user-name {
+            font-size: 1.125rem;
+            color:$neutral-primary;
+        }
+        .user-text {
+            margin-top: 1.625rem;
+            color: $neutral-regular;
+
+            font-size: 0.875rem;
+            font-weight: 400;
+            line-height: 1.75rem;
         }
     }
 }

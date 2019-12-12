@@ -3,7 +3,7 @@ const fs = require('fs')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const { VueLoaderPlugin } = require('vue-loader')
+// const { VueLoaderPlugin } = require('vue-loader')
 
 // Main const
 // see more: https://github.com/vedees/webpack-template/blob/master/README.md#main-const
@@ -51,15 +51,17 @@ module.exports = {
       test: /\.js$/,
       loader: 'babel-loader',
       exclude: '/node_modules/'
-    }, {
-      test: /\.vue$/,
-      loader: 'vue-loader',
-      options: {
-        loader: {
-          scss: 'vue-style-loader!css-loader!sass-loader'
-        }
-      }
-    }, {
+    }, 
+    // {
+    //   test: /\.vue$/,
+    //   loader: 'vue-loader',
+    //   options: {
+    //     loader: {
+    //       scss: 'vue-style-loader!css-loader!sass-loader'
+    //     }
+    //   }
+    // }, 
+    {
       test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
       loader: 'file-loader',
       options: {
@@ -103,18 +105,19 @@ module.exports = {
     },
     {
       test: /\.pug$/,
-      loader: 'pug-loader'
+      loader: 'pug-loader',
+      query: { pretty: true }
     }
   ]
   },
-  resolve: {
-    alias: {
-      '~': PATHS.src,
-      'vue$': 'vue/dist/vue.js',
-    }
-  },
+  // resolve: {
+  //   alias: {
+  //     '~': PATHS.src,
+  //     'vue$': 'vue/dist/vue.js',
+  //   }
+  // },
   plugins: [
-    new VueLoaderPlugin(),
+    // new VueLoaderPlugin(),
     new MiniCssExtractPlugin({
       filename: `${PATHS.assets}css/[name].[hash].css`,
     }),
@@ -135,7 +138,9 @@ module.exports = {
 
     ...PAGES.map(page => new HtmlWebpackPlugin({
       template: `${PAGES_DIR}/${page}`,
-      filename: `./${page.replace(/\.pug/,'.html')}`
+      filename: `./${page.replace(/\.pug/,'.html')}`,
+      inject: true,
+      minify: false
     }))
   ],
 }

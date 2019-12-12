@@ -1,17 +1,19 @@
 .card-desc.col-sm-12
-    .card-desc__selects
-        .select-item
-            input(type="radio", name="card-desc", id="select-item-1" checked)
-            label.select-item__text(for="select-item-1")|О товаре
-        .select-item
-            input(type="radio", name="card-desc", id="select-item-2")
-            label.select-item__text(for="select-item-2")|Рецепты
-        .select-item
-            input(type="radio", name="card-desc", id="select-item-3")
-            label.select-item__text(for="select-item-3")|Отзывы
+    // Навигация
+    .card-desc__selects.js-desc__selects
+        .select-item.js-select-item
+            input(type="radio", name="card-desc", id="about-item" checked)
+            label.select-item__text(for="about-item")|О товаре
+        .select-item.js-select-item
+            input(type="radio", name="card-desc", id="recipes-item")
+            label.select-item__text(for="recipes-item")|Рецепты
+        .select-item.js-select-item
+            input(type="radio", name="card-desc", id="reviews-item")
+            label.select-item__text(for="reviews-item")|Отзывы
+    // ----end---- Навигация
 
     // О товаре
-    .card-desc__about
+    .card-desc__about.js-desc__item(data-id="about-item")
         .about-item
             .about-item__desc
                 h3|Произведено из отборных семян конопли
@@ -76,7 +78,7 @@
             },
         ]
 
-    .card-desc__recipes
+    .card-desc__recipes.js-desc__item(data-id="recipes-item")
         .recipes__wrapper
             each item in recipes
                 .recipes-item
@@ -97,6 +99,70 @@
         .btn__wrapper
             .product-card__btn|Все рецепты
     // ----end---- Рецепты
+
+    // Отзывы
+    .card-desc__reviews.js-desc__item(data-id="reviews-item")
+        .reviews-head
+            .reviews-head__title
+                h3|Отзывы и рекомендации
+                .star-rating.js-star-rating(data-rating="4.5")|
+                    img(src="/assets/img/card-desc/star_yellow.svg", alt="")
+                    img(src="/assets/img/card-desc/star_yellow.svg", alt="")
+                    img(src="/assets/img/card-desc/star_yellow.svg", alt="")
+                    img(src="/assets/img/card-desc/star_yellow.svg", alt="")
+                    img(src="/assets/img/card-desc/star_grey.svg", alt="")
+                    span|4.5
+                .num-rews
+                    img(src="/assets/img/card-desc/user.svg", alt="")
+                    span|24
+            .product-card__btn|Написать отзыв
+
+        -
+            let rews = [
+                {
+                    name: 'Роман',
+                    date: '20 Декабря 2019',
+                    rating: '4',
+                    text: 'Методом холодного отжима, обладает теплым жёлтым цветом, изысканным ореховым вкусом и нежным приятным ароматом. Благодаря методу холодного отжима конопляное масло – один из ценнейших продуктов по балансу витаминов и аминокислот. Является дополнительным источником жиров для людей, которые не употребляют в пищу мясо.',
+                },
+                {
+                    name: 'Мария',
+                    date: '1 января 2019',
+                    rating: '3',
+                    text: 'Методом холодного отжима, обладает теплым жёлтым цветом, изысканным ореховым вкусом и нежным приятным ароматом. Благодаря методу холодного отжима конопляное масло – один из ценнейших продуктов по балансу витаминов и аминокислот. Является дополнительным источником жиров для людей, которые не употребляют в пищу мясо.',
+                },
+                {
+                    name: 'Станислав',
+                    date: '29 декабря 2018',
+                    rating: '5',
+                    text: 'Круто!Является дополнительным источником жиров для людей, которые не употребляют в пищу мясо.',
+                },
+                {
+                    name: 'Павел',
+                    date: '15 июля 2018',
+                    rating: '2',
+                    text: 'Личная непереносимость данного продукта',
+                },
+            ]
+
+        .reviews-wrapper
+            each rew in rews
+                .rew-item
+                    .item__rating
+                        .star-rating.js-star-rating(data-rating=rew.rating)
+                            img(src="/assets/img/card-desc/star_yellow.svg", alt="")
+                            img(src="/assets/img/card-desc/star_yellow.svg", alt="")
+                            img(src="/assets/img/card-desc/star_yellow.svg", alt="")
+                            img(src="/assets/img/card-desc/star_yellow.svg", alt="")
+                            img(src="/assets/img/card-desc/star_grey.svg", alt="")
+                        .rew-date|!{rew.date}
+                    .item__text
+                        p.user-name|!{rew.name}
+                        p.user-text|!{rew.text}
+                    a(href="#").read-more|Читать полностью
+
+
+
 
 
 
