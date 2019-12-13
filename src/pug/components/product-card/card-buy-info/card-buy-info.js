@@ -5,14 +5,14 @@ $(()=>{
         counterNum(this);
     });
 
-    $('.js-block-submit, .js-btn-num').mouseup(function () { 
+    $('.js-block-submit, .js-btn-num').mouseup(function () {
         getPrice();
     });
 
     $('.js-prop__size').on('change', function () {
         getPrice();
     });
-    
+
 
     function counterNum(elem){
         let num = $('.js-num-value').val();
@@ -38,7 +38,7 @@ $(()=>{
 
         for (const itemPrice of priceItems) {
             const check = $(itemPrice).prop('checked');
-            
+
             if(check){
                 let price = $(itemPrice).attr('data-price');
                 price = Number(price)*num;

@@ -1,25 +1,31 @@
 form.card-buy-info.col-sm-6
     .block-desc
         h2.block-desc__title-card|Масло конопляное Extra Virgin
-            span.star-rating.js-star-rating(data-rating="4")
-                img(src="/assets/img/card-buy-info/star_yellow.svg", alt="")
-                img(src="/assets/img/card-buy-info/star_yellow.svg", alt="")
-                img(src="/assets/img/card-buy-info/star_yellow.svg", alt="")
-                img(src="/assets/img/card-buy-info/star_yellow.svg", alt="")
-                img(src="/assets/img/card-buy-info/star_empty.svg", alt="")
+            //- отрисовка звёзд на JS в product-card.js
+            //
+                звезды отрисовываются на JS, поэтому ==>
+                в атрибутах .star-rating задается с бэка:
+                - rating - число не больше пяти, дробное можно
+                - src-starfull - путь к картинке звезды с фоном
+                - src-starempty - путь к картинке пустой звезды
+            //
+            span.star-rating.js-star-rating(
+                data-rating="4.5",
+                src-starfull="/assets/img/card-buy-info/star_yellow.svg",
+                src-starempty="/assets/img/card-buy-info/star_empty.svg")
 
-        p.block-desc__title|Состав
+        h5.block-desc__title|Состав
         p|100% Масло конопляное нерафинированное.
 
-        p.block-desc__title|Пищевая ценность на 100 гр. продукта
+        h5.block-desc__title|Пищевая ценность на 100 гр. продукта
         p|Линоленовая кислота (Омега-3) - 16,73 гр.
         p|Линоленовая кислота (Омега-6) - 50,93 гр.
         p|Олеиновая кислота (Омега-9) - 9,42 гр.
 
-        p.block-desc__title|Энергетическая ценность на 100 гр. продукта
+        h5.block-desc__title|Энергетическая ценность на 100 гр. продукта
         p|900 ккал/3768 кДж.
 
-        a(href="#").block-desc__link|Подробнее &rarr;
+        a(href="#modal-consist").js-modal-consist.block-desc__link|Подробнее &rarr;
 
     .block-prop
         .block-prop__size

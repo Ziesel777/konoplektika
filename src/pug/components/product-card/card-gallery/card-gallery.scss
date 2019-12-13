@@ -29,6 +29,10 @@ $height_top:100% - $height_thumbs;
         }
     }
 
+    a {
+        pointer-events: none;
+    }
+
     .swiper-container {
         width: 100%;
         height: 100%;

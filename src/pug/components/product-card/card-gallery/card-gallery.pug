@@ -3,14 +3,41 @@
 		img(src="/assets/img/card-gallery/ico_eco.svg", alt="")
 		img(src="/assets/img/card-gallery/ico_bio.svg", alt="")
 
+	-
+		let images = [
+			{
+				src:'/assets/img/card-gallery/oil-1.png',
+				title:'Конопляное масло Extra virgin',
+			},
+			{
+				src:'/assets/img/card-gallery/oil-2.jpg',
+				title:'Конопляное масло Extra virgin',
+			},
+			{
+				src:'/assets/img/card-gallery/Photo-intetnet-5.jpg',
+				title:'Конопляное мыло «HempShape»',
+			},
+			{
+				src:'/assets/img/card-gallery/Photo-intetnet-7.jpg',
+				title:'подарочный набор ручной работы "Конопель"',
+			},
+			{
+				src:'/assets/img/card-gallery/Photo-intetnet-9.jpg',
+				title:'кувшин с конопляным маслом',
+			},
+			{
+				src:'/assets/img/card-gallery/Photo-intetnet-17.jpg',
+				title:'подарочный набор ручной работы "Конопель"',
+			},
+		]
+
 	.swiper-container.gallery-top.js-gallery-top
 		.swiper-wrapper.gallery-preview-wrapper.js-preview-wrapper
-			.swiper-slide.gallery__slide(style="background-image:url(/assets/img/card-gallery/oil-1.png)")
-			.swiper-slide.gallery__slide(style="background-image:url(/assets/img/card-gallery/oil-2.jpg)")
-			.swiper-slide.gallery__slide(style="background-image:url(/assets/img/card-gallery/Photo-intetnet-5.jpg)")
-			.swiper-slide.gallery__slide(style="background-image:url(/assets/img/card-gallery/Photo-intetnet-7.jpg)")
-			.swiper-slide.gallery__slide(style="background-image:url(/assets/img/card-gallery/Photo-intetnet-9.jpg)")
-			.swiper-slide.gallery__slide(style="background-image:url(/assets/img/card-gallery/Photo-intetnet-17.jpg)")
+			each img in images
+				.swiper-slide.gallery__slide.js-gallery__slide(
+					style=`background-image:url(${img.src})`,
+					href=img.src,
+					title=img.title)
 
 	.gallery-bottom
 		.btn-thumbs-prev.js-btn-thumbs-prev

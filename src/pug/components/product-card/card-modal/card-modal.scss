@@ -1,0 +1,51 @@
+.card-modal {
+    position: relative;
+    box-shadow: 0 3px 18px rgba(0, 0, 0, 0.28);
+    color: $default-color;
+
+    margin: 40px auto;
+    height: 80vh;
+    width: 70vw;
+
+
+    &.modal-consist {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 7px;
+        box-shadow: 0 3px 18px rgba(0, 0, 0, 0.34);
+        background-color: $success-color;
+        padding: 16px;
+
+        .consist-content {
+            height: 100%;
+            width:100%;
+
+            padding: 45px 55px;
+
+            border-radius: 7px;
+            box-shadow: 0 3px 18px rgba(0, 0, 0, 0.13);
+            background-color: $default-color;
+
+            .consist-content__title {
+                font-family: "Bloc";
+                font-size: 23px;
+                font-weight: 400;
+                letter-spacing: 1.5px;
+                line-height: 32px;
+                color: $neutral-regular;
+            }
+            .consist-content__post-title {
+                // font-size: 23px;
+                // font-weight: 400;
+                color: $neutral-secondary;
+            }
+
+            p {
+                font-size: 13px;
+                color: $neutral-regular;
+            }
+        }
+    }
+}

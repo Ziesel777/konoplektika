@@ -1,14 +1,30 @@
-.product-card#app
-	// head 
+.container.product-card.js-product-card
+	// галерея-слайдер
 	include ./card-gallery/card-gallery.pug
+	// end - галерея-слайдер
+	//
+
+	// меню товара
 	include ./card-buy-info/card-buy-info.pug
+	// end - галерея-слайдер
+	//
+
+	// торговые предложения
 	include ./card-offers/card-offers.pug
-	// end - head 
+	// end - торговые предложения
+	//
 
-	// description product
+	// описание продукта
 	include ./card-desc/card-desc.pug
-	// end description product
+	// end описание продукта
+	//
 
-	// additional products
+	// дополнительные товары
 	include ./card-addition/card-addition.pug
-	// end additional products
+	// end дополнительные товары
+	//
+
+	// модальные окна
+	include ./card-modal/card-modal.pug
+	// end модальные окна
+	//

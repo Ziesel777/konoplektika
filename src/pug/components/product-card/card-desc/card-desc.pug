@@ -105,12 +105,20 @@
         .reviews-head
             .reviews-head__title
                 h3|Отзывы и рекомендации
-                .star-rating.js-star-rating(data-rating="4.5")|
-                    img(src="/assets/img/card-desc/star_yellow.svg", alt="")
-                    img(src="/assets/img/card-desc/star_yellow.svg", alt="")
-                    img(src="/assets/img/card-desc/star_yellow.svg", alt="")
-                    img(src="/assets/img/card-desc/star_yellow.svg", alt="")
-                    img(src="/assets/img/card-desc/star_grey.svg", alt="")
+
+                //- отрисовка звёзд на JS в product-card.js
+                //
+                    звезды отрисовываются на JS, поэтому ==>
+                    в атрибутах .star-rating задается с бэка:
+                    - rating - число не больше пяти, дробное можно
+                    - src-starfull - путь к картинке звезды с фоном
+                    - src-starempty - путь к картинке пустой звезды
+                //
+                .star-rating.js-star-rating(
+                        data-rating="4.5",
+                        src-starfull="/assets/img/card-desc/star_yellow.svg",
+                        src-starempty="/assets/img/card-desc/star_grey.svg")|
+
                     span|4.5
                 .num-rews
                     img(src="/assets/img/card-desc/user.svg", alt="")
@@ -149,18 +157,25 @@
             each rew in rews
                 .rew-item
                     .item__rating
-                        .star-rating.js-star-rating(data-rating=rew.rating)
-                            img(src="/assets/img/card-desc/star_yellow.svg", alt="")
-                            img(src="/assets/img/card-desc/star_yellow.svg", alt="")
-                            img(src="/assets/img/card-desc/star_yellow.svg", alt="")
-                            img(src="/assets/img/card-desc/star_yellow.svg", alt="")
-                            img(src="/assets/img/card-desc/star_grey.svg", alt="")
+                        //- отрисовка звёзд на JS в product-card.js
+                        //
+                            звезды отрисовываются на JS, поэтому ==>
+                            в атрибутах .star-rating задается с бэка:
+                            - rating - число не больше пяти, дробное можно
+                            - src-starfull - путь к картинке звезды с фоном
+                            - src-starempty - путь к картинке пустой звезды
+                        //
+                        .star-rating.js-star-rating(
+                            data-rating=rew.rating,
+                            src-starfull="/assets/img/card-desc/star_yellow.svg",
+                            src-starempty="/assets/img/card-desc/star_grey.svg")
+
                         .rew-date|!{rew.date}
                     .item__text
                         p.user-name|!{rew.name}
                         p.user-text|!{rew.text}
                     a(href="#").read-more|Читать полностью
-
+    // ----end---- Отзывы
 
 
 
