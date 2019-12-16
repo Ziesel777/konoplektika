@@ -13,40 +13,107 @@
         justify-content: center;
         align-items: center;
 
+        overflow: hidden;
+
         border-radius: 7px;
-        box-shadow: 0 3px 18px rgba(0, 0, 0, 0.34);
-        background-color: $success-color;
-        padding: 16px;
+        // box-shadow: 0 3px 18px rgba(0, 0, 0, 0.34);
+        // background-color: $success-color;
+        // padding: 16px;
 
         .consist-content {
             height: 100%;
             width:100%;
 
-            overflow-y: scroll;
-
-            padding: 45px 55px;
+            padding: 45px 35px 35px 55px;
 
             border-radius: 7px;
             box-shadow: 0 3px 18px rgba(0, 0, 0, 0.13);
             background-color: $default-color;
 
             .consist-content__title {
-                font-family: "Bloc";
-                font-size: 23px;
-                font-weight: 400;
-                letter-spacing: 1.5px;
-                line-height: 32px;
-                color: $neutral-regular;
+                // height: 20%;
+                .hr {
+                    width: 98%;
+                    padding-bottom: 25px;
+
+                    border-bottom: 1px solid rgba(112, 112, 112, 0.16);
+                }
+                
+                h2 {
+                    font-family: "Bloc";
+                    font-size: 23px;
+                    font-weight: 400;
+                    letter-spacing: 1.5px;
+                    line-height: 32px;
+                    color: $neutral-regular;
+                }
+                h3 {
+                    color: $neutral-secondary;
+                }
+
             }
-            .consist-content__post-title {
-                // font-size: 23px;
-                // font-weight: 400;
-                color: $neutral-secondary;
+
+            .consist-content__text {
+                height: calc(100% - 90px);
+                width:100%;
+                padding-top: 25px;
+
+                padding-right: 45px;
+
+                overflow-y: scroll;
+                &::-webkit-scrollbar-button {
+                    // background-image: url('');
+                    background-repeat: no-repeat;
+                    width: 5px;
+                    height: 0px
+                }
+
+                &::-webkit-scrollbar-track {
+                    background-color: #ecedee
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    -webkit-border-radius: 0px;
+                    border-radius: 0px;
+                    background-color: lighten($success-color, $amount: 20%);
+                }
+
+                &::-webkit-scrollbar-thumb:hover {
+                    background-color: $success-color;
+                }
+
+                &::-webkit-resizer {
+                    // background-image: url('');
+                    background-repeat: no-repeat;
+                    width: 4px;
+                    height: 0px
+                }
+
+                &::-webkit-scrollbar {
+                    width: 4px;
+                }
             }
+
 
             p {
                 font-size: 13px;
                 color: $neutral-regular;
+                line-height: 23px;
+            }
+
+            h5,
+            .h5 {
+                font-size: 0.8125rem;
+                color: $success-color;
+                font-weight: 700;
+
+                padding-top: 15px;
+                padding-bottom: 11px;
+            }
+
+            br {
+                margin: 0;
+                margin-top: 14px;
             }
         }
     }
