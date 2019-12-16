@@ -4,11 +4,12 @@ $hCardGallery:100vh;
 $height_thumbs:13%;
 $height_top:100% - $height_thumbs;
 
-.card-gallery {
+.product-card .card-gallery {
     position: relative;
     user-select: none;
     // border: 1px solid #80808083;
     height: $hCardGallery;
+    width: 50%;
 
     &.col-sm-6 {
         padding: 0;
@@ -133,3 +134,5 @@ $height_top:100% - $height_thumbs;
         }
     }
 }
+
+@import './card-gallery.resp.scss';

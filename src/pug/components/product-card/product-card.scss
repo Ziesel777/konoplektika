@@ -12,20 +12,20 @@
     h2,
     .h2{
         color: #111111;
-        font-size: 1.4375rem;
+        font-size: rem(23px);
         font-weight: 700;
-        line-height: 1.75rem;
+        line-height: 28px;
     }
 
     h3,
     .h3 {
-        font-size: 1.4375rem;
+        font-size: rem(23px);
         font-weight: 400;
     }
 
     h5,
     .h5 {
-        font-size: 0.8125rem;
+        font-size: rem(13px);
         color: $success-color;
         font-weight: 700;
 
@@ -35,7 +35,7 @@
 
     p,
     .p{
-        font-size: 0.8125rem;
+        font-size: rem(13px);
         color: $neutral-regular;
     }
 
@@ -49,10 +49,10 @@
         box-shadow: 0 3px 30px rgba(0, 0, 0, 0.13);
         border-radius: 6px;
         color: $neutral-regular;
-        font-size: 0.875rem;
+        font-size: rem(14px);
 
         padding: 10px 15px;
-        min-width: 5rem;
+        min-width: 80px;
 
         transition: all .2s;
 

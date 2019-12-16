@@ -1,0 +1,13 @@
+.product-card .card-gallery {
+    @include point_screen(1030){
+        width: 55%;
+
+        &.col-sm-6 {
+            padding-right: 0;
+        }
+    }
+
+    @include point_screen(875){
+        width: 60%;
+    }
+}
