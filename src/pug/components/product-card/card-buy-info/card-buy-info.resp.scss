@@ -66,6 +66,62 @@
     }
 
     @include point_screen(825){
-        
+        .block-submit{
+            .payment{
+                width: 40px;
+                height: 30px;
+            }
+        }
+    }
+
+    @include point_screen(750){
+        .block-prop{
+            margin-top: 20px;
+
+            &__num{
+                margin-bottom: 15px;
+            }
+        }
+
+        .block-submit{
+            .product-card__btn{
+                padding: 20px;
+                margin: 10px;
+                margin-left: 0;
+            }
+        }
+    }
+
+    @include point_screen(680){
+        width: 100%;
+        margin-top: 40px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .block-desc{
+            text-align: center;
+            .star-rating{
+                margin-top: 10px;
+                img {
+                    width: 20px;
+                }
+            }
+        }
+
+        .block-prop{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .block-submit{
+            margin-top: 20px;
+            .product-card__btn{
+                padding: 20px 40px;
+                margin: 10px 30px 10px 0;
+            }
+        }
     }
 }

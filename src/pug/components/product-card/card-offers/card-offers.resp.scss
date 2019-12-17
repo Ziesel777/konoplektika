@@ -1,0 +1,110 @@
+.card-offers {
+    @include point_screen(1080){
+        &__text {
+            margin-right: 16px;
+            
+        }
+
+        &__item {
+            .item-title {
+                width: 90px;
+            }
+
+            &::before,&:nth-last-of-type(2)::before {
+                bottom: 90px;
+            }
+        }
+
+        &__price {
+            .product-card__btn {
+                margin-bottom: 0;
+            }
+
+            .price-sale {
+                display: flex;
+                flex-direction: column-reverse;
+                text-align: center;
+
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+    @include point_screen(1030){
+        &__price {
+            width: unset;
+            flex: 1;
+            .product-card__btn {
+                width: 100px;
+            }
+        }
+    }
+
+    @include point_screen(880){
+        padding: 16px 0 16px 20px;
+        &__item {
+            &::before,&:nth-last-of-type(2)::before {
+                right: -25px;
+            }
+        }
+    }
+
+    @include point_screen(790){
+        width: 90%;
+        margin-left: 5%;
+        flex-wrap: wrap;
+
+        &__text {
+            width: 100%;
+
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        &__item {
+            max-width: unset;
+            width: 50%;
+
+            align-items: center;
+            margin-right: 0;
+            margin-bottom: 25px;
+
+            &::before {
+                display: none;
+            }
+
+            .item-title {
+                text-align: center;
+                width: 80%;
+            }
+
+            .item-img {
+                height: 196px;
+                margin-bottom: 15px;
+            }
+        }
+
+        &__price {
+            .product-card__btn {
+                width: 50%;
+                height: 60px;
+            }
+        }
+    }
+
+    @include point_screen(470){
+        width: 100%;
+        margin-left: 0;
+        margin-top: 80px;
+
+        &::before {
+            left: calc(50% - 269px/2);
+        }
+
+        &__price {
+            .price-sale {
+                margin-top: 40px;
+            }
+        }
+    }
+}

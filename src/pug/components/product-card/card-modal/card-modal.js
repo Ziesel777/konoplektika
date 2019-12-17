@@ -6,6 +6,7 @@ $(() => {
 		type: 'inline',
 		preloader: false,
 		focus: '#name',
+		fixedContentPos: true,
 
 		// When elemened is focused, some mobile browsers in some cases zoom in
 		// It looks not nice, so we disable it:

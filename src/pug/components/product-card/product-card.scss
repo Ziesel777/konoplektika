@@ -1,6 +1,9 @@
 .container {
     margin-top: 30px;
     margin-bottom: 30px;
+    @include point_screen(790){
+        padding: 0 10px;
+    }
 }
 
 .product-card {

@@ -20,7 +20,7 @@
 }
 
 @mixin point_screen($width) {
-  @media (max-width: $width + 'px') {
+  @media screen and (max-width: (($width * 1px) + 2 * $pad-container)) {
     @content
   }
 }

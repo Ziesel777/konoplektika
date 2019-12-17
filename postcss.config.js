@@ -1,3 +1,4 @@
+const sortCSSmq = require('sort-css-media-queries'); // улучшенная сортировка @media для css-mqpacker
 // autoprefixer - https://github.com/postcss/autoprefixer
 // css-mqpacker - https://github.com/hail2u/node-css-mqpacker
 // cssnano      - https://github.com/hail2u/node-css-mqpacker
@@ -7,7 +8,11 @@
 module.exports = {
   plugins: [
     require('autoprefixer'),
-    require('css-mqpacker'),
+    require('css-mqpacker')(
+      {
+        sort: sortCSSmq,
+      }
+    ),
     require('cssnano')({
       preset: [
         'default', {

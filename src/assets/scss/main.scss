@@ -78,13 +78,13 @@ section, .section {
   max-width: $desktopWidth;
   padding: 0 60px;
   @media screen and (max-width: $smDesktopWidth) {
-    max-width: $tableWidth;
+    // max-width: $tableWidth;
   }
   @media screen and (max-width: $tableWidth) {
-    max-width: $phoneWidth;
+    // max-width: $phoneWidth;
   }
   @media screen and (max-width: $phoneWidth) {
-    max-width: $smPhoneWidth;
+    // max-width: $smPhoneWidth;
   }
 }
 

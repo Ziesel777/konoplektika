@@ -44,6 +44,7 @@ $(() => {
 		type: 'image',
 		tLoading: 'Loading image #%curr%...',
 		mainClass: 'mfp-img-mobile',
+		fixedContentPos: true,
 		gallery: {
 			enabled: true,
 			navigateByImgClick: true,
