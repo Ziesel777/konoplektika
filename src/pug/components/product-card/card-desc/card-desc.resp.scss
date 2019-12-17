@@ -1,0 +1,178 @@
+.card-desc {
+    @include point_screen(1180) {
+        &__about {
+            .about-item {
+                &__img{
+                    padding-left: 0;
+                }
+                &__youtube {
+                    height: 28vw;
+                }
+            }
+        }
+    }
+
+    @include point_screen(1080) {
+        &__about {
+            .about-item {
+                &__desc{
+                    width: 60%;
+                    padding-right: 20px;
+                }
+
+                &__img{
+                    width: 40%;
+                }
+
+                &__behoof {
+                    padding-left: 90px;
+                }
+            }
+        }
+    }
+
+    @include point_screen(980) {
+        &__about {
+            .about-item {
+                margin-top: 70px;
+                &__desc{
+                    padding-left: 50px;
+                }
+
+                &__img{
+                    img {
+                        bottom: 30px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include point_screen(880) {
+        &__about {
+            .about-item {
+                &__img{
+                    img {
+                        position: relative;
+                        width: 100%;
+                        bottom: unset;
+                    }
+                }
+
+                &__behoof {
+                    padding-left: 50px;
+                    line-height: 18px;
+                }
+            }
+        }
+    }
+
+    @include point_screen(790) {
+        &__about {
+            .about-item {
+                &__youtube {
+                    margin-left: 40px;
+                    width: calc(50% - 40px);
+                }
+            }
+        }
+    }
+
+    @include point_screen(700) {
+        &__about {
+            .about-item {
+                &__youtube {
+                    height: 49vw;
+                    width: 100%;
+
+                    margin: 0 40px;
+                }
+                &__behoof {
+                    width: 100%;
+
+                    margin-top: 40px;
+                    padding-left: 60px;
+                    padding-right: 40px;
+                }
+
+                &:nth-last-of-type(1){
+                    flex-wrap: wrap;
+                }
+            }
+        }
+    }
+
+    @include point_screen(680) {
+        &__about {
+            .about-item {
+                &__desc{
+                    width: 70%;
+                    padding-left: 40px;
+                }
+            }
+        }
+    }
+
+    @include point_screen(648) {
+        &__selects {
+            justify-content: space-around;
+            margin-top: 80px;
+        }
+    }
+
+    @include point_screen(550) {
+        &__about {
+            .about-item {
+                &__desc{
+                    width: 100%;
+                }
+
+                &__img{
+                    height: max-content;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+
+                    opacity: .7;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+
+    @include point_screen(460) {
+        &__about {
+            .about-item {
+                &__img{
+                    top: 30px;
+                }
+            }
+        }
+    }
+
+    @include point_screen(420) {
+        &__selects {
+            .select-item {
+                width: calc((100%)/3);
+            }
+        }
+
+        &__about {
+            .about-item {
+                &__img{
+                    top: 50px;
+                }
+            }
+        }
+    }
+
+    @include point_screen(340) {
+        &__about {
+            .about-item {
+                &__img{
+                    top: 70px;
+                }
+            }
+        }
+    }
+}
