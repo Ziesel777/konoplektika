@@ -46,6 +46,17 @@
                 }
             }
         }
+        &__recipes {
+            margin-top: 60px;
+            .recipes-item {
+                .item-img {
+                    height: 19vw;
+                }
+            }
+        }
+        &__reviews {
+            margin-top: 60px;
+        }
     }
 
     @include point_screen(880) {
@@ -67,6 +78,19 @@
         }
     }
 
+    @include point_screen(839) {
+        &__reviews {
+            .reviews-head {
+                display: block;
+                text-align: end;
+            }
+            
+            .product-card__btn {
+                margin-top: 20px;
+            }
+        }
+    }
+
     @include point_screen(790) {
         &__about {
             .about-item {
@@ -75,6 +99,40 @@
                     width: calc(50% - 40px);
                 }
             }
+        }
+        &__recipes {
+            .recipes__wrapper{
+                flex-wrap: wrap;
+            }
+
+            .recipes-item{
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 60px;
+                padding: 0 100px;
+                .item-img {
+                    height: 35vw;
+                }
+                &:nth-last-of-type(1){
+                    margin-bottom: 0;
+                }
+            }
+
+            .info-block{
+                padding-left: 0;
+                width: 80%;
+            }
+
+            .item-prop {
+                width: 100%;
+                span {
+                    margin-right: 15px;
+                }
+            }
+        }
+        &__reviews {
+            margin-right: 40px;
+            margin-left: 40px;
         }
     }
 
@@ -99,6 +157,11 @@
                     flex-wrap: wrap;
                 }
             }
+        }
+
+        &__reviews {
+            margin-right: 0;
+            margin-left: 0;
         }
     }
 
@@ -138,6 +201,29 @@
                 }
             }
         }
+        &__recipes {
+            .recipes-item{
+                padding: 0 30px;
+                .item-img {
+                    height: 45vw;
+                }
+            }
+        }
+        &__reviews {
+            padding: 40px;
+            .reviews-head__title {
+                margin-right: 0;
+            }
+
+            .star-rating,
+            .num-rews {
+                margin-left: 20px;
+            }
+
+            .item__text {
+                padding-left: 0;
+            }
+        }
     }
 
     @include point_screen(460) {
@@ -146,6 +232,23 @@
                 &__img{
                     top: 30px;
                 }
+            }
+        }
+        &__reviews {
+            h3 {
+                display: block;
+                margin-bottom: 10px;
+            }
+            .reviews-head__title {
+                display:block;
+                text-align: left;
+            }
+            .star-rating {
+                margin-left: 0;
+                display: inline-block;
+            }
+            .num-rews {
+                display: inline-block;
             }
         }
     }
@@ -162,6 +265,37 @@
                 &__img{
                     top: 50px;
                 }
+            }
+        }
+
+        &__reviews {
+            .rew-item{
+                display: block;
+                
+                .item__rating {
+                    width: 100%;
+                }
+                .rew-date {
+                    display: inline-block;
+                    margin-top: 0;
+                    margin-left: 15px;
+                }
+                .item__text {
+                    width: 100%;
+                    margin-top: 15px;
+
+                    .user-text {
+                        margin-top: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include point_screen(400) {
+        &__recipes {
+            .info-block{
+                width: 100%;
             }
         }
     }

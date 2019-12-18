@@ -6,15 +6,26 @@ $(() => {
 	let topSlides = $('.js-preview-wrapper').html();
 	$('.js-thumbs-wrapper').html(topSlides);
 
-	// $('.js-card-gallery').height($('.js-card-gallery').width() * 1.1);
-	// $(window).resize(function () { 
-	// 	$('.js-card-gallery').height($('.js-card-gallery').width() * 1.1);
-	// });
+	// Задает высоту галлереи по высоте блока информации о товаре
+	let w_width = $(window).width();
 
-	$('.js-card-gallery').height($('.card-buy-info').height());
-	$(window).resize(function () { 
+	if(w_width>430){
 		$('.js-card-gallery').height($('.card-buy-info').height());
+	} else {
+		$('.js-card-gallery').height($('.card-buy-info').height()*0.5);
+	}
+
+	$(window).resize(function () {
+		w_width=$(window).width();
+
+		if(w_width>430){
+			$('.js-card-gallery').height($('.card-buy-info').height());
+		} else {
+			$('.js-card-gallery').height($('.card-buy-info').height()*0.5);
+		}
 	});
+	// --------------------------------------------------------------
+
 
 	let galleryThumbs = new Swiper('.js-gallery-thumbs', {
 		spaceBetween: 10,
@@ -44,6 +55,7 @@ $(() => {
 		type: 'image',
 		tLoading: 'Loading image #%curr%...',
 		mainClass: 'mfp-img-mobile',
+		disableOn: 700,
 		fixedContentPos: true,
 		gallery: {
 			enabled: true,

@@ -229,8 +229,19 @@ $mt_select: 108px;
         }
 
         .recipes-item {
-            width: (100%/3);
+            width: calc((100% - 26px * 2) / 3);
             margin-right: 26px;
+
+            text-decoration: none;
+            transition: all .3s;
+
+            &:nth-last-of-type(1){
+                margin-right: 0;
+            }
+
+            &:hover {
+                opacity: .8;
+            }
 
             .item-img {
                 width:100%;
@@ -336,6 +347,7 @@ $mt_select: 108px;
 
         .reviews-head {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
         }
@@ -346,6 +358,10 @@ $mt_select: 108px;
         .num-rews {
             display: flex;
             align-items: center;
+        }
+
+        .reviews-head__title {
+            margin-right: 30px;
         }
 
         .star-rating,
@@ -413,7 +429,7 @@ $mt_select: 108px;
 
             .read-more {
                 position: absolute;
-                bottom: -14px;
+                bottom: -24px;
                 right: 0;
 
                 font-size: rem(14px);

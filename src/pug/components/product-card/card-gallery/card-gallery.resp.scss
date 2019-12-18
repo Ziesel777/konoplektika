@@ -28,6 +28,21 @@ $height_thumbs:13%;
             height: $height_thumbs;
         }
     }
+
+    @include point_screen(480) {
+        .gallery-bottom {
+            height: 18vw;
+        }
+    }
+
+    @include point_screen(310) {
+        .gallery-top {
+            height: 100%;
+        }
+        .gallery-bottom {
+            display: none;
+        }
+    }
 }
 
 @include point_screen(800){

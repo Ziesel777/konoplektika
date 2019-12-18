@@ -38,7 +38,7 @@
 
                     border-bottom: 1px solid rgba(112, 112, 112, 0.16);
                 }
-                
+
                 h2 {
                     font-family: "Bloc";
                     font-size: 23px;
@@ -118,3 +118,5 @@
         }
     }
 }
+
+@import './card-modal.resp.scss';
