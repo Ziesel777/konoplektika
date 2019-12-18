@@ -310,6 +310,28 @@
         }
     }
 
+    @include point_screen(310) {
+        &__about {
+            .about-item {
+                &__desc{
+                    h3 {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    
+    @include point_screen(260) {
+        &__about {
+            .about-item {
+                &__img{
+                    top: 100px;
+                }
+            }
+        }
+    }
+
     @include point_screen(250){
         &__about {
             .about-item {
