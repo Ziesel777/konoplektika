@@ -309,4 +309,40 @@
             }
         }
     }
+
+    @include point_screen(250){
+        &__about {
+            .about-item {
+                &__youtube {
+                    .video-title {
+                        p {
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include point_screen(220){
+        &__about {
+            .about-item {
+                &__youtube {
+                    .video-title {
+                        p {
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__recipes{
+            .item-prop{
+                span{
+                    margin-right: 0;
+                }
+            }
+        }
+    }
 }
