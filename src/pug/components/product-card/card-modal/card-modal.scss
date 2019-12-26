@@ -60,6 +60,10 @@
 
                 padding-right: 45px;
 
+                font-size: rem(13px);
+                color: $neutral-regular;
+                line-height: 23px;
+
                 overflow-y: scroll;
                 &::-webkit-scrollbar-button {
                     // background-image: url('');
@@ -96,19 +100,24 @@
 
 
             p {
-                font-size: 13px;
+                font-size: rem(13px);
                 color: $neutral-regular;
                 line-height: 23px;
             }
 
             h5,
-            .h5 {
-                font-size: 0.8125rem;
+            .h5,
+            b {
+                display: block;
+                font-size: rem(13px);
                 color: $success-color;
                 font-weight: 700;
 
                 padding-top: 15px;
                 padding-bottom: 11px;
+            }
+            b{
+                padding-bottom: 0;
             }
 
             br {
