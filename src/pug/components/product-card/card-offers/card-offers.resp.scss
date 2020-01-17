@@ -101,6 +101,10 @@
             left: calc(50% - 269px/2);
         }
 
+        &::after {
+            right: 0;
+        }
+
         &__price {
             .price-sale {
                 margin-top: 40px;

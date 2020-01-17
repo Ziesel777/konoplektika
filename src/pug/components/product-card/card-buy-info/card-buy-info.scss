@@ -8,10 +8,15 @@
     }
 
     .star-rating {
-        margin-left: 9px;
+        display: inline-block;
+        margin-left: auto;
     }
 
     .block-desc{
+        font-size: rem(13px);
+        color: $neutral-regular;
+        font-family: $mainFontFamily;
+        
         &__title-card{
             margin: 0;
             margin-bottom: 28px;
@@ -38,6 +43,21 @@
             font-size: rem(13px);
             color: $neutral-regular;
             font-family: $mainFontFamily;
+        }
+
+        h5,
+        .h5,
+        b {
+            display: block;
+            font-size: rem(13px);
+            color: $success-color;
+            font-weight: 700;
+
+            padding-top: 15px;
+            padding-bottom: 11px;
+        }
+        b{
+            padding-bottom: 0;
         }
     }
 

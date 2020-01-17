@@ -1,0 +1,15 @@
+.card-modal {
+    @include point_screen(580){
+        height: 97vh;
+        width: 97vw;
+        margin: auto;
+    }
+
+    @include point_screen(260){
+        &.modal-consist {
+            .consist-content {
+                padding: 20px;
+            }
+        }
+    }
+}
