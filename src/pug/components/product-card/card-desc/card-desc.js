@@ -23,7 +23,7 @@ $(()=>{
 	// проверка состояния нажатия каждого пункта
 	function getCheckSelect(selects){
 		let arrChecks =[];
-		
+
 		for(const sel of selects){
 			let name = $(sel).find('input').attr('id');
 			let check = $(sel).find('input').prop('checked');
