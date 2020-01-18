@@ -34,7 +34,12 @@ body {
 
 h1, h2, h3, h4, h5, h6 { margin: 0; }
 
-a { text-decoration: none; }
+a { 
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
 
 ul, li {
   margin: 0;

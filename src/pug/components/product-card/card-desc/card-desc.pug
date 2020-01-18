@@ -2,13 +2,13 @@
     // Навигация
     .card-desc__selects.js-desc__selects
         .select-item.js-select-item
-            input(type="radio", name="card-desc", id="about-item" checked)
+            input(type="radio", name="card-desc", id="about-item" )
             label.select-item__text(for="about-item")|О товаре
         .select-item.js-select-item
             input(type="radio", name="card-desc", id="recipes-item" )
             label.select-item__text(for="recipes-item")|Рецепты
         .select-item.js-select-item
-            input(type="radio", name="card-desc", id="reviews-item" )
+            input(type="radio", name="card-desc", id="reviews-item" checked)
             label.select-item__text(for="reviews-item")|Отзывы
     // ----end---- Навигация
 
@@ -123,7 +123,7 @@
                 .num-rews
                     img(src="/assets/img/card-desc/user.svg", alt="")
                     span|24
-            .product-card__btn|Написать отзыв
+            a(href="#modal-reviews").product-card__btn.js-modal-reviews|Написать отзыв
 
         -
             let rews = [

@@ -33,3 +33,17 @@
             br
             p
                 |Применяется в кулинарии для заправки супов, соусов, в салаты, винегрет, тушеные овощи, каши и выпечку. Также широко используется в косметологии, медицине.
+
+.card-modal.modal-reviews.mfp-hide(id="modal-reviews")
+    .reviews-content
+        .modal-reviews__head
+            input(type="text", name="userName" placeholder="Ваше имя..." value="" ).reviews-userName
+            .dynamic-star-rating.js-star-rating.js-dynamic-star(
+                data-rating="0",
+                src-starfull="/assets/img/card-desc/star_yellow.svg",
+                src-starempty="/assets/img/card-desc/star_grey.svg")
+        textarea(name="userComment", cols="30", rows="10", placeholder="Напишите отзыв о товаре..." ).modal-reviews__textarea
+        .product-card__btn.js-reviews-submit|Добавить отзыв
+            
+
+

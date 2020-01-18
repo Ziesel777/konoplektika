@@ -344,6 +344,13 @@ $mt_select: 108px;
         h3 {
             font-weight: 700;
         }
+        
+        a { 
+            text-decoration: none;
+            &:hover {
+                text-decoration: none;
+            }
+        }
 
         .reviews-head {
             display: flex;
