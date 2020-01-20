@@ -1,4 +1,6 @@
 .card-modal {
+
+    // Состав
     @include point_screen(580){
         height: 97vh;
         width: 97vw;
@@ -10,6 +12,58 @@
             .consist-content {
                 padding: 20px;
             }
+        }
+    }
+
+    // Отзыв
+    @include point_screen(1280-120){
+        &.modal-reviews {
+            width: 60%;
+        }
+    }
+
+    @include point_screen(1024-120){
+        &.modal-reviews {
+            width: 70%;
+        }
+    }
+
+    @include point_screen(800-120){
+        &.modal-reviews {
+            width: 80%;
+            margin: 25px auto;
+        }
+    }
+
+    @include point_screen(600-120){
+        &.modal-reviews {
+            width: 90%;
+        }
+        &.modal-reviews-success {
+            width: 90%;
+        }
+    }
+
+    @include point_screen(533-120){
+        &.modal-reviews {
+            padding: 25px 25px;
+            .modal-reviews__head {
+                .reviews-userName {
+                    width: 100%;
+                }
+                .dynamic-star-rating {
+                    margin: 10px 0;
+                }
+            }
+            .modal-reviews__textarea {
+                height: 50vh;
+            }
+        }
+    }
+
+    @include point_screen(360-120){
+        &.modal-reviews {
+            width: 100%;
         }
     }
 }

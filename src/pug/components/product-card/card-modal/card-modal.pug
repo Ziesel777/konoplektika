@@ -35,15 +35,24 @@
                 |Применяется в кулинарии для заправки супов, соусов, в салаты, винегрет, тушеные овощи, каши и выпечку. Также широко используется в косметологии, медицине.
 
 .card-modal.modal-reviews.mfp-hide(id="modal-reviews")
-    .reviews-content
+    .reviews-content.js-reviews-content
         .modal-reviews__head
-            input(type="text", name="userName" placeholder="Ваше имя..." value="" ).reviews-userName
+            input.reviews-userName.js-reviews-userName(
+                type="text",
+                name="userName",
+                placeholder="Ваше имя...",
+                value="")
             .dynamic-star-rating.js-star-rating.js-dynamic-star(
                 data-rating="0",
                 src-starfull="/assets/img/card-desc/star_yellow.svg",
                 src-starempty="/assets/img/card-desc/star_grey.svg")
-        textarea(name="userComment", cols="30", rows="10", placeholder="Напишите отзыв о товаре..." ).modal-reviews__textarea
-        .product-card__btn.js-reviews-submit|Добавить отзыв
-            
+        textarea.modal-reviews__textarea.js-reviews-comment(
+            name="userComment",
+            cols="30", rows="10",
+            placeholder="Напишите отзыв о товаре...")
+        button(href="#reviews-success", disabled).product-card__btn.js-reviews-btn|Добавить отзыв
+
+.card-modal.modal-reviews-success.mfp-hide(id="reviews-success")|Отзыв успешно добавлен на сайт!
+
 
 

@@ -129,7 +129,7 @@
   <!-- Навигация-->
   <div class="card-desc__selects js-desc__selects">
     <div class="select-item js-select-item">
-      <input type="radio" name="card-desc" id="about-item" checked>
+      <input type="radio" name="card-desc" id="about-item">
       <label class="select-item__text" for="about-item">О товаре</label>
     </div>
     <div class="select-item js-select-item">
@@ -137,7 +137,7 @@
       <label class="select-item__text" for="recipes-item">Рецепты</label>
     </div>
     <div class="select-item js-select-item">
-      <input type="radio" name="card-desc" id="reviews-item">
+      <input type="radio" name="card-desc" id="reviews-item" checked>
       <label class="select-item__text" for="reviews-item">Отзывы</label>
     </div>
   </div>
@@ -227,8 +227,7 @@
         <!---->
         <div class="star-rating js-star-rating" data-rating="4.5" src-starfull="/assets/img/card-desc/star_yellow.svg" src-starempty="/assets/img/card-desc/star_grey.svg"><span>4.5</span></div>
         <div class="num-rews"><img src="/assets/img/card-desc/user.svg" alt=""><span>24</span></div>
-      </div>
-      <div class="product-card__btn">Написать отзыв</div>
+      </div><a class="product-card__btn js-modal-reviews" href="#modal-reviews">Написать отзыв</a>
     </div>
     <div class="reviews-wrapper">
       <div class="rew-item">
@@ -448,6 +447,17 @@
     </div>
   </div>
 </div>
+<div class="card-modal modal-reviews mfp-hide" id="modal-reviews">
+  <div class="reviews-content js-reviews-content">
+    <div class="modal-reviews__head">
+      <input class="reviews-userName js-reviews-userName" type="text" name="userName" placeholder="Ваше имя..." value="">
+      <div class="dynamic-star-rating js-star-rating js-dynamic-star" data-rating="0" src-starfull="/assets/img/card-desc/star_yellow.svg" src-starempty="/assets/img/card-desc/star_grey.svg"></div>
+    </div>
+    <textarea class="modal-reviews__textarea js-reviews-comment" name="userComment" cols="30" rows="10" placeholder="Напишите отзыв о товаре..."></textarea>
+    <button class="product-card__btn js-reviews-btn" href="#reviews-success" disabled>Добавить отзыв</button>
+  </div>
+</div>
+<div class="card-modal modal-reviews-success mfp-hide" id="reviews-success">Отзыв успешно добавлен на сайт!</div>
     <!-- end модальные окна-->
     <!---->
   </div>
