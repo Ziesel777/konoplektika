@@ -47,32 +47,32 @@ ul, li {
   list-style-type: none;
 }
 
-section, .section {
-  position: relative;
-  padding: 40px 0;
-  @media screen and (max-width: $desktopWidth) {
-    padding: 36px 0;
-  }
-  @media screen and (max-width: $desktopWidth) {
-    padding: 28px 0;
-  }
-  @media screen and (max-width: $desktopWidth) {
-    padding: 20px 0;
-  }
-}
+// section, .section {
+//   position: relative;
+//   padding: 40px 0;
+//   @media screen and (max-width: $desktopWidth) {
+//     padding: 36px 0;
+//   }
+//   @media screen and (max-width: $desktopWidth) {
+//     padding: 28px 0;
+//   }
+//   @media screen and (max-width: $desktopWidth) {
+//     padding: 20px 0;
+//   }
+// }
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  min-height: 100vh;
-}
+// .wrapper {
+//   display: flex;
+//   flex-direction: column;
+//   margin: 0 auto;
+//   min-height: 100vh;
+// }
 
-.content-wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
+// .content-wrapper {
+//   display: flex;
+//   flex-direction: column;
+//   min-height: 100vh;
+// }
 
 .container {
   width: 100%;
