@@ -1,727 +1,467 @@
 <!DOCTYPE html>
 <html lang="ru">
-
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<title>Продуктовая карточка</title>
-	<link href="/assets/css/vendors.css" rel="stylesheet">
-	<link href="/assets/css/app.css" rel="stylesheet">
-</head>
-
-<body>
-	<div class="container">
-		<div class="product-card js-product-card">
-			<!-- галерея-слайдер-->
-			<div class="card-gallery col-sm-6 js-card-gallery">
-				<div class="card-gallery__icons"><img src="/assets/img/card-gallery/ico_eco.svg" alt=""><img
-						src="/assets/img/card-gallery/ico_bio.svg" alt=""></div>
-				<div class="swiper-container gallery-top js-gallery-top">
-					<div class="swiper-wrapper gallery-preview-wrapper js-preview-wrapper">
-						<div class="swiper-slide gallery__slide js-gallery__slide"
-							style="background-image:url(/assets/img/card-gallery/oil-1.png)"
-							href="/assets/img/card-gallery/oil-1.png" title="Конопляное масло Extra virgin"></div>
-						<div class="swiper-slide gallery__slide js-gallery__slide"
-							style="background-image:url(/assets/img/card-gallery/oil-2.jpg)"
-							href="/assets/img/card-gallery/oil-2.jpg" title="Конопляное масло Extra virgin"></div>
-						<div class="swiper-slide gallery__slide js-gallery__slide"
-							style="background-image:url(/assets/img/card-gallery/Photo-intetnet-5.jpg)"
-							href="/assets/img/card-gallery/Photo-intetnet-5.jpg" title="Конопляное мыло «HempShape»">
-						</div>
-						<div class="swiper-slide gallery__slide js-gallery__slide"
-							style="background-image:url(/assets/img/card-gallery/Photo-intetnet-7.jpg)"
-							href="/assets/img/card-gallery/Photo-intetnet-7.jpg"
-							title="подарочный набор ручной работы &quot;Конопель&quot;"></div>
-						<div class="swiper-slide gallery__slide js-gallery__slide"
-							style="background-image:url(/assets/img/card-gallery/Photo-intetnet-9.jpg)"
-							href="/assets/img/card-gallery/Photo-intetnet-9.jpg" title="кувшин с конопляным маслом">
-						</div>
-						<div class="swiper-slide gallery__slide js-gallery__slide"
-							style="background-image:url(/assets/img/card-gallery/Photo-intetnet-17.jpg)"
-							href="/assets/img/card-gallery/Photo-intetnet-17.jpg"
-							title="подарочный набор ручной работы &quot;Конопель&quot;"></div>
-					</div>
-				</div>
-				<div class="gallery-bottom">
-					<div class="btn-thumbs-prev js-btn-thumbs-prev"><img src="/assets/img/card-gallery/left_arrow.svg"
-							alt=""></div>
-					<div class="swiper-container gallery-thumbs js-gallery-thumbs">
-						<div class="swiper-wrapper gallery-thumbs-wrapper js-thumbs-wrapper">
-							<!-- Тут js-ом вставляются слайды из топа-->
-						</div>
-					</div>
-					<div class="btn-thumbs-next js-btn-thumbs-next"><img src="/assets/img/card-gallery/right_arrow.svg"
-							alt=""></div>
-				</div>
-			</div>
-			<!-- end - галерея-слайдер-->
-			<!---->
-			<!-- меню товара-->
-			<form class="card-buy-info col-sm-6">
-				<div class="block-desc">
-					<h2 class="block-desc__title-card">Масло конопляное Extra Virgin
-						<!--
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Продуктовая карточка</title>
+  <link href="/assets/css/vendors.css" rel="stylesheet"><link href="/assets/css/app.css" rel="stylesheet"></head>
+  <body>
+<div class="container">
+  <div class="product-card js-product-card">
+    <!-- галерея-слайдер-->
+<div class="card-gallery col-sm-6 js-card-gallery">
+  <div class="card-gallery__icons"><img src="/assets/img/card-gallery/ico_eco.svg" alt=""><img src="/assets/img/card-gallery/ico_bio.svg" alt=""></div>
+  <div class="swiper-container gallery-top js-gallery-top">
+    <div class="swiper-wrapper gallery-preview-wrapper js-preview-wrapper">
+      <div class="swiper-slide gallery__slide js-gallery__slide" style="background-image:url(/assets/img/card-gallery/oil-1.png)" href="/assets/img/card-gallery/oil-1.png" title="Конопляное масло Extra virgin"></div>
+      <div class="swiper-slide gallery__slide js-gallery__slide" style="background-image:url(/assets/img/card-gallery/oil-2.jpg)" href="/assets/img/card-gallery/oil-2.jpg" title="Конопляное масло Extra virgin"></div>
+      <div class="swiper-slide gallery__slide js-gallery__slide" style="background-image:url(/assets/img/card-gallery/Photo-intetnet-5.jpg)" href="/assets/img/card-gallery/Photo-intetnet-5.jpg" title="Конопляное мыло «HempShape»"></div>
+      <div class="swiper-slide gallery__slide js-gallery__slide" style="background-image:url(/assets/img/card-gallery/Photo-intetnet-7.jpg)" href="/assets/img/card-gallery/Photo-intetnet-7.jpg" title="подарочный набор ручной работы &quot;Конопель&quot;"></div>
+      <div class="swiper-slide gallery__slide js-gallery__slide" style="background-image:url(/assets/img/card-gallery/Photo-intetnet-9.jpg)" href="/assets/img/card-gallery/Photo-intetnet-9.jpg" title="кувшин с конопляным маслом"></div>
+      <div class="swiper-slide gallery__slide js-gallery__slide" style="background-image:url(/assets/img/card-gallery/Photo-intetnet-17.jpg)" href="/assets/img/card-gallery/Photo-intetnet-17.jpg" title="подарочный набор ручной работы &quot;Конопель&quot;"></div>
+    </div>
+  </div>
+  <div class="gallery-bottom">
+    <div class="btn-thumbs-prev js-btn-thumbs-prev"><img src="/assets/img/card-gallery/left_arrow.svg" alt=""></div>
+    <div class="swiper-container gallery-thumbs js-gallery-thumbs">
+      <div class="swiper-wrapper gallery-thumbs-wrapper js-thumbs-wrapper">
+        <!-- Тут js-ом вставляются слайды из топа-->
+      </div>
+    </div>
+    <div class="btn-thumbs-next js-btn-thumbs-next"><img src="/assets/img/card-gallery/right_arrow.svg" alt=""></div>
+  </div>
+</div>
+    <!-- end - галерея-слайдер-->
+    <!---->
+    <!-- меню товара-->
+<form class="card-buy-info col-sm-6">
+  <div class="block-desc">
+    <h2 class="block-desc__title-card">Масло конопляное Extra Virgin
+      <!--
       звезды отрисовываются на JS, поэтому ==>
       в атрибутах .star-rating задается с бэка:
       - rating - число не больше пяти, дробное можно
       - src-starfull - путь к картинке звезды с фоном
       - src-starempty - путь к картинке пустой звезды
       -->
-						<!----><span class="star-rating js-star-rating" data-rating="4.5"
-							src-starfull="/assets/img/card-buy-info/star_yellow.svg"
-							src-starempty="/assets/img/card-buy-info/star_empty.svg"></span>
-					</h2>
-					<h5 class="block-desc__title">Состав</h5>
-					<p>100% Масло конопляное нерафинированное.</p>
-					<h5 class="block-desc__title">Пищевая ценность на 100 гр. продукта</h5>
-					<p>Линоленовая кислота (Омега-3) - 16,73 гр.</p>
-					<p>Линоленовая кислота (Омега-6) - 50,93 гр.</p>
-					<p>Олеиновая кислота (Омега-9) - 9,42 гр.</p>
-					<h5 class="block-desc__title">Энергетическая ценность на 100 гр. продукта</h5>
-					<p>900 ккал/3768 кДж.</p><a class="js-modal-consist block-desc__link"
-						href="#modal-consist">Подробнее &rarr;</a>
-				</div>
-				<div class="block-prop">
-					<div class="block-prop__size">
-						<div class="div">
-							<input class="js-prop__size" type="radio" name="prop-size" id="prop1" data-price="200">
-							<label class="product-card__btn" for="prop1">100 мл.</label>
-						</div>
-						<div class="div">
-							<input class="js-prop__size" type="radio" name="prop-size" id="prop2" data-price="340"
-								checked>
-							<label class="product-card__btn" for="prop2">250 мл.</label>
-						</div>
-						<div class="div">
-							<input class="js-prop__size" type="radio" name="prop-size" id="prop3" data-price="1156">
-							<label class="product-card__btn" for="prop3">250 мл. x 4</label>
-						</div>
-						<div class="div">
-							<input class="js-prop__size" type="radio" name="prop-size" id="prop4" data-price="2999">
-							<label class="product-card__btn" for="prop4">3 л.</label>
-						</div>
-					</div>
-					<div class="block-prop__num">
-						<div class="btn-num js-btn-num" data-type="-"><img src="/assets/img/card-buy-info/minus.svg"
-								alt=""></div>
-						<input class="num-value js-num-value" type="text" name="num" value="1" disabled>
-						<div class="btn-num js-btn-num" data-type="+"><img src="/assets/img/card-buy-info/plus.svg"
-								alt=""></div>
-					</div>
-				</div>
-				<div class="block-price js-block-price">Итого:<span>340 руб.</span></div>
-				<div class="block-submit js-block-submit">
-					<button class="product-card__btn" type="submit">В корзину</button>
-					<div class="payment" style="background-image:url(/assets/img/card-buy-info/apple_pay.png)"></div>
-					<div class="payment" style="background-image:url(/assets/img/card-buy-info/google_pay.png)"></div>
-					<div class="payment" style="background-image:url(/assets/img/card-buy-info/mastercard.png)"></div>
-				</div>
-			</form>
-			<!-- end - галерея-слайдер-->
-			<!---->
-			<!-- торговые предложения-->
-			<div class="card-offers col-sm-12">
-				<div class="card-offers__text">с этим товаром часто покупают:</div>
-				<div class="card-offers__item">
-					<div class="item-img" style="background-image: url(/assets/img/card-offers/oil.png)"></div>
-					<div class="item-title">Масло конопляное Extra Virgin</div>
-					<div class="item-price">320 руб.</div>
-				</div>
-				<div class="card-offers__item">
-					<div class="item-img" style="background-image: url(/assets/img/card-offers/hemp-shape-2.png)"></div>
-					<div class="item-title">Конопляное мыло «HempShape»</div>
-					<div class="item-price">190 руб.</div>
-				</div>
-				<div class="card-offers__item">
-					<div class="item-img" style="background-image: url(/assets/img/card-offers/hemp-fiber.png)"></div>
-					<div class="item-title">Клетчатка из семян конопли</div>
-					<div class="item-price">80 руб.</div>
-				</div>
-				<div class="card-offers__item">
-					<div class="item-img" style="background-image: url(/assets/img/card-offers/bath-bomb.png)"></div>
-					<div class="item-title">Бомбочка для ванны «HempShape»</div>
-					<div class="item-price">390 руб.</div>
-				</div>
-				<div class="card-offers__price">
-					<div class="price-sale">
-						<div class="price-new">900 руб.</div>
-						<div class="price-old">980 руб.</div>
-					</div>
-					<button class="product-card__btn"><img src="/assets/img/card-offers/cart.svg" alt="">Добавить в
-						корзину</button>
-				</div>
-			</div>
-			<!-- end - торговые предложения-->
-			<!---->
-			<!-- описание продукта-->
-			<div class="card-desc col-sm-12">
-				<!-- Навигация-->
-				<div class="card-desc__selects js-desc__selects">
-					<div class="select-item js-select-item">
-						<input type="radio" name="card-desc" id="about-item">
-						<label class="select-item__text" for="about-item">О товаре</label>
-					</div>
-					<div class="select-item js-select-item">
-						<input type="radio" name="card-desc" id="recipes-item">
-						<label class="select-item__text" for="recipes-item">Рецепты</label>
-					</div>
-					<div class="select-item js-select-item">
-						<input type="radio" name="card-desc" id="reviews-item" checked>
-						<label class="select-item__text" for="reviews-item">Отзывы</label>
-					</div>
-				</div>
-				<!-- ----end---- Навигация-->
-				<!-- О товаре-->
-				<div class="card-desc__about js-desc__item" data-id="about-item">
-					<div class="about-item">
-						<div class="about-item__desc">
-							<h3>Произведено из отборных семян конопли</h3>
-							<p>
-								Методом холодного отжима, обладает теплым жёлтым цветом,изысканным ореховым вкусом и
-								нежным приятным ароматом.
-								Благодаря методу холодного отжима конопляное масло – один
-								из ценнейших продуктов по балансу витаминов и аминокислот.
-								Является дополнительным источником жиров для людей, которые
-								не употребляют в пищу мясо.
-							</p>
-							<p class="desc-down"><span><img src="/assets/img/card-desc/license.svg" alt="">Лицензия
-									товара</span>|<span></span>1,2 Мб<a href="#" target="_blank"><span><img
-											src="/assets/img/card-desc/arrow_down.svg" alt="">Скачать</span></a></p>
-						</div>
-						<div class="about-item__img"><img src="/assets/img/card-desc/seeds.png" alt=""></div>
-					</div>
-					<div class="about-item">
-						<div class="about-item__youtube"
-							style="background-image: url(http://i.ytimg.com/vi/akkvAehH3Vg/hqdefault.jpg)">
-							<div class="video-title"><a class="video-play js-video-play"
-									href="http://www.youtube.com/watch?v=akkvAehH3Vg"
-									style="background-image: url(/assets/img/card-desc/video-play.svg)"></a>
-								<p>с пользой о здоровье</p>
-							</div>
-						</div>
-						<div class="about-item__behoof">
-							<ul style="list-style-image: url(/assets/img/card-desc/marker-circle.svg);">
-								<li>Улучшает обмен веществ и способствует усилению иммунных свойств организма.</li>
-								<li>Фитостеролы и фолиевая кислота - обеспечивают в норме период вынашивания ребенка у
-									беременных.</li>
-								<li>Антиоксиданты - предотвращают преждевременное увядание кожи и разглаживают морщины.
-								</li>
-								<li>Хлорофилл - способствует борьбе организма с онкологическими заболеваниями.</li>
-								<li>Аминокислоты - восстанавливают работу печени и укрепляют центральную нервную
-									систему.</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<!-- ----end---- О товаре-->
-				<!-- Рецепты-->
-				<div class="card-desc__recipes js-desc__item" data-id="recipes-item">
-					<div class="recipes__wrapper"><a class="recipes-item" href="#">
-							<div class="item-img"
-								style="background-image: url(/assets/img/card-desc/recipes/potatoes.jpg)"></div>
-							<div class="info-block">
-								<div class="item-prop">
-									<div class="div"><img src="/assets/img/card-desc/recipes/cutlery.svg" alt="">6
-										порций</div><span>|</span>
-									<div class="div"><img src="/assets/img/card-desc/recipes/time.svg" alt="">40 минут
-									</div>
-								</div>
-								<div class="item-title">КЛЁЦКИ КАРТОФЕЛЬНЫЕ</div>
-								<div class="item-text"><span>Ингредиенты:</span> Картофельное пюре, полстакана ржаной
-									муки или пшеничной муки, конопляное масло, яйца, луковица, соль,тмин.</div>
-							</div>
-						</a><a class="recipes-item" href="#">
-							<div class="item-img"
-								style="background-image: url(/assets/img/card-desc/recipes/avocado-salad.jpg)"></div>
-							<div class="info-block">
-								<div class="item-prop">
-									<div class="div"><img src="/assets/img/card-desc/recipes/cutlery.svg" alt="">6
-										порций</div><span>|</span>
-									<div class="div"><img src="/assets/img/card-desc/recipes/time.svg" alt="">20 минут
-									</div>
-								</div>
-								<div class="item-title">САЛАТ С АВОКАДО И МАКАРОНАМИ</div>
-								<div class="item-text"><span>Ингредиенты:</span> макароны, чеснок, перец чили, красный
-									лук, горчица, масло конопляное, масло льняное, уксус, лайм, авокадо, базилик,
-									морская соль, черный перец.</div>
-							</div>
-						</a><a class="recipes-item" href="#">
-							<div class="item-img"
-								style="background-image: url(/assets/img/card-desc/recipes/cranberry-smoothie.jpg)">
-							</div>
-							<div class="info-block">
-								<div class="item-prop">
-									<div class="div"><img src="/assets/img/card-desc/recipes/cutlery.svg" alt="">6
-										порций</div><span>|</span>
-									<div class="div"><img src="/assets/img/card-desc/recipes/time.svg" alt="">15 минут
-									</div>
-								</div>
-								<div class="item-title">СМУЗИ С КЛЮКВОЙ И ЧЕРНИКОЙ</div>
-								<div class="item-text"><span>Ингредиенты:</span> черника или ежевика, клюквенный сок,
-									конопляное масло.</div>
-							</div>
-						</a>
-					</div>
-					<div class="btn__wrapper">
-						<div class="product-card__btn">Все рецепты</div>
-					</div>
-				</div>
-				<!-- ----end---- Рецепты-->
-				<!-- Отзывы-->
-				<div class="card-desc__reviews js-desc__item" data-id="reviews-item">
-					<div class="reviews-head">
-						<div class="reviews-head__title">
-							<h3>Отзывы и рекомендации</h3>
-							<!--
+      <!----><span class="star-rating js-star-rating" data-rating="4.5" src-starfull="/assets/img/card-buy-info/star_yellow.svg" src-starempty="/assets/img/card-buy-info/star_empty.svg"></span>
+    </h2>
+    <h5 class="block-desc__title">Состав</h5>
+    <p>100% Масло конопляное нерафинированное.</p>
+    <h5 class="block-desc__title">Пищевая ценность на 100 гр. продукта</h5>
+    <p>Линоленовая кислота (Омега-3) - 16,73 гр.</p>
+    <p>Линоленовая кислота (Омега-6) - 50,93 гр.</p>
+    <p>Олеиновая кислота (Омега-9) - 9,42 гр.</p>
+    <h5 class="block-desc__title">Энергетическая ценность на 100 гр. продукта</h5>
+    <p>900 ккал/3768 кДж.</p><a class="js-modal-consist block-desc__link" href="#modal-consist">Подробнее &rarr;</a>
+  </div>
+  <div class="block-prop">
+    <div class="block-prop__size">
+      <div class="div">
+        <input class="js-prop__size" type="radio" name="prop-size" id="prop1" data-price="200">
+        <label class="product-card__btn" for="prop1">100 мл.</label>
+      </div>
+      <div class="div">
+        <input class="js-prop__size" type="radio" name="prop-size" id="prop2" data-price="340" checked>
+        <label class="product-card__btn" for="prop2">250 мл.</label>
+      </div>
+      <div class="div">
+        <input class="js-prop__size" type="radio" name="prop-size" id="prop3" data-price="1156">
+        <label class="product-card__btn" for="prop3">250 мл. x 4</label>
+      </div>
+      <div class="div">
+        <input class="js-prop__size" type="radio" name="prop-size" id="prop4" data-price="2999">
+        <label class="product-card__btn" for="prop4">3 л.</label>
+      </div>
+    </div>
+    <div class="block-prop__num">
+      <div class="btn-num js-btn-num" data-type="-"><img src="/assets/img/card-buy-info/minus.svg" alt=""></div>
+      <input class="num-value js-num-value" type="text" name="num" value="1" disabled>
+      <div class="btn-num js-btn-num" data-type="+"><img src="/assets/img/card-buy-info/plus.svg" alt=""></div>
+    </div>
+  </div>
+  <div class="block-price js-block-price">Итого:<span>340 руб.</span></div>
+  <div class="block-submit js-block-submit">
+    <button class="product-card__btn" type="submit">В корзину</button>
+    <div class="payment" style="background-image:url(/assets/img/card-buy-info/apple_pay.png)"></div>
+    <div class="payment" style="background-image:url(/assets/img/card-buy-info/google_pay.png)"></div>
+    <div class="payment" style="background-image:url(/assets/img/card-buy-info/mastercard.png)"></div>
+  </div>
+</form>
+    <!-- end - галерея-слайдер-->
+    <!---->
+    <!-- торговые предложения-->
+<div class="card-offers col-sm-12">
+  <div class="card-offers__text">с этим товаром часто покупают:</div>
+  <div class="card-offers__item">
+    <div class="item-img" style="background-image: url(/assets/img/card-offers/oil.png)"></div>
+    <div class="item-title">Масло конопляное Extra Virgin</div>
+    <div class="item-price">320 руб.</div>
+  </div>
+  <div class="card-offers__item">
+    <div class="item-img" style="background-image: url(/assets/img/card-offers/hemp-shape-2.png)"></div>
+    <div class="item-title">Конопляное мыло «HempShape»</div>
+    <div class="item-price">190 руб.</div>
+  </div>
+  <div class="card-offers__item">
+    <div class="item-img" style="background-image: url(/assets/img/card-offers/hemp-fiber.png)"></div>
+    <div class="item-title">Клетчатка из семян конопли</div>
+    <div class="item-price">80 руб.</div>
+  </div>
+  <div class="card-offers__item">
+    <div class="item-img" style="background-image: url(/assets/img/card-offers/bath-bomb.png)"></div>
+    <div class="item-title">Бомбочка для ванны «HempShape»</div>
+    <div class="item-price">390 руб.</div>
+  </div>
+  <div class="card-offers__price">
+    <div class="price-sale">
+      <div class="price-new">900 руб.</div>
+      <div class="price-old">980 руб.</div>
+    </div>
+    <button class="product-card__btn"><img src="/assets/img/card-offers/cart.svg" alt="">Добавить в корзину</button>
+  </div>
+</div>
+    <!-- end - торговые предложения-->
+    <!---->
+    <!-- описание продукта-->
+<div class="card-desc col-sm-12">
+  <!-- Навигация-->
+  <div class="card-desc__selects js-desc__selects">
+    <div class="select-item js-select-item">
+      <input type="radio" name="card-desc" id="about-item">
+      <label class="select-item__text" for="about-item">О товаре</label>
+    </div>
+    <div class="select-item js-select-item">
+      <input type="radio" name="card-desc" id="recipes-item">
+      <label class="select-item__text" for="recipes-item">Рецепты</label>
+    </div>
+    <div class="select-item js-select-item">
+      <input type="radio" name="card-desc" id="reviews-item" checked>
+      <label class="select-item__text" for="reviews-item">Отзывы</label>
+    </div>
+  </div>
+  <!-- ----end---- Навигация-->
+  <!-- О товаре-->
+  <div class="card-desc__about js-desc__item" data-id="about-item">
+    <div class="about-item">
+      <div class="about-item__desc">
+        <h3>Произведено из отборных семян конопли</h3>
+        <p>
+           Методом холодного отжима, обладает теплым жёлтым цветом,изысканным ореховым вкусом и нежным приятным ароматом.
+          Благодаря методу холодного отжима конопляное масло – один
+          из ценнейших продуктов по балансу витаминов и аминокислот.
+          Является дополнительным источником жиров для людей, которые
+          не употребляют в пищу мясо.
+        </p>
+        <p class="desc-down"><span><img src="/assets/img/card-desc/license.svg" alt="">Лицензия товара</span>|<span></span>1,2 Мб<a href="#" target="_blank"><span><img src="/assets/img/card-desc/arrow_down.svg" alt="">Скачать</span></a></p>
+      </div>
+      <div class="about-item__img"><img src="/assets/img/card-desc/seeds.png" alt=""></div>
+    </div>
+    <div class="about-item">
+      <div class="about-item__youtube" style="background-image: url(http://i.ytimg.com/vi/akkvAehH3Vg/hqdefault.jpg)">
+        <div class="video-title"><a class="video-play js-video-play" href="http://www.youtube.com/watch?v=akkvAehH3Vg" style="background-image: url(/assets/img/card-desc/video-play.svg)"></a>
+          <p>с пользой о здоровье</p>
+        </div>
+      </div>
+      <div class="about-item__behoof">
+        <ul style="list-style-image: url(/assets/img/card-desc/marker-circle.svg);">
+          <li>Улучшает обмен веществ и способствует усилению иммунных свойств организма.</li>
+          <li>Фитостеролы и фолиевая кислота - обеспечивают в норме период вынашивания ребенка у беременных.</li>
+          <li>Антиоксиданты - предотвращают преждевременное увядание кожи и разглаживают морщины.</li>
+          <li>Хлорофилл - способствует борьбе организма с онкологическими заболеваниями.</li>
+          <li>Аминокислоты - восстанавливают работу печени и укрепляют центральную нервную систему.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- ----end---- О товаре-->
+  <!-- Рецепты-->
+  <div class="card-desc__recipes js-desc__item" data-id="recipes-item">
+    <div class="recipes__wrapper"><a class="recipes-item" href="#">
+        <div class="item-img" style="background-image: url(/assets/img/card-desc/recipes/potatoes.jpg)"></div>
+        <div class="info-block">
+          <div class="item-prop">
+            <div class="div"><img src="/assets/img/card-desc/recipes/cutlery.svg" alt="">6 порций</div><span>|</span>
+            <div class="div"><img src="/assets/img/card-desc/recipes/time.svg" alt="">40 минут</div>
+          </div>
+          <div class="item-title">КЛЁЦКИ КАРТОФЕЛЬНЫЕ</div>
+          <div class="item-text"><span>Ингредиенты:</span> Картофельное пюре, полстакана ржаной муки или пшеничной муки, конопляное масло, яйца, луковица, соль,тмин.</div>
+        </div></a><a class="recipes-item" href="#">
+        <div class="item-img" style="background-image: url(/assets/img/card-desc/recipes/avocado-salad.jpg)"></div>
+        <div class="info-block">
+          <div class="item-prop">
+            <div class="div"><img src="/assets/img/card-desc/recipes/cutlery.svg" alt="">6 порций</div><span>|</span>
+            <div class="div"><img src="/assets/img/card-desc/recipes/time.svg" alt="">20 минут</div>
+          </div>
+          <div class="item-title">САЛАТ С АВОКАДО И МАКАРОНАМИ</div>
+          <div class="item-text"><span>Ингредиенты:</span> макароны, чеснок, перец чили, красный лук, горчица, масло конопляное, масло льняное, уксус, лайм, авокадо, базилик, морская соль, черный перец.</div>
+        </div></a><a class="recipes-item" href="#">
+        <div class="item-img" style="background-image: url(/assets/img/card-desc/recipes/cranberry-smoothie.jpg)"></div>
+        <div class="info-block">
+          <div class="item-prop">
+            <div class="div"><img src="/assets/img/card-desc/recipes/cutlery.svg" alt="">6 порций</div><span>|</span>
+            <div class="div"><img src="/assets/img/card-desc/recipes/time.svg" alt="">15 минут</div>
+          </div>
+          <div class="item-title">СМУЗИ С КЛЮКВОЙ И ЧЕРНИКОЙ</div>
+          <div class="item-text"><span>Ингредиенты:</span> черника или ежевика, клюквенный сок, конопляное масло.</div>
+        </div></a>
+    </div>
+    <div class="btn__wrapper">
+      <div class="product-card__btn">Все рецепты</div>
+    </div>
+  </div>
+  <!-- ----end---- Рецепты-->
+  <!-- Отзывы-->
+  <div class="card-desc__reviews js-desc__item" data-id="reviews-item">
+    <div class="reviews-head">
+      <div class="reviews-head__title">
+        <h3>Отзывы и рекомендации</h3>
+        <!--
         звезды отрисовываются на JS, поэтому ==>
         в атрибутах .star-rating задается с бэка:
         - rating - число не больше пяти, дробное можно
         - src-starfull - путь к картинке звезды с фоном
         - src-starempty - путь к картинке пустой звезды
         -->
-							<!---->
-							<div class="star-rating js-star-rating" data-rating="4.5"
-								src-starfull="/assets/img/card-desc/star_yellow.svg"
-								src-starempty="/assets/img/card-desc/star_grey.svg"><span>4.5</span></div>
-							<div class="num-rews"><img src="/assets/img/card-desc/user.svg" alt=""><span>24</span></div>
-						</div><a class="product-card__btn js-modal-reviews" href="#modal-reviews">Написать отзыв</a>
-					</div>
-					<div class="reviews-wrapper">
-						<div class="rew-item">
-							<div class="item__rating">
-								<!--
+        <!---->
+        <div class="star-rating js-star-rating" data-rating="4.5" src-starfull="/assets/img/card-desc/star_yellow.svg" src-starempty="/assets/img/card-desc/star_grey.svg"><span>4.5</span></div>
+        <div class="num-rews"><img src="/assets/img/card-desc/user.svg" alt=""><span>24</span></div>
+      </div><a class="product-card__btn js-modal-reviews" href="#modal-reviews">Написать отзыв</a>
+    </div>
+    <div class="reviews-wrapper">
+      <div class="rew-item">
+        <div class="item__rating">
+          <!--
           звезды отрисовываются на JS, поэтому ==>
           в атрибутах .star-rating задается с бэка:
           - rating - число не больше пяти, дробное можно
           - src-starfull - путь к картинке звезды с фоном
           - src-starempty - путь к картинке пустой звезды
           -->
-								<!---->
-								<div class="star-rating js-star-rating" data-rating="4"
-									src-starfull="/assets/img/card-desc/star_yellow.svg"
-									src-starempty="/assets/img/card-desc/star_grey.svg"></div>
-								<div class="rew-date">20 Декабря 2019</div>
-							</div>
-							<div class="item__text">
-								<p class="user-name">Роман</p>
-								<p class="user-text">Методом холодного отжима, обладает теплым жёлтым цветом, изысканным
-									ореховым вкусом и нежным приятным ароматом. Благодаря методу холодного отжима
-									конопляное масло – один из ценнейших продуктов по балансу витаминов и аминокислот.
-									Является дополнительным источником жиров для людей, которые не употребляют в пищу
-									мясо.</p>
-							</div><a class="read-more" href="#">Читать полностью</a>
-						</div>
-						<div class="rew-item">
-							<div class="item__rating">
-								<!--
+          <!---->
+          <div class="star-rating js-star-rating" data-rating="4" src-starfull="/assets/img/card-desc/star_yellow.svg" src-starempty="/assets/img/card-desc/star_grey.svg"></div>
+          <div class="rew-date">20 Декабря 2019</div>
+        </div>
+        <div class="item__text">
+          <p class="user-name">Роман</p>
+          <p class="user-text">Методом холодного отжима, обладает теплым жёлтым цветом, изысканным ореховым вкусом и нежным приятным ароматом. Благодаря методу холодного отжима конопляное масло – один из ценнейших продуктов по балансу витаминов и аминокислот. Является дополнительным источником жиров для людей, которые не употребляют в пищу мясо.</p>
+        </div><a class="read-more" href="#">Читать полностью</a>
+      </div>
+      <div class="rew-item">
+        <div class="item__rating">
+          <!--
           звезды отрисовываются на JS, поэтому ==>
           в атрибутах .star-rating задается с бэка:
           - rating - число не больше пяти, дробное можно
           - src-starfull - путь к картинке звезды с фоном
           - src-starempty - путь к картинке пустой звезды
           -->
-								<!---->
-								<div class="star-rating js-star-rating" data-rating="3"
-									src-starfull="/assets/img/card-desc/star_yellow.svg"
-									src-starempty="/assets/img/card-desc/star_grey.svg"></div>
-								<div class="rew-date">1 января 2019</div>
-							</div>
-							<div class="item__text">
-								<p class="user-name">Мария</p>
-								<p class="user-text">Методом холодного отжима, обладает теплым жёлтым цветом, изысканным
-									ореховым вкусом и нежным приятным ароматом. Благодаря методу холодного отжима
-									конопляное масло – один из ценнейших продуктов по балансу витаминов и аминокислот.
-									Является дополнительным источником жиров для людей, которые не употребляют в пищу
-									мясо.</p>
-							</div><a class="read-more" href="#">Читать полностью</a>
-						</div>
-						<div class="rew-item">
-							<div class="item__rating">
-								<!--
+          <!---->
+          <div class="star-rating js-star-rating" data-rating="3" src-starfull="/assets/img/card-desc/star_yellow.svg" src-starempty="/assets/img/card-desc/star_grey.svg"></div>
+          <div class="rew-date">1 января 2019</div>
+        </div>
+        <div class="item__text">
+          <p class="user-name">Мария</p>
+          <p class="user-text">Методом холодного отжима, обладает теплым жёлтым цветом, изысканным ореховым вкусом и нежным приятным ароматом. Благодаря методу холодного отжима конопляное масло – один из ценнейших продуктов по балансу витаминов и аминокислот. Является дополнительным источником жиров для людей, которые не употребляют в пищу мясо.</p>
+        </div><a class="read-more" href="#">Читать полностью</a>
+      </div>
+      <div class="rew-item">
+        <div class="item__rating">
+          <!--
           звезды отрисовываются на JS, поэтому ==>
           в атрибутах .star-rating задается с бэка:
           - rating - число не больше пяти, дробное можно
           - src-starfull - путь к картинке звезды с фоном
           - src-starempty - путь к картинке пустой звезды
           -->
-								<!---->
-								<div class="star-rating js-star-rating" data-rating="5"
-									src-starfull="/assets/img/card-desc/star_yellow.svg"
-									src-starempty="/assets/img/card-desc/star_grey.svg"></div>
-								<div class="rew-date">29 декабря 2018</div>
-							</div>
-							<div class="item__text">
-								<p class="user-name">Станислав</p>
-								<p class="user-text">Круто!Является дополнительным источником жиров для людей, которые
-									не употребляют в пищу мясо.</p>
-							</div><a class="read-more" href="#">Читать полностью</a>
-						</div>
-						<div class="rew-item">
-							<div class="item__rating">
-								<!--
+          <!---->
+          <div class="star-rating js-star-rating" data-rating="5" src-starfull="/assets/img/card-desc/star_yellow.svg" src-starempty="/assets/img/card-desc/star_grey.svg"></div>
+          <div class="rew-date">29 декабря 2018</div>
+        </div>
+        <div class="item__text">
+          <p class="user-name">Станислав</p>
+          <p class="user-text">Круто!Является дополнительным источником жиров для людей, которые не употребляют в пищу мясо.</p>
+        </div><a class="read-more" href="#">Читать полностью</a>
+      </div>
+      <div class="rew-item">
+        <div class="item__rating">
+          <!--
           звезды отрисовываются на JS, поэтому ==>
           в атрибутах .star-rating задается с бэка:
           - rating - число не больше пяти, дробное можно
           - src-starfull - путь к картинке звезды с фоном
           - src-starempty - путь к картинке пустой звезды
           -->
-								<!---->
-								<div class="star-rating js-star-rating" data-rating="2"
-									src-starfull="/assets/img/card-desc/star_yellow.svg"
-									src-starempty="/assets/img/card-desc/star_grey.svg"></div>
-								<div class="rew-date">15 июля 2018</div>
-							</div>
-							<div class="item__text">
-								<p class="user-name">Павел</p>
-								<p class="user-text">Личная непереносимость данного продукта</p>
-							</div><a class="read-more" href="#">Читать полностью</a>
-						</div>
-					</div>
-				</div>
-				<!-- ----end---- Отзывы-->
-			</div>
-			<!-- end описание продукта-->
-			<!---->
-			<!-- дополнительные товары-->
-			<!-- другие наборы-->
-			<div class="card-addition col-sm-12">
-				<div class="card-addition__title">
-					<p class="title-category">наборы</p>
-					<h3 class="title-head">Другие наборы с этим товаром</h3>
-				</div>
-				<div class="card-addition__wrapper">
-					<div class="addition-item">
-						<div class="item-img" style="background-image: url(/assets/img/card-addition/sets-oil-3.jpg)">
-							<div class="item-btn">
-								<!--корзина--><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="25"
-										viewBox="0 0 23 25">
-										<g>
-											<g>
-												<g>
-													<path fill="#3bc915"
-														d="M19.514 14.682H7.01a1.317 1.317 0 0 1-1.315-1.315V6.562l15.134 2.085v4.715c0 .732-.592 1.32-1.315 1.32zm.676 6.464c0 .709-.578 1.282-1.283 1.282a1.288 1.288 0 0 1-1.282-1.282c0-.704.578-1.283 1.282-1.283.705 0 1.283.574 1.283 1.283zm-10.046 0c0 .709-.578 1.282-1.282 1.282a1.288 1.288 0 0 1-1.283-1.282c0-.704.578-1.283 1.283-1.283.704 0 1.282.574 1.282 1.283zM7.01 15.94h12.504a2.58 2.58 0 0 0 2.574-2.574v-5.28-.037c0-.01 0-.019-.005-.028 0-.01-.004-.023-.004-.033 0-.009-.005-.018-.005-.028-.005-.009-.005-.018-.01-.032-.004-.01-.004-.019-.009-.028-.004-.01-.004-.019-.009-.028a.226.226 0 0 1-.014-.033l-.014-.023-.014-.028c-.005-.01-.01-.014-.014-.023-.005-.01-.014-.019-.018-.028-.005-.01-.01-.014-.02-.024-.004-.009-.013-.014-.018-.023-.004-.01-.014-.014-.018-.023-.005-.01-.014-.014-.02-.019-.008-.01-.013-.014-.022-.023-.01-.005-.014-.014-.024-.019-.01-.005-.018-.014-.028-.019-.009-.004-.014-.009-.023-.014a.098.098 0 0 1-.028-.018l-.028-.014-.028-.014-.028-.014c-.01-.005-.019-.005-.028-.01a.087.087 0 0 0-.033-.009c-.009 0-.018-.005-.023-.005-.014-.004-.023-.004-.037-.004-.005 0-.01-.005-.019-.005L5.7 5.294v-2.21c0-.024 0-.047-.005-.066 0-.005 0-.01-.005-.019 0-.014-.004-.028-.004-.042-.005-.014-.005-.023-.01-.037 0-.01-.004-.014-.004-.023l-.014-.042c0-.005-.005-.014-.005-.019a.14.14 0 0 0-.019-.037c-.004-.005-.004-.014-.009-.019-.005-.01-.01-.019-.019-.028-.004-.01-.009-.014-.014-.023-.004-.01-.009-.014-.014-.024-.004-.009-.014-.018-.018-.028l-.014-.014-.028-.027-.014-.014c-.01-.01-.019-.02-.033-.028-.005-.005-.014-.01-.019-.014-.009-.01-.018-.014-.027-.024-.014-.01-.028-.018-.038-.023-.004-.005-.01-.005-.014-.01l-.06-.027L1.875 1.05a.629.629 0 0 0-.825.336.629.629 0 0 0 .336.825l3.05 1.287v13.796c0 1.306.98 2.388 2.243 2.55-.228.383-.364.83-.364 1.307a2.545 2.545 0 0 0 2.542 2.541c1.4 0 2.542-1.142 2.542-2.541 0-.467-.126-.91-.35-1.283h5.662c-.224.378-.35.816-.35 1.283a2.545 2.545 0 0 0 2.542 2.541c1.399 0 2.542-1.142 2.542-2.541 0-1.4-1.143-2.542-2.542-2.542H7.01a1.317 1.317 0 0 1-1.315-1.315v-1.707c.382.224.835.354 1.315.354z" />
-													<path fill="none" stroke="#3bc915" stroke-miterlimit="50"
-														d="M19.514 14.682H7.01a1.317 1.317 0 0 1-1.315-1.315V6.562l15.134 2.085v4.715c0 .732-.592 1.32-1.315 1.32zm.676 6.464c0 .709-.578 1.282-1.283 1.282a1.288 1.288 0 0 1-1.282-1.282c0-.704.578-1.283 1.282-1.283.705 0 1.283.574 1.283 1.283zm-10.046 0c0 .709-.578 1.282-1.282 1.282a1.288 1.288 0 0 1-1.283-1.282c0-.704.578-1.283 1.283-1.283.704 0 1.282.574 1.282 1.283zM7.01 15.94h12.504a2.58 2.58 0 0 0 2.574-2.574v-5.28-.037c0-.01 0-.019-.005-.028 0-.01-.004-.023-.004-.033 0-.009-.005-.018-.005-.028-.005-.009-.005-.018-.01-.032-.004-.01-.004-.019-.009-.028-.004-.01-.004-.019-.009-.028a.226.226 0 0 1-.014-.033l-.014-.023-.014-.028c-.005-.01-.01-.014-.014-.023-.005-.01-.014-.019-.018-.028-.005-.01-.01-.014-.02-.024-.004-.009-.013-.014-.018-.023-.004-.01-.014-.014-.018-.023-.005-.01-.014-.014-.02-.019-.008-.01-.013-.014-.022-.023-.01-.005-.014-.014-.024-.019-.01-.005-.018-.014-.028-.019-.009-.004-.014-.009-.023-.014a.098.098 0 0 1-.028-.018l-.028-.014-.028-.014-.028-.014c-.01-.005-.019-.005-.028-.01a.087.087 0 0 0-.033-.009c-.009 0-.018-.005-.023-.005-.014-.004-.023-.004-.037-.004-.005 0-.01-.005-.019-.005L5.7 5.294v-2.21c0-.024 0-.047-.005-.066 0-.005 0-.01-.005-.019 0-.014-.004-.028-.004-.042-.005-.014-.005-.023-.01-.037 0-.01-.004-.014-.004-.023l-.014-.042c0-.005-.005-.014-.005-.019a.14.14 0 0 0-.019-.037c-.004-.005-.004-.014-.009-.019-.005-.01-.01-.019-.019-.028-.004-.01-.009-.014-.014-.023-.004-.01-.009-.014-.014-.024-.004-.009-.014-.018-.018-.028l-.014-.014-.028-.027-.014-.014c-.01-.01-.019-.02-.033-.028-.005-.005-.014-.01-.019-.014-.009-.01-.018-.014-.027-.024-.014-.01-.028-.018-.038-.023-.004-.005-.01-.005-.014-.01l-.06-.027L1.875 1.05a.629.629 0 0 0-.825.336.629.629 0 0 0 .336.825l3.05 1.287v13.796c0 1.306.98 2.388 2.243 2.55-.228.383-.364.83-.364 1.307a2.545 2.545 0 0 0 2.542 2.541c1.4 0 2.542-1.142 2.542-2.541 0-.467-.126-.91-.35-1.283h5.662c-.224.378-.35.816-.35 1.283a2.545 2.545 0 0 0 2.542 2.541c1.399 0 2.542-1.142 2.542-2.541 0-1.4-1.143-2.542-2.542-2.542H7.01a1.317 1.317 0 0 1-1.315-1.315v-1.707c.382.224.835.354 1.315.354z" />
-												</g>
-											</g>
-										</g>
-									</svg></a><span>|</span>
-								<!--детальная--><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="21"
-										height="21" viewBox="0 0 21 21">
-										<g>
-											<g>
-												<path fill="#484848"
-													d="M8.48 2.212a6.275 6.275 0 0 1 6.268 6.269 6.275 6.275 0 0 1-6.268 6.268A6.275 6.275 0 0 1 2.212 8.48 6.275 6.275 0 0 1 8.48 2.212zm11.49 16.92l-4.999-5.2a8.453 8.453 0 0 0 1.99-5.451C16.96 3.804 13.156 0 8.48 0 3.803 0 0 3.804 0 8.48c0 4.677 3.804 8.481 8.48 8.481a8.39 8.39 0 0 0 4.859-1.535l5.037 5.24c.21.218.494.338.797.338a1.107 1.107 0 0 0 .797-1.873z" />
-											</g>
-										</g>
-									</svg></a>
-							</div>
-						</div>
-						<div class="item-title">Сбалансированное питание HempSmoothie</div>
-						<div class="item-size">Ваниль 250 г.</div>
-						<div class="item-price">320 руб.</div>
-					</div>
-					<div class="addition-item">
-						<div class="item-img" style="background-image: url(/assets/img/card-addition/sets-oil-2.jpg)">
-							<div class="item-btn">
-								<!--корзина--><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="25"
-										viewBox="0 0 23 25">
-										<g>
-											<g>
-												<g>
-													<path fill="#3bc915"
-														d="M19.514 14.682H7.01a1.317 1.317 0 0 1-1.315-1.315V6.562l15.134 2.085v4.715c0 .732-.592 1.32-1.315 1.32zm.676 6.464c0 .709-.578 1.282-1.283 1.282a1.288 1.288 0 0 1-1.282-1.282c0-.704.578-1.283 1.282-1.283.705 0 1.283.574 1.283 1.283zm-10.046 0c0 .709-.578 1.282-1.282 1.282a1.288 1.288 0 0 1-1.283-1.282c0-.704.578-1.283 1.283-1.283.704 0 1.282.574 1.282 1.283zM7.01 15.94h12.504a2.58 2.58 0 0 0 2.574-2.574v-5.28-.037c0-.01 0-.019-.005-.028 0-.01-.004-.023-.004-.033 0-.009-.005-.018-.005-.028-.005-.009-.005-.018-.01-.032-.004-.01-.004-.019-.009-.028-.004-.01-.004-.019-.009-.028a.226.226 0 0 1-.014-.033l-.014-.023-.014-.028c-.005-.01-.01-.014-.014-.023-.005-.01-.014-.019-.018-.028-.005-.01-.01-.014-.02-.024-.004-.009-.013-.014-.018-.023-.004-.01-.014-.014-.018-.023-.005-.01-.014-.014-.02-.019-.008-.01-.013-.014-.022-.023-.01-.005-.014-.014-.024-.019-.01-.005-.018-.014-.028-.019-.009-.004-.014-.009-.023-.014a.098.098 0 0 1-.028-.018l-.028-.014-.028-.014-.028-.014c-.01-.005-.019-.005-.028-.01a.087.087 0 0 0-.033-.009c-.009 0-.018-.005-.023-.005-.014-.004-.023-.004-.037-.004-.005 0-.01-.005-.019-.005L5.7 5.294v-2.21c0-.024 0-.047-.005-.066 0-.005 0-.01-.005-.019 0-.014-.004-.028-.004-.042-.005-.014-.005-.023-.01-.037 0-.01-.004-.014-.004-.023l-.014-.042c0-.005-.005-.014-.005-.019a.14.14 0 0 0-.019-.037c-.004-.005-.004-.014-.009-.019-.005-.01-.01-.019-.019-.028-.004-.01-.009-.014-.014-.023-.004-.01-.009-.014-.014-.024-.004-.009-.014-.018-.018-.028l-.014-.014-.028-.027-.014-.014c-.01-.01-.019-.02-.033-.028-.005-.005-.014-.01-.019-.014-.009-.01-.018-.014-.027-.024-.014-.01-.028-.018-.038-.023-.004-.005-.01-.005-.014-.01l-.06-.027L1.875 1.05a.629.629 0 0 0-.825.336.629.629 0 0 0 .336.825l3.05 1.287v13.796c0 1.306.98 2.388 2.243 2.55-.228.383-.364.83-.364 1.307a2.545 2.545 0 0 0 2.542 2.541c1.4 0 2.542-1.142 2.542-2.541 0-.467-.126-.91-.35-1.283h5.662c-.224.378-.35.816-.35 1.283a2.545 2.545 0 0 0 2.542 2.541c1.399 0 2.542-1.142 2.542-2.541 0-1.4-1.143-2.542-2.542-2.542H7.01a1.317 1.317 0 0 1-1.315-1.315v-1.707c.382.224.835.354 1.315.354z" />
-													<path fill="none" stroke="#3bc915" stroke-miterlimit="50"
-														d="M19.514 14.682H7.01a1.317 1.317 0 0 1-1.315-1.315V6.562l15.134 2.085v4.715c0 .732-.592 1.32-1.315 1.32zm.676 6.464c0 .709-.578 1.282-1.283 1.282a1.288 1.288 0 0 1-1.282-1.282c0-.704.578-1.283 1.282-1.283.705 0 1.283.574 1.283 1.283zm-10.046 0c0 .709-.578 1.282-1.282 1.282a1.288 1.288 0 0 1-1.283-1.282c0-.704.578-1.283 1.283-1.283.704 0 1.282.574 1.282 1.283zM7.01 15.94h12.504a2.58 2.58 0 0 0 2.574-2.574v-5.28-.037c0-.01 0-.019-.005-.028 0-.01-.004-.023-.004-.033 0-.009-.005-.018-.005-.028-.005-.009-.005-.018-.01-.032-.004-.01-.004-.019-.009-.028-.004-.01-.004-.019-.009-.028a.226.226 0 0 1-.014-.033l-.014-.023-.014-.028c-.005-.01-.01-.014-.014-.023-.005-.01-.014-.019-.018-.028-.005-.01-.01-.014-.02-.024-.004-.009-.013-.014-.018-.023-.004-.01-.014-.014-.018-.023-.005-.01-.014-.014-.02-.019-.008-.01-.013-.014-.022-.023-.01-.005-.014-.014-.024-.019-.01-.005-.018-.014-.028-.019-.009-.004-.014-.009-.023-.014a.098.098 0 0 1-.028-.018l-.028-.014-.028-.014-.028-.014c-.01-.005-.019-.005-.028-.01a.087.087 0 0 0-.033-.009c-.009 0-.018-.005-.023-.005-.014-.004-.023-.004-.037-.004-.005 0-.01-.005-.019-.005L5.7 5.294v-2.21c0-.024 0-.047-.005-.066 0-.005 0-.01-.005-.019 0-.014-.004-.028-.004-.042-.005-.014-.005-.023-.01-.037 0-.01-.004-.014-.004-.023l-.014-.042c0-.005-.005-.014-.005-.019a.14.14 0 0 0-.019-.037c-.004-.005-.004-.014-.009-.019-.005-.01-.01-.019-.019-.028-.004-.01-.009-.014-.014-.023-.004-.01-.009-.014-.014-.024-.004-.009-.014-.018-.018-.028l-.014-.014-.028-.027-.014-.014c-.01-.01-.019-.02-.033-.028-.005-.005-.014-.01-.019-.014-.009-.01-.018-.014-.027-.024-.014-.01-.028-.018-.038-.023-.004-.005-.01-.005-.014-.01l-.06-.027L1.875 1.05a.629.629 0 0 0-.825.336.629.629 0 0 0 .336.825l3.05 1.287v13.796c0 1.306.98 2.388 2.243 2.55-.228.383-.364.83-.364 1.307a2.545 2.545 0 0 0 2.542 2.541c1.4 0 2.542-1.142 2.542-2.541 0-.467-.126-.91-.35-1.283h5.662c-.224.378-.35.816-.35 1.283a2.545 2.545 0 0 0 2.542 2.541c1.399 0 2.542-1.142 2.542-2.541 0-1.4-1.143-2.542-2.542-2.542H7.01a1.317 1.317 0 0 1-1.315-1.315v-1.707c.382.224.835.354 1.315.354z" />
-												</g>
-											</g>
-										</g>
-									</svg></a><span>|</span>
-								<!--детальная--><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="21"
-										height="21" viewBox="0 0 21 21">
-										<g>
-											<g>
-												<path fill="#484848"
-													d="M8.48 2.212a6.275 6.275 0 0 1 6.268 6.269 6.275 6.275 0 0 1-6.268 6.268A6.275 6.275 0 0 1 2.212 8.48 6.275 6.275 0 0 1 8.48 2.212zm11.49 16.92l-4.999-5.2a8.453 8.453 0 0 0 1.99-5.451C16.96 3.804 13.156 0 8.48 0 3.803 0 0 3.804 0 8.48c0 4.677 3.804 8.481 8.48 8.481a8.39 8.39 0 0 0 4.859-1.535l5.037 5.24c.21.218.494.338.797.338a1.107 1.107 0 0 0 .797-1.873z" />
-											</g>
-										</g>
-									</svg></a>
-							</div>
-						</div>
-						<div class="item-title">Сбалансированное питание HempSmoothie</div>
-						<div class="item-size">Клубника 250 г.</div>
-						<div class="item-price">340 руб.</div>
-					</div>
-					<div class="addition-item">
-						<div class="item-img" style="background-image: url(/assets/img/card-addition/sets-oil-1.jpg)">
-							<div class="item-btn">
-								<!--корзина--><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="25"
-										viewBox="0 0 23 25">
-										<g>
-											<g>
-												<g>
-													<path fill="#3bc915"
-														d="M19.514 14.682H7.01a1.317 1.317 0 0 1-1.315-1.315V6.562l15.134 2.085v4.715c0 .732-.592 1.32-1.315 1.32zm.676 6.464c0 .709-.578 1.282-1.283 1.282a1.288 1.288 0 0 1-1.282-1.282c0-.704.578-1.283 1.282-1.283.705 0 1.283.574 1.283 1.283zm-10.046 0c0 .709-.578 1.282-1.282 1.282a1.288 1.288 0 0 1-1.283-1.282c0-.704.578-1.283 1.283-1.283.704 0 1.282.574 1.282 1.283zM7.01 15.94h12.504a2.58 2.58 0 0 0 2.574-2.574v-5.28-.037c0-.01 0-.019-.005-.028 0-.01-.004-.023-.004-.033 0-.009-.005-.018-.005-.028-.005-.009-.005-.018-.01-.032-.004-.01-.004-.019-.009-.028-.004-.01-.004-.019-.009-.028a.226.226 0 0 1-.014-.033l-.014-.023-.014-.028c-.005-.01-.01-.014-.014-.023-.005-.01-.014-.019-.018-.028-.005-.01-.01-.014-.02-.024-.004-.009-.013-.014-.018-.023-.004-.01-.014-.014-.018-.023-.005-.01-.014-.014-.02-.019-.008-.01-.013-.014-.022-.023-.01-.005-.014-.014-.024-.019-.01-.005-.018-.014-.028-.019-.009-.004-.014-.009-.023-.014a.098.098 0 0 1-.028-.018l-.028-.014-.028-.014-.028-.014c-.01-.005-.019-.005-.028-.01a.087.087 0 0 0-.033-.009c-.009 0-.018-.005-.023-.005-.014-.004-.023-.004-.037-.004-.005 0-.01-.005-.019-.005L5.7 5.294v-2.21c0-.024 0-.047-.005-.066 0-.005 0-.01-.005-.019 0-.014-.004-.028-.004-.042-.005-.014-.005-.023-.01-.037 0-.01-.004-.014-.004-.023l-.014-.042c0-.005-.005-.014-.005-.019a.14.14 0 0 0-.019-.037c-.004-.005-.004-.014-.009-.019-.005-.01-.01-.019-.019-.028-.004-.01-.009-.014-.014-.023-.004-.01-.009-.014-.014-.024-.004-.009-.014-.018-.018-.028l-.014-.014-.028-.027-.014-.014c-.01-.01-.019-.02-.033-.028-.005-.005-.014-.01-.019-.014-.009-.01-.018-.014-.027-.024-.014-.01-.028-.018-.038-.023-.004-.005-.01-.005-.014-.01l-.06-.027L1.875 1.05a.629.629 0 0 0-.825.336.629.629 0 0 0 .336.825l3.05 1.287v13.796c0 1.306.98 2.388 2.243 2.55-.228.383-.364.83-.364 1.307a2.545 2.545 0 0 0 2.542 2.541c1.4 0 2.542-1.142 2.542-2.541 0-.467-.126-.91-.35-1.283h5.662c-.224.378-.35.816-.35 1.283a2.545 2.545 0 0 0 2.542 2.541c1.399 0 2.542-1.142 2.542-2.541 0-1.4-1.143-2.542-2.542-2.542H7.01a1.317 1.317 0 0 1-1.315-1.315v-1.707c.382.224.835.354 1.315.354z" />
-													<path fill="none" stroke="#3bc915" stroke-miterlimit="50"
-														d="M19.514 14.682H7.01a1.317 1.317 0 0 1-1.315-1.315V6.562l15.134 2.085v4.715c0 .732-.592 1.32-1.315 1.32zm.676 6.464c0 .709-.578 1.282-1.283 1.282a1.288 1.288 0 0 1-1.282-1.282c0-.704.578-1.283 1.282-1.283.705 0 1.283.574 1.283 1.283zm-10.046 0c0 .709-.578 1.282-1.282 1.282a1.288 1.288 0 0 1-1.283-1.282c0-.704.578-1.283 1.283-1.283.704 0 1.282.574 1.282 1.283zM7.01 15.94h12.504a2.58 2.58 0 0 0 2.574-2.574v-5.28-.037c0-.01 0-.019-.005-.028 0-.01-.004-.023-.004-.033 0-.009-.005-.018-.005-.028-.005-.009-.005-.018-.01-.032-.004-.01-.004-.019-.009-.028-.004-.01-.004-.019-.009-.028a.226.226 0 0 1-.014-.033l-.014-.023-.014-.028c-.005-.01-.01-.014-.014-.023-.005-.01-.014-.019-.018-.028-.005-.01-.01-.014-.02-.024-.004-.009-.013-.014-.018-.023-.004-.01-.014-.014-.018-.023-.005-.01-.014-.014-.02-.019-.008-.01-.013-.014-.022-.023-.01-.005-.014-.014-.024-.019-.01-.005-.018-.014-.028-.019-.009-.004-.014-.009-.023-.014a.098.098 0 0 1-.028-.018l-.028-.014-.028-.014-.028-.014c-.01-.005-.019-.005-.028-.01a.087.087 0 0 0-.033-.009c-.009 0-.018-.005-.023-.005-.014-.004-.023-.004-.037-.004-.005 0-.01-.005-.019-.005L5.7 5.294v-2.21c0-.024 0-.047-.005-.066 0-.005 0-.01-.005-.019 0-.014-.004-.028-.004-.042-.005-.014-.005-.023-.01-.037 0-.01-.004-.014-.004-.023l-.014-.042c0-.005-.005-.014-.005-.019a.14.14 0 0 0-.019-.037c-.004-.005-.004-.014-.009-.019-.005-.01-.01-.019-.019-.028-.004-.01-.009-.014-.014-.023-.004-.01-.009-.014-.014-.024-.004-.009-.014-.018-.018-.028l-.014-.014-.028-.027-.014-.014c-.01-.01-.019-.02-.033-.028-.005-.005-.014-.01-.019-.014-.009-.01-.018-.014-.027-.024-.014-.01-.028-.018-.038-.023-.004-.005-.01-.005-.014-.01l-.06-.027L1.875 1.05a.629.629 0 0 0-.825.336.629.629 0 0 0 .336.825l3.05 1.287v13.796c0 1.306.98 2.388 2.243 2.55-.228.383-.364.83-.364 1.307a2.545 2.545 0 0 0 2.542 2.541c1.4 0 2.542-1.142 2.542-2.541 0-.467-.126-.91-.35-1.283h5.662c-.224.378-.35.816-.35 1.283a2.545 2.545 0 0 0 2.542 2.541c1.399 0 2.542-1.142 2.542-2.541 0-1.4-1.143-2.542-2.542-2.542H7.01a1.317 1.317 0 0 1-1.315-1.315v-1.707c.382.224.835.354 1.315.354z" />
-												</g>
-											</g>
-										</g>
-									</svg></a><span>|</span>
-								<!--детальная--><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="21"
-										height="21" viewBox="0 0 21 21">
-										<g>
-											<g>
-												<path fill="#484848"
-													d="M8.48 2.212a6.275 6.275 0 0 1 6.268 6.269 6.275 6.275 0 0 1-6.268 6.268A6.275 6.275 0 0 1 2.212 8.48 6.275 6.275 0 0 1 8.48 2.212zm11.49 16.92l-4.999-5.2a8.453 8.453 0 0 0 1.99-5.451C16.96 3.804 13.156 0 8.48 0 3.803 0 0 3.804 0 8.48c0 4.677 3.804 8.481 8.48 8.481a8.39 8.39 0 0 0 4.859-1.535l5.037 5.24c.21.218.494.338.797.338a1.107 1.107 0 0 0 .797-1.873z" />
-											</g>
-										</g>
-									</svg></a>
-							</div>
-						</div>
-						<div class="item-title">Сбалансированное питание HempSmoothie</div>
-						<div class="item-size">Кэроб 250 г.</div>
-						<div class="item-price">340 руб.</div>
-					</div>
-					<div class="addition-item">
-						<div class="item-img" style="background-image: url(/assets/img/card-addition/sets-oil.jpg)">
-							<div class="item-btn">
-								<!--корзина--><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="25"
-										viewBox="0 0 23 25">
-										<g>
-											<g>
-												<g>
-													<path fill="#3bc915"
-														d="M19.514 14.682H7.01a1.317 1.317 0 0 1-1.315-1.315V6.562l15.134 2.085v4.715c0 .732-.592 1.32-1.315 1.32zm.676 6.464c0 .709-.578 1.282-1.283 1.282a1.288 1.288 0 0 1-1.282-1.282c0-.704.578-1.283 1.282-1.283.705 0 1.283.574 1.283 1.283zm-10.046 0c0 .709-.578 1.282-1.282 1.282a1.288 1.288 0 0 1-1.283-1.282c0-.704.578-1.283 1.283-1.283.704 0 1.282.574 1.282 1.283zM7.01 15.94h12.504a2.58 2.58 0 0 0 2.574-2.574v-5.28-.037c0-.01 0-.019-.005-.028 0-.01-.004-.023-.004-.033 0-.009-.005-.018-.005-.028-.005-.009-.005-.018-.01-.032-.004-.01-.004-.019-.009-.028-.004-.01-.004-.019-.009-.028a.226.226 0 0 1-.014-.033l-.014-.023-.014-.028c-.005-.01-.01-.014-.014-.023-.005-.01-.014-.019-.018-.028-.005-.01-.01-.014-.02-.024-.004-.009-.013-.014-.018-.023-.004-.01-.014-.014-.018-.023-.005-.01-.014-.014-.02-.019-.008-.01-.013-.014-.022-.023-.01-.005-.014-.014-.024-.019-.01-.005-.018-.014-.028-.019-.009-.004-.014-.009-.023-.014a.098.098 0 0 1-.028-.018l-.028-.014-.028-.014-.028-.014c-.01-.005-.019-.005-.028-.01a.087.087 0 0 0-.033-.009c-.009 0-.018-.005-.023-.005-.014-.004-.023-.004-.037-.004-.005 0-.01-.005-.019-.005L5.7 5.294v-2.21c0-.024 0-.047-.005-.066 0-.005 0-.01-.005-.019 0-.014-.004-.028-.004-.042-.005-.014-.005-.023-.01-.037 0-.01-.004-.014-.004-.023l-.014-.042c0-.005-.005-.014-.005-.019a.14.14 0 0 0-.019-.037c-.004-.005-.004-.014-.009-.019-.005-.01-.01-.019-.019-.028-.004-.01-.009-.014-.014-.023-.004-.01-.009-.014-.014-.024-.004-.009-.014-.018-.018-.028l-.014-.014-.028-.027-.014-.014c-.01-.01-.019-.02-.033-.028-.005-.005-.014-.01-.019-.014-.009-.01-.018-.014-.027-.024-.014-.01-.028-.018-.038-.023-.004-.005-.01-.005-.014-.01l-.06-.027L1.875 1.05a.629.629 0 0 0-.825.336.629.629 0 0 0 .336.825l3.05 1.287v13.796c0 1.306.98 2.388 2.243 2.55-.228.383-.364.83-.364 1.307a2.545 2.545 0 0 0 2.542 2.541c1.4 0 2.542-1.142 2.542-2.541 0-.467-.126-.91-.35-1.283h5.662c-.224.378-.35.816-.35 1.283a2.545 2.545 0 0 0 2.542 2.541c1.399 0 2.542-1.142 2.542-2.541 0-1.4-1.143-2.542-2.542-2.542H7.01a1.317 1.317 0 0 1-1.315-1.315v-1.707c.382.224.835.354 1.315.354z" />
-													<path fill="none" stroke="#3bc915" stroke-miterlimit="50"
-														d="M19.514 14.682H7.01a1.317 1.317 0 0 1-1.315-1.315V6.562l15.134 2.085v4.715c0 .732-.592 1.32-1.315 1.32zm.676 6.464c0 .709-.578 1.282-1.283 1.282a1.288 1.288 0 0 1-1.282-1.282c0-.704.578-1.283 1.282-1.283.705 0 1.283.574 1.283 1.283zm-10.046 0c0 .709-.578 1.282-1.282 1.282a1.288 1.288 0 0 1-1.283-1.282c0-.704.578-1.283 1.283-1.283.704 0 1.282.574 1.282 1.283zM7.01 15.94h12.504a2.58 2.58 0 0 0 2.574-2.574v-5.28-.037c0-.01 0-.019-.005-.028 0-.01-.004-.023-.004-.033 0-.009-.005-.018-.005-.028-.005-.009-.005-.018-.01-.032-.004-.01-.004-.019-.009-.028-.004-.01-.004-.019-.009-.028a.226.226 0 0 1-.014-.033l-.014-.023-.014-.028c-.005-.01-.01-.014-.014-.023-.005-.01-.014-.019-.018-.028-.005-.01-.01-.014-.02-.024-.004-.009-.013-.014-.018-.023-.004-.01-.014-.014-.018-.023-.005-.01-.014-.014-.02-.019-.008-.01-.013-.014-.022-.023-.01-.005-.014-.014-.024-.019-.01-.005-.018-.014-.028-.019-.009-.004-.014-.009-.023-.014a.098.098 0 0 1-.028-.018l-.028-.014-.028-.014-.028-.014c-.01-.005-.019-.005-.028-.01a.087.087 0 0 0-.033-.009c-.009 0-.018-.005-.023-.005-.014-.004-.023-.004-.037-.004-.005 0-.01-.005-.019-.005L5.7 5.294v-2.21c0-.024 0-.047-.005-.066 0-.005 0-.01-.005-.019 0-.014-.004-.028-.004-.042-.005-.014-.005-.023-.01-.037 0-.01-.004-.014-.004-.023l-.014-.042c0-.005-.005-.014-.005-.019a.14.14 0 0 0-.019-.037c-.004-.005-.004-.014-.009-.019-.005-.01-.01-.019-.019-.028-.004-.01-.009-.014-.014-.023-.004-.01-.009-.014-.014-.024-.004-.009-.014-.018-.018-.028l-.014-.014-.028-.027-.014-.014c-.01-.01-.019-.02-.033-.028-.005-.005-.014-.01-.019-.014-.009-.01-.018-.014-.027-.024-.014-.01-.028-.018-.038-.023-.004-.005-.01-.005-.014-.01l-.06-.027L1.875 1.05a.629.629 0 0 0-.825.336.629.629 0 0 0 .336.825l3.05 1.287v13.796c0 1.306.98 2.388 2.243 2.55-.228.383-.364.83-.364 1.307a2.545 2.545 0 0 0 2.542 2.541c1.4 0 2.542-1.142 2.542-2.541 0-.467-.126-.91-.35-1.283h5.662c-.224.378-.35.816-.35 1.283a2.545 2.545 0 0 0 2.542 2.541c1.399 0 2.542-1.142 2.542-2.541 0-1.4-1.143-2.542-2.542-2.542H7.01a1.317 1.317 0 0 1-1.315-1.315v-1.707c.382.224.835.354 1.315.354z" />
-												</g>
-											</g>
-										</g>
-									</svg></a><span>|</span>
-								<!--детальная--><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="21"
-										height="21" viewBox="0 0 21 21">
-										<g>
-											<g>
-												<path fill="#484848"
-													d="M8.48 2.212a6.275 6.275 0 0 1 6.268 6.269 6.275 6.275 0 0 1-6.268 6.268A6.275 6.275 0 0 1 2.212 8.48 6.275 6.275 0 0 1 8.48 2.212zm11.49 16.92l-4.999-5.2a8.453 8.453 0 0 0 1.99-5.451C16.96 3.804 13.156 0 8.48 0 3.803 0 0 3.804 0 8.48c0 4.677 3.804 8.481 8.48 8.481a8.39 8.39 0 0 0 4.859-1.535l5.037 5.24c.21.218.494.338.797.338a1.107 1.107 0 0 0 .797-1.873z" />
-											</g>
-										</g>
-									</svg></a>
-							</div>
-						</div>
-						<div class="item-title">Сбалансированное питание HempSmoothie</div>
-						<div class="item-size"> Кэроб,одна порция</div>
-						<div class="item-price">80 руб.</div>
-					</div>
-				</div>
-			</div>
-			<!-- ----end----другие наборы-->
-			<!-- другие категории-->
-			<div class="card-addition col-sm-12">
-				<div class="card-addition__title">
-					<p class="title-category">масла</p>
-					<h3 class="title-head">Другие товары категории</h3>
-				</div>
-				<div class="card-addition__wrapper">
-					<div class="addition-item">
-						<div class="item-img" style="background-image: url(/assets/img/card-addition/ct-oil-1.jpg)">
-							<div class="item-btn">
-								<!--корзина--><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="25"
-										viewBox="0 0 23 25">
-										<g>
-											<g>
-												<g>
-													<path fill="#3bc915"
-														d="M19.514 14.682H7.01a1.317 1.317 0 0 1-1.315-1.315V6.562l15.134 2.085v4.715c0 .732-.592 1.32-1.315 1.32zm.676 6.464c0 .709-.578 1.282-1.283 1.282a1.288 1.288 0 0 1-1.282-1.282c0-.704.578-1.283 1.282-1.283.705 0 1.283.574 1.283 1.283zm-10.046 0c0 .709-.578 1.282-1.282 1.282a1.288 1.288 0 0 1-1.283-1.282c0-.704.578-1.283 1.283-1.283.704 0 1.282.574 1.282 1.283zM7.01 15.94h12.504a2.58 2.58 0 0 0 2.574-2.574v-5.28-.037c0-.01 0-.019-.005-.028 0-.01-.004-.023-.004-.033 0-.009-.005-.018-.005-.028-.005-.009-.005-.018-.01-.032-.004-.01-.004-.019-.009-.028-.004-.01-.004-.019-.009-.028a.226.226 0 0 1-.014-.033l-.014-.023-.014-.028c-.005-.01-.01-.014-.014-.023-.005-.01-.014-.019-.018-.028-.005-.01-.01-.014-.02-.024-.004-.009-.013-.014-.018-.023-.004-.01-.014-.014-.018-.023-.005-.01-.014-.014-.02-.019-.008-.01-.013-.014-.022-.023-.01-.005-.014-.014-.024-.019-.01-.005-.018-.014-.028-.019-.009-.004-.014-.009-.023-.014a.098.098 0 0 1-.028-.018l-.028-.014-.028-.014-.028-.014c-.01-.005-.019-.005-.028-.01a.087.087 0 0 0-.033-.009c-.009 0-.018-.005-.023-.005-.014-.004-.023-.004-.037-.004-.005 0-.01-.005-.019-.005L5.7 5.294v-2.21c0-.024 0-.047-.005-.066 0-.005 0-.01-.005-.019 0-.014-.004-.028-.004-.042-.005-.014-.005-.023-.01-.037 0-.01-.004-.014-.004-.023l-.014-.042c0-.005-.005-.014-.005-.019a.14.14 0 0 0-.019-.037c-.004-.005-.004-.014-.009-.019-.005-.01-.01-.019-.019-.028-.004-.01-.009-.014-.014-.023-.004-.01-.009-.014-.014-.024-.004-.009-.014-.018-.018-.028l-.014-.014-.028-.027-.014-.014c-.01-.01-.019-.02-.033-.028-.005-.005-.014-.01-.019-.014-.009-.01-.018-.014-.027-.024-.014-.01-.028-.018-.038-.023-.004-.005-.01-.005-.014-.01l-.06-.027L1.875 1.05a.629.629 0 0 0-.825.336.629.629 0 0 0 .336.825l3.05 1.287v13.796c0 1.306.98 2.388 2.243 2.55-.228.383-.364.83-.364 1.307a2.545 2.545 0 0 0 2.542 2.541c1.4 0 2.542-1.142 2.542-2.541 0-.467-.126-.91-.35-1.283h5.662c-.224.378-.35.816-.35 1.283a2.545 2.545 0 0 0 2.542 2.541c1.399 0 2.542-1.142 2.542-2.541 0-1.4-1.143-2.542-2.542-2.542H7.01a1.317 1.317 0 0 1-1.315-1.315v-1.707c.382.224.835.354 1.315.354z" />
-													<path fill="none" stroke="#3bc915" stroke-miterlimit="50"
-														d="M19.514 14.682H7.01a1.317 1.317 0 0 1-1.315-1.315V6.562l15.134 2.085v4.715c0 .732-.592 1.32-1.315 1.32zm.676 6.464c0 .709-.578 1.282-1.283 1.282a1.288 1.288 0 0 1-1.282-1.282c0-.704.578-1.283 1.282-1.283.705 0 1.283.574 1.283 1.283zm-10.046 0c0 .709-.578 1.282-1.282 1.282a1.288 1.288 0 0 1-1.283-1.282c0-.704.578-1.283 1.283-1.283.704 0 1.282.574 1.282 1.283zM7.01 15.94h12.504a2.58 2.58 0 0 0 2.574-2.574v-5.28-.037c0-.01 0-.019-.005-.028 0-.01-.004-.023-.004-.033 0-.009-.005-.018-.005-.028-.005-.009-.005-.018-.01-.032-.004-.01-.004-.019-.009-.028-.004-.01-.004-.019-.009-.028a.226.226 0 0 1-.014-.033l-.014-.023-.014-.028c-.005-.01-.01-.014-.014-.023-.005-.01-.014-.019-.018-.028-.005-.01-.01-.014-.02-.024-.004-.009-.013-.014-.018-.023-.004-.01-.014-.014-.018-.023-.005-.01-.014-.014-.02-.019-.008-.01-.013-.014-.022-.023-.01-.005-.014-.014-.024-.019-.01-.005-.018-.014-.028-.019-.009-.004-.014-.009-.023-.014a.098.098 0 0 1-.028-.018l-.028-.014-.028-.014-.028-.014c-.01-.005-.019-.005-.028-.01a.087.087 0 0 0-.033-.009c-.009 0-.018-.005-.023-.005-.014-.004-.023-.004-.037-.004-.005 0-.01-.005-.019-.005L5.7 5.294v-2.21c0-.024 0-.047-.005-.066 0-.005 0-.01-.005-.019 0-.014-.004-.028-.004-.042-.005-.014-.005-.023-.01-.037 0-.01-.004-.014-.004-.023l-.014-.042c0-.005-.005-.014-.005-.019a.14.14 0 0 0-.019-.037c-.004-.005-.004-.014-.009-.019-.005-.01-.01-.019-.019-.028-.004-.01-.009-.014-.014-.023-.004-.01-.009-.014-.014-.024-.004-.009-.014-.018-.018-.028l-.014-.014-.028-.027-.014-.014c-.01-.01-.019-.02-.033-.028-.005-.005-.014-.01-.019-.014-.009-.01-.018-.014-.027-.024-.014-.01-.028-.018-.038-.023-.004-.005-.01-.005-.014-.01l-.06-.027L1.875 1.05a.629.629 0 0 0-.825.336.629.629 0 0 0 .336.825l3.05 1.287v13.796c0 1.306.98 2.388 2.243 2.55-.228.383-.364.83-.364 1.307a2.545 2.545 0 0 0 2.542 2.541c1.4 0 2.542-1.142 2.542-2.541 0-.467-.126-.91-.35-1.283h5.662c-.224.378-.35.816-.35 1.283a2.545 2.545 0 0 0 2.542 2.541c1.399 0 2.542-1.142 2.542-2.541 0-1.4-1.143-2.542-2.542-2.542H7.01a1.317 1.317 0 0 1-1.315-1.315v-1.707c.382.224.835.354 1.315.354z" />
-												</g>
-											</g>
-										</g>
-									</svg></a><span>|</span>
-								<!--детальная--><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="21"
-										height="21" viewBox="0 0 21 21">
-										<g>
-											<g>
-												<path fill="#484848"
-													d="M8.48 2.212a6.275 6.275 0 0 1 6.268 6.269 6.275 6.275 0 0 1-6.268 6.268A6.275 6.275 0 0 1 2.212 8.48 6.275 6.275 0 0 1 8.48 2.212zm11.49 16.92l-4.999-5.2a8.453 8.453 0 0 0 1.99-5.451C16.96 3.804 13.156 0 8.48 0 3.803 0 0 3.804 0 8.48c0 4.677 3.804 8.481 8.48 8.481a8.39 8.39 0 0 0 4.859-1.535l5.037 5.24c.21.218.494.338.797.338a1.107 1.107 0 0 0 .797-1.873z" />
-											</g>
-										</g>
-									</svg></a>
-							</div>
-						</div>
-						<div class="item-title">Сбалансированное питание HempSmoothie</div>
-						<div class="item-size">Ваниль 250 г.</div>
-						<div class="item-price">320 руб.</div>
-					</div>
-					<div class="addition-item">
-						<div class="item-img" style="background-image: url(/assets/img/card-addition/ct-oil-2.jpg)">
-							<div class="item-btn">
-								<!--корзина--><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="25"
-										viewBox="0 0 23 25">
-										<g>
-											<g>
-												<g>
-													<path fill="#3bc915"
-														d="M19.514 14.682H7.01a1.317 1.317 0 0 1-1.315-1.315V6.562l15.134 2.085v4.715c0 .732-.592 1.32-1.315 1.32zm.676 6.464c0 .709-.578 1.282-1.283 1.282a1.288 1.288 0 0 1-1.282-1.282c0-.704.578-1.283 1.282-1.283.705 0 1.283.574 1.283 1.283zm-10.046 0c0 .709-.578 1.282-1.282 1.282a1.288 1.288 0 0 1-1.283-1.282c0-.704.578-1.283 1.283-1.283.704 0 1.282.574 1.282 1.283zM7.01 15.94h12.504a2.58 2.58 0 0 0 2.574-2.574v-5.28-.037c0-.01 0-.019-.005-.028 0-.01-.004-.023-.004-.033 0-.009-.005-.018-.005-.028-.005-.009-.005-.018-.01-.032-.004-.01-.004-.019-.009-.028-.004-.01-.004-.019-.009-.028a.226.226 0 0 1-.014-.033l-.014-.023-.014-.028c-.005-.01-.01-.014-.014-.023-.005-.01-.014-.019-.018-.028-.005-.01-.01-.014-.02-.024-.004-.009-.013-.014-.018-.023-.004-.01-.014-.014-.018-.023-.005-.01-.014-.014-.02-.019-.008-.01-.013-.014-.022-.023-.01-.005-.014-.014-.024-.019-.01-.005-.018-.014-.028-.019-.009-.004-.014-.009-.023-.014a.098.098 0 0 1-.028-.018l-.028-.014-.028-.014-.028-.014c-.01-.005-.019-.005-.028-.01a.087.087 0 0 0-.033-.009c-.009 0-.018-.005-.023-.005-.014-.004-.023-.004-.037-.004-.005 0-.01-.005-.019-.005L5.7 5.294v-2.21c0-.024 0-.047-.005-.066 0-.005 0-.01-.005-.019 0-.014-.004-.028-.004-.042-.005-.014-.005-.023-.01-.037 0-.01-.004-.014-.004-.023l-.014-.042c0-.005-.005-.014-.005-.019a.14.14 0 0 0-.019-.037c-.004-.005-.004-.014-.009-.019-.005-.01-.01-.019-.019-.028-.004-.01-.009-.014-.014-.023-.004-.01-.009-.014-.014-.024-.004-.009-.014-.018-.018-.028l-.014-.014-.028-.027-.014-.014c-.01-.01-.019-.02-.033-.028-.005-.005-.014-.01-.019-.014-.009-.01-.018-.014-.027-.024-.014-.01-.028-.018-.038-.023-.004-.005-.01-.005-.014-.01l-.06-.027L1.875 1.05a.629.629 0 0 0-.825.336.629.629 0 0 0 .336.825l3.05 1.287v13.796c0 1.306.98 2.388 2.243 2.55-.228.383-.364.83-.364 1.307a2.545 2.545 0 0 0 2.542 2.541c1.4 0 2.542-1.142 2.542-2.541 0-.467-.126-.91-.35-1.283h5.662c-.224.378-.35.816-.35 1.283a2.545 2.545 0 0 0 2.542 2.541c1.399 0 2.542-1.142 2.542-2.541 0-1.4-1.143-2.542-2.542-2.542H7.01a1.317 1.317 0 0 1-1.315-1.315v-1.707c.382.224.835.354 1.315.354z" />
-													<path fill="none" stroke="#3bc915" stroke-miterlimit="50"
-														d="M19.514 14.682H7.01a1.317 1.317 0 0 1-1.315-1.315V6.562l15.134 2.085v4.715c0 .732-.592 1.32-1.315 1.32zm.676 6.464c0 .709-.578 1.282-1.283 1.282a1.288 1.288 0 0 1-1.282-1.282c0-.704.578-1.283 1.282-1.283.705 0 1.283.574 1.283 1.283zm-10.046 0c0 .709-.578 1.282-1.282 1.282a1.288 1.288 0 0 1-1.283-1.282c0-.704.578-1.283 1.283-1.283.704 0 1.282.574 1.282 1.283zM7.01 15.94h12.504a2.58 2.58 0 0 0 2.574-2.574v-5.28-.037c0-.01 0-.019-.005-.028 0-.01-.004-.023-.004-.033 0-.009-.005-.018-.005-.028-.005-.009-.005-.018-.01-.032-.004-.01-.004-.019-.009-.028-.004-.01-.004-.019-.009-.028a.226.226 0 0 1-.014-.033l-.014-.023-.014-.028c-.005-.01-.01-.014-.014-.023-.005-.01-.014-.019-.018-.028-.005-.01-.01-.014-.02-.024-.004-.009-.013-.014-.018-.023-.004-.01-.014-.014-.018-.023-.005-.01-.014-.014-.02-.019-.008-.01-.013-.014-.022-.023-.01-.005-.014-.014-.024-.019-.01-.005-.018-.014-.028-.019-.009-.004-.014-.009-.023-.014a.098.098 0 0 1-.028-.018l-.028-.014-.028-.014-.028-.014c-.01-.005-.019-.005-.028-.01a.087.087 0 0 0-.033-.009c-.009 0-.018-.005-.023-.005-.014-.004-.023-.004-.037-.004-.005 0-.01-.005-.019-.005L5.7 5.294v-2.21c0-.024 0-.047-.005-.066 0-.005 0-.01-.005-.019 0-.014-.004-.028-.004-.042-.005-.014-.005-.023-.01-.037 0-.01-.004-.014-.004-.023l-.014-.042c0-.005-.005-.014-.005-.019a.14.14 0 0 0-.019-.037c-.004-.005-.004-.014-.009-.019-.005-.01-.01-.019-.019-.028-.004-.01-.009-.014-.014-.023-.004-.01-.009-.014-.014-.024-.004-.009-.014-.018-.018-.028l-.014-.014-.028-.027-.014-.014c-.01-.01-.019-.02-.033-.028-.005-.005-.014-.01-.019-.014-.009-.01-.018-.014-.027-.024-.014-.01-.028-.018-.038-.023-.004-.005-.01-.005-.014-.01l-.06-.027L1.875 1.05a.629.629 0 0 0-.825.336.629.629 0 0 0 .336.825l3.05 1.287v13.796c0 1.306.98 2.388 2.243 2.55-.228.383-.364.83-.364 1.307a2.545 2.545 0 0 0 2.542 2.541c1.4 0 2.542-1.142 2.542-2.541 0-.467-.126-.91-.35-1.283h5.662c-.224.378-.35.816-.35 1.283a2.545 2.545 0 0 0 2.542 2.541c1.399 0 2.542-1.142 2.542-2.541 0-1.4-1.143-2.542-2.542-2.542H7.01a1.317 1.317 0 0 1-1.315-1.315v-1.707c.382.224.835.354 1.315.354z" />
-												</g>
-											</g>
-										</g>
-									</svg></a><span>|</span>
-								<!--детальная--><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="21"
-										height="21" viewBox="0 0 21 21">
-										<g>
-											<g>
-												<path fill="#484848"
-													d="M8.48 2.212a6.275 6.275 0 0 1 6.268 6.269 6.275 6.275 0 0 1-6.268 6.268A6.275 6.275 0 0 1 2.212 8.48 6.275 6.275 0 0 1 8.48 2.212zm11.49 16.92l-4.999-5.2a8.453 8.453 0 0 0 1.99-5.451C16.96 3.804 13.156 0 8.48 0 3.803 0 0 3.804 0 8.48c0 4.677 3.804 8.481 8.48 8.481a8.39 8.39 0 0 0 4.859-1.535l5.037 5.24c.21.218.494.338.797.338a1.107 1.107 0 0 0 .797-1.873z" />
-											</g>
-										</g>
-									</svg></a>
-							</div>
-						</div>
-						<div class="item-title">Сбалансированное питание HempSmoothie</div>
-						<div class="item-size"> Клубника 250 г.</div>
-						<div class="item-price">340 руб.</div>
-					</div>
-					<div class="addition-item">
-						<div class="item-img" style="background-image: url(/assets/img/card-addition/ct-oil-3.jpg)">
-							<div class="item-btn">
-								<!--корзина--><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="25"
-										viewBox="0 0 23 25">
-										<g>
-											<g>
-												<g>
-													<path fill="#3bc915"
-														d="M19.514 14.682H7.01a1.317 1.317 0 0 1-1.315-1.315V6.562l15.134 2.085v4.715c0 .732-.592 1.32-1.315 1.32zm.676 6.464c0 .709-.578 1.282-1.283 1.282a1.288 1.288 0 0 1-1.282-1.282c0-.704.578-1.283 1.282-1.283.705 0 1.283.574 1.283 1.283zm-10.046 0c0 .709-.578 1.282-1.282 1.282a1.288 1.288 0 0 1-1.283-1.282c0-.704.578-1.283 1.283-1.283.704 0 1.282.574 1.282 1.283zM7.01 15.94h12.504a2.58 2.58 0 0 0 2.574-2.574v-5.28-.037c0-.01 0-.019-.005-.028 0-.01-.004-.023-.004-.033 0-.009-.005-.018-.005-.028-.005-.009-.005-.018-.01-.032-.004-.01-.004-.019-.009-.028-.004-.01-.004-.019-.009-.028a.226.226 0 0 1-.014-.033l-.014-.023-.014-.028c-.005-.01-.01-.014-.014-.023-.005-.01-.014-.019-.018-.028-.005-.01-.01-.014-.02-.024-.004-.009-.013-.014-.018-.023-.004-.01-.014-.014-.018-.023-.005-.01-.014-.014-.02-.019-.008-.01-.013-.014-.022-.023-.01-.005-.014-.014-.024-.019-.01-.005-.018-.014-.028-.019-.009-.004-.014-.009-.023-.014a.098.098 0 0 1-.028-.018l-.028-.014-.028-.014-.028-.014c-.01-.005-.019-.005-.028-.01a.087.087 0 0 0-.033-.009c-.009 0-.018-.005-.023-.005-.014-.004-.023-.004-.037-.004-.005 0-.01-.005-.019-.005L5.7 5.294v-2.21c0-.024 0-.047-.005-.066 0-.005 0-.01-.005-.019 0-.014-.004-.028-.004-.042-.005-.014-.005-.023-.01-.037 0-.01-.004-.014-.004-.023l-.014-.042c0-.005-.005-.014-.005-.019a.14.14 0 0 0-.019-.037c-.004-.005-.004-.014-.009-.019-.005-.01-.01-.019-.019-.028-.004-.01-.009-.014-.014-.023-.004-.01-.009-.014-.014-.024-.004-.009-.014-.018-.018-.028l-.014-.014-.028-.027-.014-.014c-.01-.01-.019-.02-.033-.028-.005-.005-.014-.01-.019-.014-.009-.01-.018-.014-.027-.024-.014-.01-.028-.018-.038-.023-.004-.005-.01-.005-.014-.01l-.06-.027L1.875 1.05a.629.629 0 0 0-.825.336.629.629 0 0 0 .336.825l3.05 1.287v13.796c0 1.306.98 2.388 2.243 2.55-.228.383-.364.83-.364 1.307a2.545 2.545 0 0 0 2.542 2.541c1.4 0 2.542-1.142 2.542-2.541 0-.467-.126-.91-.35-1.283h5.662c-.224.378-.35.816-.35 1.283a2.545 2.545 0 0 0 2.542 2.541c1.399 0 2.542-1.142 2.542-2.541 0-1.4-1.143-2.542-2.542-2.542H7.01a1.317 1.317 0 0 1-1.315-1.315v-1.707c.382.224.835.354 1.315.354z" />
-													<path fill="none" stroke="#3bc915" stroke-miterlimit="50"
-														d="M19.514 14.682H7.01a1.317 1.317 0 0 1-1.315-1.315V6.562l15.134 2.085v4.715c0 .732-.592 1.32-1.315 1.32zm.676 6.464c0 .709-.578 1.282-1.283 1.282a1.288 1.288 0 0 1-1.282-1.282c0-.704.578-1.283 1.282-1.283.705 0 1.283.574 1.283 1.283zm-10.046 0c0 .709-.578 1.282-1.282 1.282a1.288 1.288 0 0 1-1.283-1.282c0-.704.578-1.283 1.283-1.283.704 0 1.282.574 1.282 1.283zM7.01 15.94h12.504a2.58 2.58 0 0 0 2.574-2.574v-5.28-.037c0-.01 0-.019-.005-.028 0-.01-.004-.023-.004-.033 0-.009-.005-.018-.005-.028-.005-.009-.005-.018-.01-.032-.004-.01-.004-.019-.009-.028-.004-.01-.004-.019-.009-.028a.226.226 0 0 1-.014-.033l-.014-.023-.014-.028c-.005-.01-.01-.014-.014-.023-.005-.01-.014-.019-.018-.028-.005-.01-.01-.014-.02-.024-.004-.009-.013-.014-.018-.023-.004-.01-.014-.014-.018-.023-.005-.01-.014-.014-.02-.019-.008-.01-.013-.014-.022-.023-.01-.005-.014-.014-.024-.019-.01-.005-.018-.014-.028-.019-.009-.004-.014-.009-.023-.014a.098.098 0 0 1-.028-.018l-.028-.014-.028-.014-.028-.014c-.01-.005-.019-.005-.028-.01a.087.087 0 0 0-.033-.009c-.009 0-.018-.005-.023-.005-.014-.004-.023-.004-.037-.004-.005 0-.01-.005-.019-.005L5.7 5.294v-2.21c0-.024 0-.047-.005-.066 0-.005 0-.01-.005-.019 0-.014-.004-.028-.004-.042-.005-.014-.005-.023-.01-.037 0-.01-.004-.014-.004-.023l-.014-.042c0-.005-.005-.014-.005-.019a.14.14 0 0 0-.019-.037c-.004-.005-.004-.014-.009-.019-.005-.01-.01-.019-.019-.028-.004-.01-.009-.014-.014-.023-.004-.01-.009-.014-.014-.024-.004-.009-.014-.018-.018-.028l-.014-.014-.028-.027-.014-.014c-.01-.01-.019-.02-.033-.028-.005-.005-.014-.01-.019-.014-.009-.01-.018-.014-.027-.024-.014-.01-.028-.018-.038-.023-.004-.005-.01-.005-.014-.01l-.06-.027L1.875 1.05a.629.629 0 0 0-.825.336.629.629 0 0 0 .336.825l3.05 1.287v13.796c0 1.306.98 2.388 2.243 2.55-.228.383-.364.83-.364 1.307a2.545 2.545 0 0 0 2.542 2.541c1.4 0 2.542-1.142 2.542-2.541 0-.467-.126-.91-.35-1.283h5.662c-.224.378-.35.816-.35 1.283a2.545 2.545 0 0 0 2.542 2.541c1.399 0 2.542-1.142 2.542-2.541 0-1.4-1.143-2.542-2.542-2.542H7.01a1.317 1.317 0 0 1-1.315-1.315v-1.707c.382.224.835.354 1.315.354z" />
-												</g>
-											</g>
-										</g>
-									</svg></a><span>|</span>
-								<!--детальная--><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="21"
-										height="21" viewBox="0 0 21 21">
-										<g>
-											<g>
-												<path fill="#484848"
-													d="M8.48 2.212a6.275 6.275 0 0 1 6.268 6.269 6.275 6.275 0 0 1-6.268 6.268A6.275 6.275 0 0 1 2.212 8.48 6.275 6.275 0 0 1 8.48 2.212zm11.49 16.92l-4.999-5.2a8.453 8.453 0 0 0 1.99-5.451C16.96 3.804 13.156 0 8.48 0 3.803 0 0 3.804 0 8.48c0 4.677 3.804 8.481 8.48 8.481a8.39 8.39 0 0 0 4.859-1.535l5.037 5.24c.21.218.494.338.797.338a1.107 1.107 0 0 0 .797-1.873z" />
-											</g>
-										</g>
-									</svg></a>
-							</div>
-						</div>
-						<div class="item-title">Сбалансированное питание HempSmoothie</div>
-						<div class="item-size">Кэроб 250 г.</div>
-						<div class="item-price">340 руб.</div>
-					</div>
-					<div class="addition-item">
-						<div class="item-img" style="background-image: url(/assets/img/card-addition/ct-oil-3.jpg)">
-							<div class="item-btn">
-								<!--корзина--><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="25"
-										viewBox="0 0 23 25">
-										<g>
-											<g>
-												<g>
-													<path fill="#3bc915"
-														d="M19.514 14.682H7.01a1.317 1.317 0 0 1-1.315-1.315V6.562l15.134 2.085v4.715c0 .732-.592 1.32-1.315 1.32zm.676 6.464c0 .709-.578 1.282-1.283 1.282a1.288 1.288 0 0 1-1.282-1.282c0-.704.578-1.283 1.282-1.283.705 0 1.283.574 1.283 1.283zm-10.046 0c0 .709-.578 1.282-1.282 1.282a1.288 1.288 0 0 1-1.283-1.282c0-.704.578-1.283 1.283-1.283.704 0 1.282.574 1.282 1.283zM7.01 15.94h12.504a2.58 2.58 0 0 0 2.574-2.574v-5.28-.037c0-.01 0-.019-.005-.028 0-.01-.004-.023-.004-.033 0-.009-.005-.018-.005-.028-.005-.009-.005-.018-.01-.032-.004-.01-.004-.019-.009-.028-.004-.01-.004-.019-.009-.028a.226.226 0 0 1-.014-.033l-.014-.023-.014-.028c-.005-.01-.01-.014-.014-.023-.005-.01-.014-.019-.018-.028-.005-.01-.01-.014-.02-.024-.004-.009-.013-.014-.018-.023-.004-.01-.014-.014-.018-.023-.005-.01-.014-.014-.02-.019-.008-.01-.013-.014-.022-.023-.01-.005-.014-.014-.024-.019-.01-.005-.018-.014-.028-.019-.009-.004-.014-.009-.023-.014a.098.098 0 0 1-.028-.018l-.028-.014-.028-.014-.028-.014c-.01-.005-.019-.005-.028-.01a.087.087 0 0 0-.033-.009c-.009 0-.018-.005-.023-.005-.014-.004-.023-.004-.037-.004-.005 0-.01-.005-.019-.005L5.7 5.294v-2.21c0-.024 0-.047-.005-.066 0-.005 0-.01-.005-.019 0-.014-.004-.028-.004-.042-.005-.014-.005-.023-.01-.037 0-.01-.004-.014-.004-.023l-.014-.042c0-.005-.005-.014-.005-.019a.14.14 0 0 0-.019-.037c-.004-.005-.004-.014-.009-.019-.005-.01-.01-.019-.019-.028-.004-.01-.009-.014-.014-.023-.004-.01-.009-.014-.014-.024-.004-.009-.014-.018-.018-.028l-.014-.014-.028-.027-.014-.014c-.01-.01-.019-.02-.033-.028-.005-.005-.014-.01-.019-.014-.009-.01-.018-.014-.027-.024-.014-.01-.028-.018-.038-.023-.004-.005-.01-.005-.014-.01l-.06-.027L1.875 1.05a.629.629 0 0 0-.825.336.629.629 0 0 0 .336.825l3.05 1.287v13.796c0 1.306.98 2.388 2.243 2.55-.228.383-.364.83-.364 1.307a2.545 2.545 0 0 0 2.542 2.541c1.4 0 2.542-1.142 2.542-2.541 0-.467-.126-.91-.35-1.283h5.662c-.224.378-.35.816-.35 1.283a2.545 2.545 0 0 0 2.542 2.541c1.399 0 2.542-1.142 2.542-2.541 0-1.4-1.143-2.542-2.542-2.542H7.01a1.317 1.317 0 0 1-1.315-1.315v-1.707c.382.224.835.354 1.315.354z" />
-													<path fill="none" stroke="#3bc915" stroke-miterlimit="50"
-														d="M19.514 14.682H7.01a1.317 1.317 0 0 1-1.315-1.315V6.562l15.134 2.085v4.715c0 .732-.592 1.32-1.315 1.32zm.676 6.464c0 .709-.578 1.282-1.283 1.282a1.288 1.288 0 0 1-1.282-1.282c0-.704.578-1.283 1.282-1.283.705 0 1.283.574 1.283 1.283zm-10.046 0c0 .709-.578 1.282-1.282 1.282a1.288 1.288 0 0 1-1.283-1.282c0-.704.578-1.283 1.283-1.283.704 0 1.282.574 1.282 1.283zM7.01 15.94h12.504a2.58 2.58 0 0 0 2.574-2.574v-5.28-.037c0-.01 0-.019-.005-.028 0-.01-.004-.023-.004-.033 0-.009-.005-.018-.005-.028-.005-.009-.005-.018-.01-.032-.004-.01-.004-.019-.009-.028-.004-.01-.004-.019-.009-.028a.226.226 0 0 1-.014-.033l-.014-.023-.014-.028c-.005-.01-.01-.014-.014-.023-.005-.01-.014-.019-.018-.028-.005-.01-.01-.014-.02-.024-.004-.009-.013-.014-.018-.023-.004-.01-.014-.014-.018-.023-.005-.01-.014-.014-.02-.019-.008-.01-.013-.014-.022-.023-.01-.005-.014-.014-.024-.019-.01-.005-.018-.014-.028-.019-.009-.004-.014-.009-.023-.014a.098.098 0 0 1-.028-.018l-.028-.014-.028-.014-.028-.014c-.01-.005-.019-.005-.028-.01a.087.087 0 0 0-.033-.009c-.009 0-.018-.005-.023-.005-.014-.004-.023-.004-.037-.004-.005 0-.01-.005-.019-.005L5.7 5.294v-2.21c0-.024 0-.047-.005-.066 0-.005 0-.01-.005-.019 0-.014-.004-.028-.004-.042-.005-.014-.005-.023-.01-.037 0-.01-.004-.014-.004-.023l-.014-.042c0-.005-.005-.014-.005-.019a.14.14 0 0 0-.019-.037c-.004-.005-.004-.014-.009-.019-.005-.01-.01-.019-.019-.028-.004-.01-.009-.014-.014-.023-.004-.01-.009-.014-.014-.024-.004-.009-.014-.018-.018-.028l-.014-.014-.028-.027-.014-.014c-.01-.01-.019-.02-.033-.028-.005-.005-.014-.01-.019-.014-.009-.01-.018-.014-.027-.024-.014-.01-.028-.018-.038-.023-.004-.005-.01-.005-.014-.01l-.06-.027L1.875 1.05a.629.629 0 0 0-.825.336.629.629 0 0 0 .336.825l3.05 1.287v13.796c0 1.306.98 2.388 2.243 2.55-.228.383-.364.83-.364 1.307a2.545 2.545 0 0 0 2.542 2.541c1.4 0 2.542-1.142 2.542-2.541 0-.467-.126-.91-.35-1.283h5.662c-.224.378-.35.816-.35 1.283a2.545 2.545 0 0 0 2.542 2.541c1.399 0 2.542-1.142 2.542-2.541 0-1.4-1.143-2.542-2.542-2.542H7.01a1.317 1.317 0 0 1-1.315-1.315v-1.707c.382.224.835.354 1.315.354z" />
-												</g>
-											</g>
-										</g>
-									</svg></a><span>|</span>
-								<!--детальная--><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="21"
-										height="21" viewBox="0 0 21 21">
-										<g>
-											<g>
-												<path fill="#484848"
-													d="M8.48 2.212a6.275 6.275 0 0 1 6.268 6.269 6.275 6.275 0 0 1-6.268 6.268A6.275 6.275 0 0 1 2.212 8.48 6.275 6.275 0 0 1 8.48 2.212zm11.49 16.92l-4.999-5.2a8.453 8.453 0 0 0 1.99-5.451C16.96 3.804 13.156 0 8.48 0 3.803 0 0 3.804 0 8.48c0 4.677 3.804 8.481 8.48 8.481a8.39 8.39 0 0 0 4.859-1.535l5.037 5.24c.21.218.494.338.797.338a1.107 1.107 0 0 0 .797-1.873z" />
-											</g>
-										</g>
-									</svg></a>
-							</div>
-						</div>
-						<div class="item-title">Сбалансированное питание HempSmoothie</div>
-						<div class="item-size"> Кэроб,одна порция</div>
-						<div class="item-price">80 руб.</div>
-					</div>
-				</div>
-			</div>
-			<!-- ----end----другие категории-->
-			<!-- end дополнительные товары-->
-			<!---->
-			<!-- модальные окна-->
-			<div class="card-modal modal-consist mfp-hide" id="modal-consist">
-				<div class="consist-content">
-					<div class="consist-content__title">
-						<h2>Состав продукта</h2>
-						<h3>Масло конопляное Extra Virgin</h3>
-						<div class="hr"></div>
-					</div>
-					<div class="consist-content__text">
-						<h5>Состав:</h5>
-						<p>100% масло конопляное нерафинированное.</p>
-						<h5>Пищевая ценность на 100 гр. продукта:</h5>
-						<p><i>Ненасыщенные жирные кислоты:</i></p>
-						<p>линоленовая кислота (Омега-3) - 16,73 гр.</p>
-						<p>линоленовая кислота (Омега-6) - 50,93 гр.</p>
-						<p>олеиновая кислота (Омега-9) - 9,42 гр.</p>
-						<h5>Энергетическая ценность на 100 гр. продукта:</h5>
-						<p>900 ккал/3768 кДж.</p><br><br>
-						<p>
-							Конопляное масло получают из семечек конопли методом холодного отжима. Цвет -
-							светло-зелёный, вкус - со слабовыраженной кислинкой и приятным ароматом.
-							Вплоть до середины XIX в. конопляное масло играло в рационе восточных славян ту же роль,
-							какую сейчас играет подсолнечное, а жареные семена употреблялись вместо семечек.
-						</p><br>
-						<p>Семена растения, в отличие от соцветий и листьев, не содержат каннабиола, психотропного
-							вещества, которое оказывает наркотическое действие. Конопляное масло - уникальный пищевой
-							продукт. Оно содержит большое количество ненасыщенных жирных кислот (линоленовая, олеиновая,
-							а также стеариновая и пальмитиновая кислоты). Масло семечек конопли содержит ряд витаминов –
-							А, группа В, Е, О, К. Также в состав данного продукта входят всевозможные аминокислоты и
-							микроэлементы. Конопляное масло содержит каротин, дубильные вещества и хлорофилл, который
-							придает маслу зеленоватый цвет и обладает противоопухолевым действием.</p><br>
-						<p>Следует отметить, что масло конопляное является просто незаменимым для вегетарианцев или для
-							людей, что соблюдают пост, поскольку оно помогает поддерживать человеческий организм в
-							здоровом состоянии.</p><br>
-						<p>Применяется в кулинарии для заправки супов, соусов, в салаты, винегрет, тушеные овощи, каши и
-							выпечку. Также широко используется в косметологии, медицине.</p>
-					</div>
-				</div>
-			</div>
-			<div class="card-modal modal-reviews mfp-hide" id="modal-reviews">
-				<div class="reviews-content js-reviews-content">
-					<div class="modal-reviews__head">
-						<input class="reviews-userName js-reviews-userName" type="text" name="userName"
-							placeholder="Ваше имя..." value="">
-						<div class="dynamic-star-rating js-star-rating js-dynamic-star" data-rating="0"
-							src-starfull="/assets/img/card-desc/star_yellow.svg"
-							src-starempty="/assets/img/card-desc/star_grey.svg"></div>
-					</div>
-					<textarea class="modal-reviews__textarea js-reviews-comment" name="userComment" cols="30" rows="10"
-						placeholder="Напишите отзыв о товаре..."></textarea>
-					<button class="product-card__btn js-reviews-btn" href="#reviews-success" disabled>Добавить
-						отзыв</button>
-				</div>
-			</div>
-			<div class="card-modal modal-reviews-success mfp-hide" id="reviews-success">Отзыв успешно добавлен на сайт!
-			</div>
-			<!-- end модальные окна-->
-			<!---->
-		</div>
-	</div>
-	<script type="text/javascript" src="/assets/js/vendors.js"></script>
-	<script type="text/javascript" src="/assets/js/app.js"></script>
-</body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
-</script>
-
+          <!---->
+          <div class="star-rating js-star-rating" data-rating="2" src-starfull="/assets/img/card-desc/star_yellow.svg" src-starempty="/assets/img/card-desc/star_grey.svg"></div>
+          <div class="rew-date">15 июля 2018</div>
+        </div>
+        <div class="item__text">
+          <p class="user-name">Павел</p>
+          <p class="user-text">Личная непереносимость данного продукта</p>
+        </div><a class="read-more" href="#">Читать полностью</a>
+      </div>
+    </div>
+  </div>
+  <!-- ----end---- Отзывы-->
+</div>
+    <!-- end описание продукта-->
+    <!---->
+    <!-- дополнительные товары-->
+<!-- другие наборы-->
+<div class="card-addition col-sm-12">
+  <div class="card-addition__title">
+    <p class="title-category">наборы</p>
+    <h3 class="title-head">Другие наборы с этим товаром</h3>
+  </div>
+  <div class="card-addition__wrapper">
+    <div class="addition-item">
+      <div class="item-img" style="background-image: url(/assets/img/card-addition/sets-oil-3.jpg)">
+        <div class="item-btn">
+          <!--корзина--><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="25" viewBox="0 0 23 25"><g><g><g><path fill="#3bc915" d="M19.514 14.682H7.01a1.317 1.317 0 0 1-1.315-1.315V6.562l15.134 2.085v4.715c0 .732-.592 1.32-1.315 1.32zm.676 6.464c0 .709-.578 1.282-1.283 1.282a1.288 1.288 0 0 1-1.282-1.282c0-.704.578-1.283 1.282-1.283.705 0 1.283.574 1.283 1.283zm-10.046 0c0 .709-.578 1.282-1.282 1.282a1.288 1.288 0 0 1-1.283-1.282c0-.704.578-1.283 1.283-1.283.704 0 1.282.574 1.282 1.283zM7.01 15.94h12.504a2.58 2.58 0 0 0 2.574-2.574v-5.28-.037c0-.01 0-.019-.005-.028 0-.01-.004-.023-.004-.033 0-.009-.005-.018-.005-.028-.005-.009-.005-.018-.01-.032-.004-.01-.004-.019-.009-.028-.004-.01-.004-.019-.009-.028a.226.226 0 0 1-.014-.033l-.014-.023-.014-.028c-.005-.01-.01-.014-.014-.023-.005-.01-.014-.019-.018-.028-.005-.01-.01-.014-.02-.024-.004-.009-.013-.014-.018-.023-.004-.01-.014-.014-.018-.023-.005-.01-.014-.014-.02-.019-.008-.01-.013-.014-.022-.023-.01-.005-.014-.014-.024-.019-.01-.005-.018-.014-.028-.019-.009-.004-.014-.009-.023-.014a.098.098 0 0 1-.028-.018l-.028-.014-.028-.014-.028-.014c-.01-.005-.019-.005-.028-.01a.087.087 0 0 0-.033-.009c-.009 0-.018-.005-.023-.005-.014-.004-.023-.004-.037-.004-.005 0-.01-.005-.019-.005L5.7 5.294v-2.21c0-.024 0-.047-.005-.066 0-.005 0-.01-.005-.019 0-.014-.004-.028-.004-.042-.005-.014-.005-.023-.01-.037 0-.01-.004-.014-.004-.023l-.014-.042c0-.005-.005-.014-.005-.019a.14.14 0 0 0-.019-.037c-.004-.005-.004-.014-.009-.019-.005-.01-.01-.019-.019-.028-.004-.01-.009-.014-.014-.023-.004-.01-.009-.014-.014-.024-.004-.009-.014-.018-.018-.028l-.014-.014-.028-.027-.014-.014c-.01-.01-.019-.02-.033-.028-.005-.005-.014-.01-.019-.014-.009-.01-.018-.014-.027-.024-.014-.01-.028-.018-.038-.023-.004-.005-.01-.005-.014-.01l-.06-.027L1.875 1.05a.629.629 0 0 0-.825.336.629.629 0 0 0 .336.825l3.05 1.287v13.796c0 1.306.98 2.388 2.243 2.55-.228.383-.364.83-.364 1.307a2.545 2.545 0 0 0 2.542 2.541c1.4 0 2.542-1.142 2.542-2.541 0-.467-.126-.91-.35-1.283h5.662c-.224.378-.35.816-.35 1.283a2.545 2.545 0 0 0 2.542 2.541c1.399 0 2.542-1.142 2.542-2.541 0-1.4-1.143-2.542-2.542-2.542H7.01a1.317 1.317 0 0 1-1.315-1.315v-1.707c.382.224.835.354 1.315.354z"/><path fill="none" stroke="#3bc915" stroke-miterlimit="50" d="M19.514 14.682H7.01a1.317 1.317 0 0 1-1.315-1.315V6.562l15.134 2.085v4.715c0 .732-.592 1.32-1.315 1.32zm.676 6.464c0 .709-.578 1.282-1.283 1.282a1.288 1.288 0 0 1-1.282-1.282c0-.704.578-1.283 1.282-1.283.705 0 1.283.574 1.283 1.283zm-10.046 0c0 .709-.578 1.282-1.282 1.282a1.288 1.288 0 0 1-1.283-1.282c0-.704.578-1.283 1.283-1.283.704 0 1.282.574 1.282 1.283zM7.01 15.94h12.504a2.58 2.58 0 0 0 2.574-2.574v-5.28-.037c0-.01 0-.019-.005-.028 0-.01-.004-.023-.004-.033 0-.009-.005-.018-.005-.028-.005-.009-.005-.018-.01-.032-.004-.01-.004-.019-.009-.028-.004-.01-.004-.019-.009-.028a.226.226 0 0 1-.014-.033l-.014-.023-.014-.028c-.005-.01-.01-.014-.014-.023-.005-.01-.014-.019-.018-.028-.005-.01-.01-.014-.02-.024-.004-.009-.013-.014-.018-.023-.004-.01-.014-.014-.018-.023-.005-.01-.014-.014-.02-.019-.008-.01-.013-.014-.022-.023-.01-.005-.014-.014-.024-.019-.01-.005-.018-.014-.028-.019-.009-.004-.014-.009-.023-.014a.098.098 0 0 1-.028-.018l-.028-.014-.028-.014-.028-.014c-.01-.005-.019-.005-.028-.01a.087.087 0 0 0-.033-.009c-.009 0-.018-.005-.023-.005-.014-.004-.023-.004-.037-.004-.005 0-.01-.005-.019-.005L5.7 5.294v-2.21c0-.024 0-.047-.005-.066 0-.005 0-.01-.005-.019 0-.014-.004-.028-.004-.042-.005-.014-.005-.023-.01-.037 0-.01-.004-.014-.004-.023l-.014-.042c0-.005-.005-.014-.005-.019a.14.14 0 0 0-.019-.037c-.004-.005-.004-.014-.009-.019-.005-.01-.01-.019-.019-.028-.004-.01-.009-.014-.014-.023-.004-.01-.009-.014-.014-.024-.004-.009-.014-.018-.018-.028l-.014-.014-.028-.027-.014-.014c-.01-.01-.019-.02-.033-.028-.005-.005-.014-.01-.019-.014-.009-.01-.018-.014-.027-.024-.014-.01-.028-.018-.038-.023-.004-.005-.01-.005-.014-.01l-.06-.027L1.875 1.05a.629.629 0 0 0-.825.336.629.629 0 0 0 .336.825l3.05 1.287v13.796c0 1.306.98 2.388 2.243 2.55-.228.383-.364.83-.364 1.307a2.545 2.545 0 0 0 2.542 2.541c1.4 0 2.542-1.142 2.542-2.541 0-.467-.126-.91-.35-1.283h5.662c-.224.378-.35.816-.35 1.283a2.545 2.545 0 0 0 2.542 2.541c1.399 0 2.542-1.142 2.542-2.541 0-1.4-1.143-2.542-2.542-2.542H7.01a1.317 1.317 0 0 1-1.315-1.315v-1.707c.382.224.835.354 1.315.354z"/></g></g></g></svg></a><span>|</span>
+          <!--детальная--><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><g><g><path fill="#484848" d="M8.48 2.212a6.275 6.275 0 0 1 6.268 6.269 6.275 6.275 0 0 1-6.268 6.268A6.275 6.275 0 0 1 2.212 8.48 6.275 6.275 0 0 1 8.48 2.212zm11.49 16.92l-4.999-5.2a8.453 8.453 0 0 0 1.99-5.451C16.96 3.804 13.156 0 8.48 0 3.803 0 0 3.804 0 8.48c0 4.677 3.804 8.481 8.48 8.481a8.39 8.39 0 0 0 4.859-1.535l5.037 5.24c.21.218.494.338.797.338a1.107 1.107 0 0 0 .797-1.873z"/></g></g></svg></a>
+        </div>
+      </div>
+      <div class="item-title">Сбалансированное питание HempSmoothie</div>
+      <div class="item-size">Ваниль 250 г.</div>
+      <div class="item-price">320 руб.</div>
+    </div>
+    <div class="addition-item">
+      <div class="item-img" style="background-image: url(/assets/img/card-addition/sets-oil-2.jpg)">
+        <div class="item-btn">
+          <!--корзина--><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="25" viewBox="0 0 23 25"><g><g><g><path fill="#3bc915" d="M19.514 14.682H7.01a1.317 1.317 0 0 1-1.315-1.315V6.562l15.134 2.085v4.715c0 .732-.592 1.32-1.315 1.32zm.676 6.464c0 .709-.578 1.282-1.283 1.282a1.288 1.288 0 0 1-1.282-1.282c0-.704.578-1.283 1.282-1.283.705 0 1.283.574 1.283 1.283zm-10.046 0c0 .709-.578 1.282-1.282 1.282a1.288 1.288 0 0 1-1.283-1.282c0-.704.578-1.283 1.283-1.283.704 0 1.282.574 1.282 1.283zM7.01 15.94h12.504a2.58 2.58 0 0 0 2.574-2.574v-5.28-.037c0-.01 0-.019-.005-.028 0-.01-.004-.023-.004-.033 0-.009-.005-.018-.005-.028-.005-.009-.005-.018-.01-.032-.004-.01-.004-.019-.009-.028-.004-.01-.004-.019-.009-.028a.226.226 0 0 1-.014-.033l-.014-.023-.014-.028c-.005-.01-.01-.014-.014-.023-.005-.01-.014-.019-.018-.028-.005-.01-.01-.014-.02-.024-.004-.009-.013-.014-.018-.023-.004-.01-.014-.014-.018-.023-.005-.01-.014-.014-.02-.019-.008-.01-.013-.014-.022-.023-.01-.005-.014-.014-.024-.019-.01-.005-.018-.014-.028-.019-.009-.004-.014-.009-.023-.014a.098.098 0 0 1-.028-.018l-.028-.014-.028-.014-.028-.014c-.01-.005-.019-.005-.028-.01a.087.087 0 0 0-.033-.009c-.009 0-.018-.005-.023-.005-.014-.004-.023-.004-.037-.004-.005 0-.01-.005-.019-.005L5.7 5.294v-2.21c0-.024 0-.047-.005-.066 0-.005 0-.01-.005-.019 0-.014-.004-.028-.004-.042-.005-.014-.005-.023-.01-.037 0-.01-.004-.014-.004-.023l-.014-.042c0-.005-.005-.014-.005-.019a.14.14 0 0 0-.019-.037c-.004-.005-.004-.014-.009-.019-.005-.01-.01-.019-.019-.028-.004-.01-.009-.014-.014-.023-.004-.01-.009-.014-.014-.024-.004-.009-.014-.018-.018-.028l-.014-.014-.028-.027-.014-.014c-.01-.01-.019-.02-.033-.028-.005-.005-.014-.01-.019-.014-.009-.01-.018-.014-.027-.024-.014-.01-.028-.018-.038-.023-.004-.005-.01-.005-.014-.01l-.06-.027L1.875 1.05a.629.629 0 0 0-.825.336.629.629 0 0 0 .336.825l3.05 1.287v13.796c0 1.306.98 2.388 2.243 2.55-.228.383-.364.83-.364 1.307a2.545 2.545 0 0 0 2.542 2.541c1.4 0 2.542-1.142 2.542-2.541 0-.467-.126-.91-.35-1.283h5.662c-.224.378-.35.816-.35 1.283a2.545 2.545 0 0 0 2.542 2.541c1.399 0 2.542-1.142 2.542-2.541 0-1.4-1.143-2.542-2.542-2.542H7.01a1.317 1.317 0 0 1-1.315-1.315v-1.707c.382.224.835.354 1.315.354z"/><path fill="none" stroke="#3bc915" stroke-miterlimit="50" d="M19.514 14.682H7.01a1.317 1.317 0 0 1-1.315-1.315V6.562l15.134 2.085v4.715c0 .732-.592 1.32-1.315 1.32zm.676 6.464c0 .709-.578 1.282-1.283 1.282a1.288 1.288 0 0 1-1.282-1.282c0-.704.578-1.283 1.282-1.283.705 0 1.283.574 1.283 1.283zm-10.046 0c0 .709-.578 1.282-1.282 1.282a1.288 1.288 0 0 1-1.283-1.282c0-.704.578-1.283 1.283-1.283.704 0 1.282.574 1.282 1.283zM7.01 15.94h12.504a2.58 2.58 0 0 0 2.574-2.574v-5.28-.037c0-.01 0-.019-.005-.028 0-.01-.004-.023-.004-.033 0-.009-.005-.018-.005-.028-.005-.009-.005-.018-.01-.032-.004-.01-.004-.019-.009-.028-.004-.01-.004-.019-.009-.028a.226.226 0 0 1-.014-.033l-.014-.023-.014-.028c-.005-.01-.01-.014-.014-.023-.005-.01-.014-.019-.018-.028-.005-.01-.01-.014-.02-.024-.004-.009-.013-.014-.018-.023-.004-.01-.014-.014-.018-.023-.005-.01-.014-.014-.02-.019-.008-.01-.013-.014-.022-.023-.01-.005-.014-.014-.024-.019-.01-.005-.018-.014-.028-.019-.009-.004-.014-.009-.023-.014a.098.098 0 0 1-.028-.018l-.028-.014-.028-.014-.028-.014c-.01-.005-.019-.005-.028-.01a.087.087 0 0 0-.033-.009c-.009 0-.018-.005-.023-.005-.014-.004-.023-.004-.037-.004-.005 0-.01-.005-.019-.005L5.7 5.294v-2.21c0-.024 0-.047-.005-.066 0-.005 0-.01-.005-.019 0-.014-.004-.028-.004-.042-.005-.014-.005-.023-.01-.037 0-.01-.004-.014-.004-.023l-.014-.042c0-.005-.005-.014-.005-.019a.14.14 0 0 0-.019-.037c-.004-.005-.004-.014-.009-.019-.005-.01-.01-.019-.019-.028-.004-.01-.009-.014-.014-.023-.004-.01-.009-.014-.014-.024-.004-.009-.014-.018-.018-.028l-.014-.014-.028-.027-.014-.014c-.01-.01-.019-.02-.033-.028-.005-.005-.014-.01-.019-.014-.009-.01-.018-.014-.027-.024-.014-.01-.028-.018-.038-.023-.004-.005-.01-.005-.014-.01l-.06-.027L1.875 1.05a.629.629 0 0 0-.825.336.629.629 0 0 0 .336.825l3.05 1.287v13.796c0 1.306.98 2.388 2.243 2.55-.228.383-.364.83-.364 1.307a2.545 2.545 0 0 0 2.542 2.541c1.4 0 2.542-1.142 2.542-2.541 0-.467-.126-.91-.35-1.283h5.662c-.224.378-.35.816-.35 1.283a2.545 2.545 0 0 0 2.542 2.541c1.399 0 2.542-1.142 2.542-2.541 0-1.4-1.143-2.542-2.542-2.542H7.01a1.317 1.317 0 0 1-1.315-1.315v-1.707c.382.224.835.354 1.315.354z"/></g></g></g></svg></a><span>|</span>
+          <!--детальная--><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><g><g><path fill="#484848" d="M8.48 2.212a6.275 6.275 0 0 1 6.268 6.269 6.275 6.275 0 0 1-6.268 6.268A6.275 6.275 0 0 1 2.212 8.48 6.275 6.275 0 0 1 8.48 2.212zm11.49 16.92l-4.999-5.2a8.453 8.453 0 0 0 1.99-5.451C16.96 3.804 13.156 0 8.48 0 3.803 0 0 3.804 0 8.48c0 4.677 3.804 8.481 8.48 8.481a8.39 8.39 0 0 0 4.859-1.535l5.037 5.24c.21.218.494.338.797.338a1.107 1.107 0 0 0 .797-1.873z"/></g></g></svg></a>
+        </div>
+      </div>
+      <div class="item-title">Сбалансированное питание HempSmoothie</div>
+      <div class="item-size">Клубника 250 г.</div>
+      <div class="item-price">340 руб.</div>
+    </div>
+    <div class="addition-item">
+      <div class="item-img" style="background-image: url(/assets/img/card-addition/sets-oil-1.jpg)">
+        <div class="item-btn">
+          <!--корзина--><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="25" viewBox="0 0 23 25"><g><g><g><path fill="#3bc915" d="M19.514 14.682H7.01a1.317 1.317 0 0 1-1.315-1.315V6.562l15.134 2.085v4.715c0 .732-.592 1.32-1.315 1.32zm.676 6.464c0 .709-.578 1.282-1.283 1.282a1.288 1.288 0 0 1-1.282-1.282c0-.704.578-1.283 1.282-1.283.705 0 1.283.574 1.283 1.283zm-10.046 0c0 .709-.578 1.282-1.282 1.282a1.288 1.288 0 0 1-1.283-1.282c0-.704.578-1.283 1.283-1.283.704 0 1.282.574 1.282 1.283zM7.01 15.94h12.504a2.58 2.58 0 0 0 2.574-2.574v-5.28-.037c0-.01 0-.019-.005-.028 0-.01-.004-.023-.004-.033 0-.009-.005-.018-.005-.028-.005-.009-.005-.018-.01-.032-.004-.01-.004-.019-.009-.028-.004-.01-.004-.019-.009-.028a.226.226 0 0 1-.014-.033l-.014-.023-.014-.028c-.005-.01-.01-.014-.014-.023-.005-.01-.014-.019-.018-.028-.005-.01-.01-.014-.02-.024-.004-.009-.013-.014-.018-.023-.004-.01-.014-.014-.018-.023-.005-.01-.014-.014-.02-.019-.008-.01-.013-.014-.022-.023-.01-.005-.014-.014-.024-.019-.01-.005-.018-.014-.028-.019-.009-.004-.014-.009-.023-.014a.098.098 0 0 1-.028-.018l-.028-.014-.028-.014-.028-.014c-.01-.005-.019-.005-.028-.01a.087.087 0 0 0-.033-.009c-.009 0-.018-.005-.023-.005-.014-.004-.023-.004-.037-.004-.005 0-.01-.005-.019-.005L5.7 5.294v-2.21c0-.024 0-.047-.005-.066 0-.005 0-.01-.005-.019 0-.014-.004-.028-.004-.042-.005-.014-.005-.023-.01-.037 0-.01-.004-.014-.004-.023l-.014-.042c0-.005-.005-.014-.005-.019a.14.14 0 0 0-.019-.037c-.004-.005-.004-.014-.009-.019-.005-.01-.01-.019-.019-.028-.004-.01-.009-.014-.014-.023-.004-.01-.009-.014-.014-.024-.004-.009-.014-.018-.018-.028l-.014-.014-.028-.027-.014-.014c-.01-.01-.019-.02-.033-.028-.005-.005-.014-.01-.019-.014-.009-.01-.018-.014-.027-.024-.014-.01-.028-.018-.038-.023-.004-.005-.01-.005-.014-.01l-.06-.027L1.875 1.05a.629.629 0 0 0-.825.336.629.629 0 0 0 .336.825l3.05 1.287v13.796c0 1.306.98 2.388 2.243 2.55-.228.383-.364.83-.364 1.307a2.545 2.545 0 0 0 2.542 2.541c1.4 0 2.542-1.142 2.542-2.541 0-.467-.126-.91-.35-1.283h5.662c-.224.378-.35.816-.35 1.283a2.545 2.545 0 0 0 2.542 2.541c1.399 0 2.542-1.142 2.542-2.541 0-1.4-1.143-2.542-2.542-2.542H7.01a1.317 1.317 0 0 1-1.315-1.315v-1.707c.382.224.835.354 1.315.354z"/><path fill="none" stroke="#3bc915" stroke-miterlimit="50" d="M19.514 14.682H7.01a1.317 1.317 0 0 1-1.315-1.315V6.562l15.134 2.085v4.715c0 .732-.592 1.32-1.315 1.32zm.676 6.464c0 .709-.578 1.282-1.283 1.282a1.288 1.288 0 0 1-1.282-1.282c0-.704.578-1.283 1.282-1.283.705 0 1.283.574 1.283 1.283zm-10.046 0c0 .709-.578 1.282-1.282 1.282a1.288 1.288 0 0 1-1.283-1.282c0-.704.578-1.283 1.283-1.283.704 0 1.282.574 1.282 1.283zM7.01 15.94h12.504a2.58 2.58 0 0 0 2.574-2.574v-5.28-.037c0-.01 0-.019-.005-.028 0-.01-.004-.023-.004-.033 0-.009-.005-.018-.005-.028-.005-.009-.005-.018-.01-.032-.004-.01-.004-.019-.009-.028-.004-.01-.004-.019-.009-.028a.226.226 0 0 1-.014-.033l-.014-.023-.014-.028c-.005-.01-.01-.014-.014-.023-.005-.01-.014-.019-.018-.028-.005-.01-.01-.014-.02-.024-.004-.009-.013-.014-.018-.023-.004-.01-.014-.014-.018-.023-.005-.01-.014-.014-.02-.019-.008-.01-.013-.014-.022-.023-.01-.005-.014-.014-.024-.019-.01-.005-.018-.014-.028-.019-.009-.004-.014-.009-.023-.014a.098.098 0 0 1-.028-.018l-.028-.014-.028-.014-.028-.014c-.01-.005-.019-.005-.028-.01a.087.087 0 0 0-.033-.009c-.009 0-.018-.005-.023-.005-.014-.004-.023-.004-.037-.004-.005 0-.01-.005-.019-.005L5.7 5.294v-2.21c0-.024 0-.047-.005-.066 0-.005 0-.01-.005-.019 0-.014-.004-.028-.004-.042-.005-.014-.005-.023-.01-.037 0-.01-.004-.014-.004-.023l-.014-.042c0-.005-.005-.014-.005-.019a.14.14 0 0 0-.019-.037c-.004-.005-.004-.014-.009-.019-.005-.01-.01-.019-.019-.028-.004-.01-.009-.014-.014-.023-.004-.01-.009-.014-.014-.024-.004-.009-.014-.018-.018-.028l-.014-.014-.028-.027-.014-.014c-.01-.01-.019-.02-.033-.028-.005-.005-.014-.01-.019-.014-.009-.01-.018-.014-.027-.024-.014-.01-.028-.018-.038-.023-.004-.005-.01-.005-.014-.01l-.06-.027L1.875 1.05a.629.629 0 0 0-.825.336.629.629 0 0 0 .336.825l3.05 1.287v13.796c0 1.306.98 2.388 2.243 2.55-.228.383-.364.83-.364 1.307a2.545 2.545 0 0 0 2.542 2.541c1.4 0 2.542-1.142 2.542-2.541 0-.467-.126-.91-.35-1.283h5.662c-.224.378-.35.816-.35 1.283a2.545 2.545 0 0 0 2.542 2.541c1.399 0 2.542-1.142 2.542-2.541 0-1.4-1.143-2.542-2.542-2.542H7.01a1.317 1.317 0 0 1-1.315-1.315v-1.707c.382.224.835.354 1.315.354z"/></g></g></g></svg></a><span>|</span>
+          <!--детальная--><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><g><g><path fill="#484848" d="M8.48 2.212a6.275 6.275 0 0 1 6.268 6.269 6.275 6.275 0 0 1-6.268 6.268A6.275 6.275 0 0 1 2.212 8.48 6.275 6.275 0 0 1 8.48 2.212zm11.49 16.92l-4.999-5.2a8.453 8.453 0 0 0 1.99-5.451C16.96 3.804 13.156 0 8.48 0 3.803 0 0 3.804 0 8.48c0 4.677 3.804 8.481 8.48 8.481a8.39 8.39 0 0 0 4.859-1.535l5.037 5.24c.21.218.494.338.797.338a1.107 1.107 0 0 0 .797-1.873z"/></g></g></svg></a>
+        </div>
+      </div>
+      <div class="item-title">Сбалансированное питание HempSmoothie</div>
+      <div class="item-size">Кэроб 250 г.</div>
+      <div class="item-price">340 руб.</div>
+    </div>
+    <div class="addition-item">
+      <div class="item-img" style="background-image: url(/assets/img/card-addition/sets-oil.jpg)">
+        <div class="item-btn">
+          <!--корзина--><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="25" viewBox="0 0 23 25"><g><g><g><path fill="#3bc915" d="M19.514 14.682H7.01a1.317 1.317 0 0 1-1.315-1.315V6.562l15.134 2.085v4.715c0 .732-.592 1.32-1.315 1.32zm.676 6.464c0 .709-.578 1.282-1.283 1.282a1.288 1.288 0 0 1-1.282-1.282c0-.704.578-1.283 1.282-1.283.705 0 1.283.574 1.283 1.283zm-10.046 0c0 .709-.578 1.282-1.282 1.282a1.288 1.288 0 0 1-1.283-1.282c0-.704.578-1.283 1.283-1.283.704 0 1.282.574 1.282 1.283zM7.01 15.94h12.504a2.58 2.58 0 0 0 2.574-2.574v-5.28-.037c0-.01 0-.019-.005-.028 0-.01-.004-.023-.004-.033 0-.009-.005-.018-.005-.028-.005-.009-.005-.018-.01-.032-.004-.01-.004-.019-.009-.028-.004-.01-.004-.019-.009-.028a.226.226 0 0 1-.014-.033l-.014-.023-.014-.028c-.005-.01-.01-.014-.014-.023-.005-.01-.014-.019-.018-.028-.005-.01-.01-.014-.02-.024-.004-.009-.013-.014-.018-.023-.004-.01-.014-.014-.018-.023-.005-.01-.014-.014-.02-.019-.008-.01-.013-.014-.022-.023-.01-.005-.014-.014-.024-.019-.01-.005-.018-.014-.028-.019-.009-.004-.014-.009-.023-.014a.098.098 0 0 1-.028-.018l-.028-.014-.028-.014-.028-.014c-.01-.005-.019-.005-.028-.01a.087.087 0 0 0-.033-.009c-.009 0-.018-.005-.023-.005-.014-.004-.023-.004-.037-.004-.005 0-.01-.005-.019-.005L5.7 5.294v-2.21c0-.024 0-.047-.005-.066 0-.005 0-.01-.005-.019 0-.014-.004-.028-.004-.042-.005-.014-.005-.023-.01-.037 0-.01-.004-.014-.004-.023l-.014-.042c0-.005-.005-.014-.005-.019a.14.14 0 0 0-.019-.037c-.004-.005-.004-.014-.009-.019-.005-.01-.01-.019-.019-.028-.004-.01-.009-.014-.014-.023-.004-.01-.009-.014-.014-.024-.004-.009-.014-.018-.018-.028l-.014-.014-.028-.027-.014-.014c-.01-.01-.019-.02-.033-.028-.005-.005-.014-.01-.019-.014-.009-.01-.018-.014-.027-.024-.014-.01-.028-.018-.038-.023-.004-.005-.01-.005-.014-.01l-.06-.027L1.875 1.05a.629.629 0 0 0-.825.336.629.629 0 0 0 .336.825l3.05 1.287v13.796c0 1.306.98 2.388 2.243 2.55-.228.383-.364.83-.364 1.307a2.545 2.545 0 0 0 2.542 2.541c1.4 0 2.542-1.142 2.542-2.541 0-.467-.126-.91-.35-1.283h5.662c-.224.378-.35.816-.35 1.283a2.545 2.545 0 0 0 2.542 2.541c1.399 0 2.542-1.142 2.542-2.541 0-1.4-1.143-2.542-2.542-2.542H7.01a1.317 1.317 0 0 1-1.315-1.315v-1.707c.382.224.835.354 1.315.354z"/><path fill="none" stroke="#3bc915" stroke-miterlimit="50" d="M19.514 14.682H7.01a1.317 1.317 0 0 1-1.315-1.315V6.562l15.134 2.085v4.715c0 .732-.592 1.32-1.315 1.32zm.676 6.464c0 .709-.578 1.282-1.283 1.282a1.288 1.288 0 0 1-1.282-1.282c0-.704.578-1.283 1.282-1.283.705 0 1.283.574 1.283 1.283zm-10.046 0c0 .709-.578 1.282-1.282 1.282a1.288 1.288 0 0 1-1.283-1.282c0-.704.578-1.283 1.283-1.283.704 0 1.282.574 1.282 1.283zM7.01 15.94h12.504a2.58 2.58 0 0 0 2.574-2.574v-5.28-.037c0-.01 0-.019-.005-.028 0-.01-.004-.023-.004-.033 0-.009-.005-.018-.005-.028-.005-.009-.005-.018-.01-.032-.004-.01-.004-.019-.009-.028-.004-.01-.004-.019-.009-.028a.226.226 0 0 1-.014-.033l-.014-.023-.014-.028c-.005-.01-.01-.014-.014-.023-.005-.01-.014-.019-.018-.028-.005-.01-.01-.014-.02-.024-.004-.009-.013-.014-.018-.023-.004-.01-.014-.014-.018-.023-.005-.01-.014-.014-.02-.019-.008-.01-.013-.014-.022-.023-.01-.005-.014-.014-.024-.019-.01-.005-.018-.014-.028-.019-.009-.004-.014-.009-.023-.014a.098.098 0 0 1-.028-.018l-.028-.014-.028-.014-.028-.014c-.01-.005-.019-.005-.028-.01a.087.087 0 0 0-.033-.009c-.009 0-.018-.005-.023-.005-.014-.004-.023-.004-.037-.004-.005 0-.01-.005-.019-.005L5.7 5.294v-2.21c0-.024 0-.047-.005-.066 0-.005 0-.01-.005-.019 0-.014-.004-.028-.004-.042-.005-.014-.005-.023-.01-.037 0-.01-.004-.014-.004-.023l-.014-.042c0-.005-.005-.014-.005-.019a.14.14 0 0 0-.019-.037c-.004-.005-.004-.014-.009-.019-.005-.01-.01-.019-.019-.028-.004-.01-.009-.014-.014-.023-.004-.01-.009-.014-.014-.024-.004-.009-.014-.018-.018-.028l-.014-.014-.028-.027-.014-.014c-.01-.01-.019-.02-.033-.028-.005-.005-.014-.01-.019-.014-.009-.01-.018-.014-.027-.024-.014-.01-.028-.018-.038-.023-.004-.005-.01-.005-.014-.01l-.06-.027L1.875 1.05a.629.629 0 0 0-.825.336.629.629 0 0 0 .336.825l3.05 1.287v13.796c0 1.306.98 2.388 2.243 2.55-.228.383-.364.83-.364 1.307a2.545 2.545 0 0 0 2.542 2.541c1.4 0 2.542-1.142 2.542-2.541 0-.467-.126-.91-.35-1.283h5.662c-.224.378-.35.816-.35 1.283a2.545 2.545 0 0 0 2.542 2.541c1.399 0 2.542-1.142 2.542-2.541 0-1.4-1.143-2.542-2.542-2.542H7.01a1.317 1.317 0 0 1-1.315-1.315v-1.707c.382.224.835.354 1.315.354z"/></g></g></g></svg></a><span>|</span>
+          <!--детальная--><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><g><g><path fill="#484848" d="M8.48 2.212a6.275 6.275 0 0 1 6.268 6.269 6.275 6.275 0 0 1-6.268 6.268A6.275 6.275 0 0 1 2.212 8.48 6.275 6.275 0 0 1 8.48 2.212zm11.49 16.92l-4.999-5.2a8.453 8.453 0 0 0 1.99-5.451C16.96 3.804 13.156 0 8.48 0 3.803 0 0 3.804 0 8.48c0 4.677 3.804 8.481 8.48 8.481a8.39 8.39 0 0 0 4.859-1.535l5.037 5.24c.21.218.494.338.797.338a1.107 1.107 0 0 0 .797-1.873z"/></g></g></svg></a>
+        </div>
+      </div>
+      <div class="item-title">Сбалансированное питание HempSmoothie</div>
+      <div class="item-size"> Кэроб,одна порция</div>
+      <div class="item-price">80 руб.</div>
+    </div>
+  </div>
+</div>
+<!-- ----end----другие наборы-->
+<!-- другие категории-->
+<div class="card-addition col-sm-12">
+  <div class="card-addition__title">
+    <p class="title-category">масла</p>
+    <h3 class="title-head">Другие товары категории</h3>
+  </div>
+  <div class="card-addition__wrapper">
+    <div class="addition-item">
+      <div class="item-img" style="background-image: url(/assets/img/card-addition/ct-oil-1.jpg)">
+        <div class="item-btn">
+          <!--корзина--><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="25" viewBox="0 0 23 25"><g><g><g><path fill="#3bc915" d="M19.514 14.682H7.01a1.317 1.317 0 0 1-1.315-1.315V6.562l15.134 2.085v4.715c0 .732-.592 1.32-1.315 1.32zm.676 6.464c0 .709-.578 1.282-1.283 1.282a1.288 1.288 0 0 1-1.282-1.282c0-.704.578-1.283 1.282-1.283.705 0 1.283.574 1.283 1.283zm-10.046 0c0 .709-.578 1.282-1.282 1.282a1.288 1.288 0 0 1-1.283-1.282c0-.704.578-1.283 1.283-1.283.704 0 1.282.574 1.282 1.283zM7.01 15.94h12.504a2.58 2.58 0 0 0 2.574-2.574v-5.28-.037c0-.01 0-.019-.005-.028 0-.01-.004-.023-.004-.033 0-.009-.005-.018-.005-.028-.005-.009-.005-.018-.01-.032-.004-.01-.004-.019-.009-.028-.004-.01-.004-.019-.009-.028a.226.226 0 0 1-.014-.033l-.014-.023-.014-.028c-.005-.01-.01-.014-.014-.023-.005-.01-.014-.019-.018-.028-.005-.01-.01-.014-.02-.024-.004-.009-.013-.014-.018-.023-.004-.01-.014-.014-.018-.023-.005-.01-.014-.014-.02-.019-.008-.01-.013-.014-.022-.023-.01-.005-.014-.014-.024-.019-.01-.005-.018-.014-.028-.019-.009-.004-.014-.009-.023-.014a.098.098 0 0 1-.028-.018l-.028-.014-.028-.014-.028-.014c-.01-.005-.019-.005-.028-.01a.087.087 0 0 0-.033-.009c-.009 0-.018-.005-.023-.005-.014-.004-.023-.004-.037-.004-.005 0-.01-.005-.019-.005L5.7 5.294v-2.21c0-.024 0-.047-.005-.066 0-.005 0-.01-.005-.019 0-.014-.004-.028-.004-.042-.005-.014-.005-.023-.01-.037 0-.01-.004-.014-.004-.023l-.014-.042c0-.005-.005-.014-.005-.019a.14.14 0 0 0-.019-.037c-.004-.005-.004-.014-.009-.019-.005-.01-.01-.019-.019-.028-.004-.01-.009-.014-.014-.023-.004-.01-.009-.014-.014-.024-.004-.009-.014-.018-.018-.028l-.014-.014-.028-.027-.014-.014c-.01-.01-.019-.02-.033-.028-.005-.005-.014-.01-.019-.014-.009-.01-.018-.014-.027-.024-.014-.01-.028-.018-.038-.023-.004-.005-.01-.005-.014-.01l-.06-.027L1.875 1.05a.629.629 0 0 0-.825.336.629.629 0 0 0 .336.825l3.05 1.287v13.796c0 1.306.98 2.388 2.243 2.55-.228.383-.364.83-.364 1.307a2.545 2.545 0 0 0 2.542 2.541c1.4 0 2.542-1.142 2.542-2.541 0-.467-.126-.91-.35-1.283h5.662c-.224.378-.35.816-.35 1.283a2.545 2.545 0 0 0 2.542 2.541c1.399 0 2.542-1.142 2.542-2.541 0-1.4-1.143-2.542-2.542-2.542H7.01a1.317 1.317 0 0 1-1.315-1.315v-1.707c.382.224.835.354 1.315.354z"/><path fill="none" stroke="#3bc915" stroke-miterlimit="50" d="M19.514 14.682H7.01a1.317 1.317 0 0 1-1.315-1.315V6.562l15.134 2.085v4.715c0 .732-.592 1.32-1.315 1.32zm.676 6.464c0 .709-.578 1.282-1.283 1.282a1.288 1.288 0 0 1-1.282-1.282c0-.704.578-1.283 1.282-1.283.705 0 1.283.574 1.283 1.283zm-10.046 0c0 .709-.578 1.282-1.282 1.282a1.288 1.288 0 0 1-1.283-1.282c0-.704.578-1.283 1.283-1.283.704 0 1.282.574 1.282 1.283zM7.01 15.94h12.504a2.58 2.58 0 0 0 2.574-2.574v-5.28-.037c0-.01 0-.019-.005-.028 0-.01-.004-.023-.004-.033 0-.009-.005-.018-.005-.028-.005-.009-.005-.018-.01-.032-.004-.01-.004-.019-.009-.028-.004-.01-.004-.019-.009-.028a.226.226 0 0 1-.014-.033l-.014-.023-.014-.028c-.005-.01-.01-.014-.014-.023-.005-.01-.014-.019-.018-.028-.005-.01-.01-.014-.02-.024-.004-.009-.013-.014-.018-.023-.004-.01-.014-.014-.018-.023-.005-.01-.014-.014-.02-.019-.008-.01-.013-.014-.022-.023-.01-.005-.014-.014-.024-.019-.01-.005-.018-.014-.028-.019-.009-.004-.014-.009-.023-.014a.098.098 0 0 1-.028-.018l-.028-.014-.028-.014-.028-.014c-.01-.005-.019-.005-.028-.01a.087.087 0 0 0-.033-.009c-.009 0-.018-.005-.023-.005-.014-.004-.023-.004-.037-.004-.005 0-.01-.005-.019-.005L5.7 5.294v-2.21c0-.024 0-.047-.005-.066 0-.005 0-.01-.005-.019 0-.014-.004-.028-.004-.042-.005-.014-.005-.023-.01-.037 0-.01-.004-.014-.004-.023l-.014-.042c0-.005-.005-.014-.005-.019a.14.14 0 0 0-.019-.037c-.004-.005-.004-.014-.009-.019-.005-.01-.01-.019-.019-.028-.004-.01-.009-.014-.014-.023-.004-.01-.009-.014-.014-.024-.004-.009-.014-.018-.018-.028l-.014-.014-.028-.027-.014-.014c-.01-.01-.019-.02-.033-.028-.005-.005-.014-.01-.019-.014-.009-.01-.018-.014-.027-.024-.014-.01-.028-.018-.038-.023-.004-.005-.01-.005-.014-.01l-.06-.027L1.875 1.05a.629.629 0 0 0-.825.336.629.629 0 0 0 .336.825l3.05 1.287v13.796c0 1.306.98 2.388 2.243 2.55-.228.383-.364.83-.364 1.307a2.545 2.545 0 0 0 2.542 2.541c1.4 0 2.542-1.142 2.542-2.541 0-.467-.126-.91-.35-1.283h5.662c-.224.378-.35.816-.35 1.283a2.545 2.545 0 0 0 2.542 2.541c1.399 0 2.542-1.142 2.542-2.541 0-1.4-1.143-2.542-2.542-2.542H7.01a1.317 1.317 0 0 1-1.315-1.315v-1.707c.382.224.835.354 1.315.354z"/></g></g></g></svg></a><span>|</span>
+          <!--детальная--><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><g><g><path fill="#484848" d="M8.48 2.212a6.275 6.275 0 0 1 6.268 6.269 6.275 6.275 0 0 1-6.268 6.268A6.275 6.275 0 0 1 2.212 8.48 6.275 6.275 0 0 1 8.48 2.212zm11.49 16.92l-4.999-5.2a8.453 8.453 0 0 0 1.99-5.451C16.96 3.804 13.156 0 8.48 0 3.803 0 0 3.804 0 8.48c0 4.677 3.804 8.481 8.48 8.481a8.39 8.39 0 0 0 4.859-1.535l5.037 5.24c.21.218.494.338.797.338a1.107 1.107 0 0 0 .797-1.873z"/></g></g></svg></a>
+        </div>
+      </div>
+      <div class="item-title">Сбалансированное питание HempSmoothie</div>
+      <div class="item-size">Ваниль 250 г.</div>
+      <div class="item-price">320 руб.</div>
+    </div>
+    <div class="addition-item">
+      <div class="item-img" style="background-image: url(/assets/img/card-addition/ct-oil-2.jpg)">
+        <div class="item-btn">
+          <!--корзина--><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="25" viewBox="0 0 23 25"><g><g><g><path fill="#3bc915" d="M19.514 14.682H7.01a1.317 1.317 0 0 1-1.315-1.315V6.562l15.134 2.085v4.715c0 .732-.592 1.32-1.315 1.32zm.676 6.464c0 .709-.578 1.282-1.283 1.282a1.288 1.288 0 0 1-1.282-1.282c0-.704.578-1.283 1.282-1.283.705 0 1.283.574 1.283 1.283zm-10.046 0c0 .709-.578 1.282-1.282 1.282a1.288 1.288 0 0 1-1.283-1.282c0-.704.578-1.283 1.283-1.283.704 0 1.282.574 1.282 1.283zM7.01 15.94h12.504a2.58 2.58 0 0 0 2.574-2.574v-5.28-.037c0-.01 0-.019-.005-.028 0-.01-.004-.023-.004-.033 0-.009-.005-.018-.005-.028-.005-.009-.005-.018-.01-.032-.004-.01-.004-.019-.009-.028-.004-.01-.004-.019-.009-.028a.226.226 0 0 1-.014-.033l-.014-.023-.014-.028c-.005-.01-.01-.014-.014-.023-.005-.01-.014-.019-.018-.028-.005-.01-.01-.014-.02-.024-.004-.009-.013-.014-.018-.023-.004-.01-.014-.014-.018-.023-.005-.01-.014-.014-.02-.019-.008-.01-.013-.014-.022-.023-.01-.005-.014-.014-.024-.019-.01-.005-.018-.014-.028-.019-.009-.004-.014-.009-.023-.014a.098.098 0 0 1-.028-.018l-.028-.014-.028-.014-.028-.014c-.01-.005-.019-.005-.028-.01a.087.087 0 0 0-.033-.009c-.009 0-.018-.005-.023-.005-.014-.004-.023-.004-.037-.004-.005 0-.01-.005-.019-.005L5.7 5.294v-2.21c0-.024 0-.047-.005-.066 0-.005 0-.01-.005-.019 0-.014-.004-.028-.004-.042-.005-.014-.005-.023-.01-.037 0-.01-.004-.014-.004-.023l-.014-.042c0-.005-.005-.014-.005-.019a.14.14 0 0 0-.019-.037c-.004-.005-.004-.014-.009-.019-.005-.01-.01-.019-.019-.028-.004-.01-.009-.014-.014-.023-.004-.01-.009-.014-.014-.024-.004-.009-.014-.018-.018-.028l-.014-.014-.028-.027-.014-.014c-.01-.01-.019-.02-.033-.028-.005-.005-.014-.01-.019-.014-.009-.01-.018-.014-.027-.024-.014-.01-.028-.018-.038-.023-.004-.005-.01-.005-.014-.01l-.06-.027L1.875 1.05a.629.629 0 0 0-.825.336.629.629 0 0 0 .336.825l3.05 1.287v13.796c0 1.306.98 2.388 2.243 2.55-.228.383-.364.83-.364 1.307a2.545 2.545 0 0 0 2.542 2.541c1.4 0 2.542-1.142 2.542-2.541 0-.467-.126-.91-.35-1.283h5.662c-.224.378-.35.816-.35 1.283a2.545 2.545 0 0 0 2.542 2.541c1.399 0 2.542-1.142 2.542-2.541 0-1.4-1.143-2.542-2.542-2.542H7.01a1.317 1.317 0 0 1-1.315-1.315v-1.707c.382.224.835.354 1.315.354z"/><path fill="none" stroke="#3bc915" stroke-miterlimit="50" d="M19.514 14.682H7.01a1.317 1.317 0 0 1-1.315-1.315V6.562l15.134 2.085v4.715c0 .732-.592 1.32-1.315 1.32zm.676 6.464c0 .709-.578 1.282-1.283 1.282a1.288 1.288 0 0 1-1.282-1.282c0-.704.578-1.283 1.282-1.283.705 0 1.283.574 1.283 1.283zm-10.046 0c0 .709-.578 1.282-1.282 1.282a1.288 1.288 0 0 1-1.283-1.282c0-.704.578-1.283 1.283-1.283.704 0 1.282.574 1.282 1.283zM7.01 15.94h12.504a2.58 2.58 0 0 0 2.574-2.574v-5.28-.037c0-.01 0-.019-.005-.028 0-.01-.004-.023-.004-.033 0-.009-.005-.018-.005-.028-.005-.009-.005-.018-.01-.032-.004-.01-.004-.019-.009-.028-.004-.01-.004-.019-.009-.028a.226.226 0 0 1-.014-.033l-.014-.023-.014-.028c-.005-.01-.01-.014-.014-.023-.005-.01-.014-.019-.018-.028-.005-.01-.01-.014-.02-.024-.004-.009-.013-.014-.018-.023-.004-.01-.014-.014-.018-.023-.005-.01-.014-.014-.02-.019-.008-.01-.013-.014-.022-.023-.01-.005-.014-.014-.024-.019-.01-.005-.018-.014-.028-.019-.009-.004-.014-.009-.023-.014a.098.098 0 0 1-.028-.018l-.028-.014-.028-.014-.028-.014c-.01-.005-.019-.005-.028-.01a.087.087 0 0 0-.033-.009c-.009 0-.018-.005-.023-.005-.014-.004-.023-.004-.037-.004-.005 0-.01-.005-.019-.005L5.7 5.294v-2.21c0-.024 0-.047-.005-.066 0-.005 0-.01-.005-.019 0-.014-.004-.028-.004-.042-.005-.014-.005-.023-.01-.037 0-.01-.004-.014-.004-.023l-.014-.042c0-.005-.005-.014-.005-.019a.14.14 0 0 0-.019-.037c-.004-.005-.004-.014-.009-.019-.005-.01-.01-.019-.019-.028-.004-.01-.009-.014-.014-.023-.004-.01-.009-.014-.014-.024-.004-.009-.014-.018-.018-.028l-.014-.014-.028-.027-.014-.014c-.01-.01-.019-.02-.033-.028-.005-.005-.014-.01-.019-.014-.009-.01-.018-.014-.027-.024-.014-.01-.028-.018-.038-.023-.004-.005-.01-.005-.014-.01l-.06-.027L1.875 1.05a.629.629 0 0 0-.825.336.629.629 0 0 0 .336.825l3.05 1.287v13.796c0 1.306.98 2.388 2.243 2.55-.228.383-.364.83-.364 1.307a2.545 2.545 0 0 0 2.542 2.541c1.4 0 2.542-1.142 2.542-2.541 0-.467-.126-.91-.35-1.283h5.662c-.224.378-.35.816-.35 1.283a2.545 2.545 0 0 0 2.542 2.541c1.399 0 2.542-1.142 2.542-2.541 0-1.4-1.143-2.542-2.542-2.542H7.01a1.317 1.317 0 0 1-1.315-1.315v-1.707c.382.224.835.354 1.315.354z"/></g></g></g></svg></a><span>|</span>
+          <!--детальная--><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><g><g><path fill="#484848" d="M8.48 2.212a6.275 6.275 0 0 1 6.268 6.269 6.275 6.275 0 0 1-6.268 6.268A6.275 6.275 0 0 1 2.212 8.48 6.275 6.275 0 0 1 8.48 2.212zm11.49 16.92l-4.999-5.2a8.453 8.453 0 0 0 1.99-5.451C16.96 3.804 13.156 0 8.48 0 3.803 0 0 3.804 0 8.48c0 4.677 3.804 8.481 8.48 8.481a8.39 8.39 0 0 0 4.859-1.535l5.037 5.24c.21.218.494.338.797.338a1.107 1.107 0 0 0 .797-1.873z"/></g></g></svg></a>
+        </div>
+      </div>
+      <div class="item-title">Сбалансированное питание HempSmoothie</div>
+      <div class="item-size"> Клубника 250 г.</div>
+      <div class="item-price">340 руб.</div>
+    </div>
+    <div class="addition-item">
+      <div class="item-img" style="background-image: url(/assets/img/card-addition/ct-oil-3.jpg)">
+        <div class="item-btn">
+          <!--корзина--><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="25" viewBox="0 0 23 25"><g><g><g><path fill="#3bc915" d="M19.514 14.682H7.01a1.317 1.317 0 0 1-1.315-1.315V6.562l15.134 2.085v4.715c0 .732-.592 1.32-1.315 1.32zm.676 6.464c0 .709-.578 1.282-1.283 1.282a1.288 1.288 0 0 1-1.282-1.282c0-.704.578-1.283 1.282-1.283.705 0 1.283.574 1.283 1.283zm-10.046 0c0 .709-.578 1.282-1.282 1.282a1.288 1.288 0 0 1-1.283-1.282c0-.704.578-1.283 1.283-1.283.704 0 1.282.574 1.282 1.283zM7.01 15.94h12.504a2.58 2.58 0 0 0 2.574-2.574v-5.28-.037c0-.01 0-.019-.005-.028 0-.01-.004-.023-.004-.033 0-.009-.005-.018-.005-.028-.005-.009-.005-.018-.01-.032-.004-.01-.004-.019-.009-.028-.004-.01-.004-.019-.009-.028a.226.226 0 0 1-.014-.033l-.014-.023-.014-.028c-.005-.01-.01-.014-.014-.023-.005-.01-.014-.019-.018-.028-.005-.01-.01-.014-.02-.024-.004-.009-.013-.014-.018-.023-.004-.01-.014-.014-.018-.023-.005-.01-.014-.014-.02-.019-.008-.01-.013-.014-.022-.023-.01-.005-.014-.014-.024-.019-.01-.005-.018-.014-.028-.019-.009-.004-.014-.009-.023-.014a.098.098 0 0 1-.028-.018l-.028-.014-.028-.014-.028-.014c-.01-.005-.019-.005-.028-.01a.087.087 0 0 0-.033-.009c-.009 0-.018-.005-.023-.005-.014-.004-.023-.004-.037-.004-.005 0-.01-.005-.019-.005L5.7 5.294v-2.21c0-.024 0-.047-.005-.066 0-.005 0-.01-.005-.019 0-.014-.004-.028-.004-.042-.005-.014-.005-.023-.01-.037 0-.01-.004-.014-.004-.023l-.014-.042c0-.005-.005-.014-.005-.019a.14.14 0 0 0-.019-.037c-.004-.005-.004-.014-.009-.019-.005-.01-.01-.019-.019-.028-.004-.01-.009-.014-.014-.023-.004-.01-.009-.014-.014-.024-.004-.009-.014-.018-.018-.028l-.014-.014-.028-.027-.014-.014c-.01-.01-.019-.02-.033-.028-.005-.005-.014-.01-.019-.014-.009-.01-.018-.014-.027-.024-.014-.01-.028-.018-.038-.023-.004-.005-.01-.005-.014-.01l-.06-.027L1.875 1.05a.629.629 0 0 0-.825.336.629.629 0 0 0 .336.825l3.05 1.287v13.796c0 1.306.98 2.388 2.243 2.55-.228.383-.364.83-.364 1.307a2.545 2.545 0 0 0 2.542 2.541c1.4 0 2.542-1.142 2.542-2.541 0-.467-.126-.91-.35-1.283h5.662c-.224.378-.35.816-.35 1.283a2.545 2.545 0 0 0 2.542 2.541c1.399 0 2.542-1.142 2.542-2.541 0-1.4-1.143-2.542-2.542-2.542H7.01a1.317 1.317 0 0 1-1.315-1.315v-1.707c.382.224.835.354 1.315.354z"/><path fill="none" stroke="#3bc915" stroke-miterlimit="50" d="M19.514 14.682H7.01a1.317 1.317 0 0 1-1.315-1.315V6.562l15.134 2.085v4.715c0 .732-.592 1.32-1.315 1.32zm.676 6.464c0 .709-.578 1.282-1.283 1.282a1.288 1.288 0 0 1-1.282-1.282c0-.704.578-1.283 1.282-1.283.705 0 1.283.574 1.283 1.283zm-10.046 0c0 .709-.578 1.282-1.282 1.282a1.288 1.288 0 0 1-1.283-1.282c0-.704.578-1.283 1.283-1.283.704 0 1.282.574 1.282 1.283zM7.01 15.94h12.504a2.58 2.58 0 0 0 2.574-2.574v-5.28-.037c0-.01 0-.019-.005-.028 0-.01-.004-.023-.004-.033 0-.009-.005-.018-.005-.028-.005-.009-.005-.018-.01-.032-.004-.01-.004-.019-.009-.028-.004-.01-.004-.019-.009-.028a.226.226 0 0 1-.014-.033l-.014-.023-.014-.028c-.005-.01-.01-.014-.014-.023-.005-.01-.014-.019-.018-.028-.005-.01-.01-.014-.02-.024-.004-.009-.013-.014-.018-.023-.004-.01-.014-.014-.018-.023-.005-.01-.014-.014-.02-.019-.008-.01-.013-.014-.022-.023-.01-.005-.014-.014-.024-.019-.01-.005-.018-.014-.028-.019-.009-.004-.014-.009-.023-.014a.098.098 0 0 1-.028-.018l-.028-.014-.028-.014-.028-.014c-.01-.005-.019-.005-.028-.01a.087.087 0 0 0-.033-.009c-.009 0-.018-.005-.023-.005-.014-.004-.023-.004-.037-.004-.005 0-.01-.005-.019-.005L5.7 5.294v-2.21c0-.024 0-.047-.005-.066 0-.005 0-.01-.005-.019 0-.014-.004-.028-.004-.042-.005-.014-.005-.023-.01-.037 0-.01-.004-.014-.004-.023l-.014-.042c0-.005-.005-.014-.005-.019a.14.14 0 0 0-.019-.037c-.004-.005-.004-.014-.009-.019-.005-.01-.01-.019-.019-.028-.004-.01-.009-.014-.014-.023-.004-.01-.009-.014-.014-.024-.004-.009-.014-.018-.018-.028l-.014-.014-.028-.027-.014-.014c-.01-.01-.019-.02-.033-.028-.005-.005-.014-.01-.019-.014-.009-.01-.018-.014-.027-.024-.014-.01-.028-.018-.038-.023-.004-.005-.01-.005-.014-.01l-.06-.027L1.875 1.05a.629.629 0 0 0-.825.336.629.629 0 0 0 .336.825l3.05 1.287v13.796c0 1.306.98 2.388 2.243 2.55-.228.383-.364.83-.364 1.307a2.545 2.545 0 0 0 2.542 2.541c1.4 0 2.542-1.142 2.542-2.541 0-.467-.126-.91-.35-1.283h5.662c-.224.378-.35.816-.35 1.283a2.545 2.545 0 0 0 2.542 2.541c1.399 0 2.542-1.142 2.542-2.541 0-1.4-1.143-2.542-2.542-2.542H7.01a1.317 1.317 0 0 1-1.315-1.315v-1.707c.382.224.835.354 1.315.354z"/></g></g></g></svg></a><span>|</span>
+          <!--детальная--><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><g><g><path fill="#484848" d="M8.48 2.212a6.275 6.275 0 0 1 6.268 6.269 6.275 6.275 0 0 1-6.268 6.268A6.275 6.275 0 0 1 2.212 8.48 6.275 6.275 0 0 1 8.48 2.212zm11.49 16.92l-4.999-5.2a8.453 8.453 0 0 0 1.99-5.451C16.96 3.804 13.156 0 8.48 0 3.803 0 0 3.804 0 8.48c0 4.677 3.804 8.481 8.48 8.481a8.39 8.39 0 0 0 4.859-1.535l5.037 5.24c.21.218.494.338.797.338a1.107 1.107 0 0 0 .797-1.873z"/></g></g></svg></a>
+        </div>
+      </div>
+      <div class="item-title">Сбалансированное питание HempSmoothie</div>
+      <div class="item-size">Кэроб 250 г.</div>
+      <div class="item-price">340 руб.</div>
+    </div>
+    <div class="addition-item">
+      <div class="item-img" style="background-image: url(/assets/img/card-addition/ct-oil-3.jpg)">
+        <div class="item-btn">
+          <!--корзина--><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="25" viewBox="0 0 23 25"><g><g><g><path fill="#3bc915" d="M19.514 14.682H7.01a1.317 1.317 0 0 1-1.315-1.315V6.562l15.134 2.085v4.715c0 .732-.592 1.32-1.315 1.32zm.676 6.464c0 .709-.578 1.282-1.283 1.282a1.288 1.288 0 0 1-1.282-1.282c0-.704.578-1.283 1.282-1.283.705 0 1.283.574 1.283 1.283zm-10.046 0c0 .709-.578 1.282-1.282 1.282a1.288 1.288 0 0 1-1.283-1.282c0-.704.578-1.283 1.283-1.283.704 0 1.282.574 1.282 1.283zM7.01 15.94h12.504a2.58 2.58 0 0 0 2.574-2.574v-5.28-.037c0-.01 0-.019-.005-.028 0-.01-.004-.023-.004-.033 0-.009-.005-.018-.005-.028-.005-.009-.005-.018-.01-.032-.004-.01-.004-.019-.009-.028-.004-.01-.004-.019-.009-.028a.226.226 0 0 1-.014-.033l-.014-.023-.014-.028c-.005-.01-.01-.014-.014-.023-.005-.01-.014-.019-.018-.028-.005-.01-.01-.014-.02-.024-.004-.009-.013-.014-.018-.023-.004-.01-.014-.014-.018-.023-.005-.01-.014-.014-.02-.019-.008-.01-.013-.014-.022-.023-.01-.005-.014-.014-.024-.019-.01-.005-.018-.014-.028-.019-.009-.004-.014-.009-.023-.014a.098.098 0 0 1-.028-.018l-.028-.014-.028-.014-.028-.014c-.01-.005-.019-.005-.028-.01a.087.087 0 0 0-.033-.009c-.009 0-.018-.005-.023-.005-.014-.004-.023-.004-.037-.004-.005 0-.01-.005-.019-.005L5.7 5.294v-2.21c0-.024 0-.047-.005-.066 0-.005 0-.01-.005-.019 0-.014-.004-.028-.004-.042-.005-.014-.005-.023-.01-.037 0-.01-.004-.014-.004-.023l-.014-.042c0-.005-.005-.014-.005-.019a.14.14 0 0 0-.019-.037c-.004-.005-.004-.014-.009-.019-.005-.01-.01-.019-.019-.028-.004-.01-.009-.014-.014-.023-.004-.01-.009-.014-.014-.024-.004-.009-.014-.018-.018-.028l-.014-.014-.028-.027-.014-.014c-.01-.01-.019-.02-.033-.028-.005-.005-.014-.01-.019-.014-.009-.01-.018-.014-.027-.024-.014-.01-.028-.018-.038-.023-.004-.005-.01-.005-.014-.01l-.06-.027L1.875 1.05a.629.629 0 0 0-.825.336.629.629 0 0 0 .336.825l3.05 1.287v13.796c0 1.306.98 2.388 2.243 2.55-.228.383-.364.83-.364 1.307a2.545 2.545 0 0 0 2.542 2.541c1.4 0 2.542-1.142 2.542-2.541 0-.467-.126-.91-.35-1.283h5.662c-.224.378-.35.816-.35 1.283a2.545 2.545 0 0 0 2.542 2.541c1.399 0 2.542-1.142 2.542-2.541 0-1.4-1.143-2.542-2.542-2.542H7.01a1.317 1.317 0 0 1-1.315-1.315v-1.707c.382.224.835.354 1.315.354z"/><path fill="none" stroke="#3bc915" stroke-miterlimit="50" d="M19.514 14.682H7.01a1.317 1.317 0 0 1-1.315-1.315V6.562l15.134 2.085v4.715c0 .732-.592 1.32-1.315 1.32zm.676 6.464c0 .709-.578 1.282-1.283 1.282a1.288 1.288 0 0 1-1.282-1.282c0-.704.578-1.283 1.282-1.283.705 0 1.283.574 1.283 1.283zm-10.046 0c0 .709-.578 1.282-1.282 1.282a1.288 1.288 0 0 1-1.283-1.282c0-.704.578-1.283 1.283-1.283.704 0 1.282.574 1.282 1.283zM7.01 15.94h12.504a2.58 2.58 0 0 0 2.574-2.574v-5.28-.037c0-.01 0-.019-.005-.028 0-.01-.004-.023-.004-.033 0-.009-.005-.018-.005-.028-.005-.009-.005-.018-.01-.032-.004-.01-.004-.019-.009-.028-.004-.01-.004-.019-.009-.028a.226.226 0 0 1-.014-.033l-.014-.023-.014-.028c-.005-.01-.01-.014-.014-.023-.005-.01-.014-.019-.018-.028-.005-.01-.01-.014-.02-.024-.004-.009-.013-.014-.018-.023-.004-.01-.014-.014-.018-.023-.005-.01-.014-.014-.02-.019-.008-.01-.013-.014-.022-.023-.01-.005-.014-.014-.024-.019-.01-.005-.018-.014-.028-.019-.009-.004-.014-.009-.023-.014a.098.098 0 0 1-.028-.018l-.028-.014-.028-.014-.028-.014c-.01-.005-.019-.005-.028-.01a.087.087 0 0 0-.033-.009c-.009 0-.018-.005-.023-.005-.014-.004-.023-.004-.037-.004-.005 0-.01-.005-.019-.005L5.7 5.294v-2.21c0-.024 0-.047-.005-.066 0-.005 0-.01-.005-.019 0-.014-.004-.028-.004-.042-.005-.014-.005-.023-.01-.037 0-.01-.004-.014-.004-.023l-.014-.042c0-.005-.005-.014-.005-.019a.14.14 0 0 0-.019-.037c-.004-.005-.004-.014-.009-.019-.005-.01-.01-.019-.019-.028-.004-.01-.009-.014-.014-.023-.004-.01-.009-.014-.014-.024-.004-.009-.014-.018-.018-.028l-.014-.014-.028-.027-.014-.014c-.01-.01-.019-.02-.033-.028-.005-.005-.014-.01-.019-.014-.009-.01-.018-.014-.027-.024-.014-.01-.028-.018-.038-.023-.004-.005-.01-.005-.014-.01l-.06-.027L1.875 1.05a.629.629 0 0 0-.825.336.629.629 0 0 0 .336.825l3.05 1.287v13.796c0 1.306.98 2.388 2.243 2.55-.228.383-.364.83-.364 1.307a2.545 2.545 0 0 0 2.542 2.541c1.4 0 2.542-1.142 2.542-2.541 0-.467-.126-.91-.35-1.283h5.662c-.224.378-.35.816-.35 1.283a2.545 2.545 0 0 0 2.542 2.541c1.399 0 2.542-1.142 2.542-2.541 0-1.4-1.143-2.542-2.542-2.542H7.01a1.317 1.317 0 0 1-1.315-1.315v-1.707c.382.224.835.354 1.315.354z"/></g></g></g></svg></a><span>|</span>
+          <!--детальная--><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><g><g><path fill="#484848" d="M8.48 2.212a6.275 6.275 0 0 1 6.268 6.269 6.275 6.275 0 0 1-6.268 6.268A6.275 6.275 0 0 1 2.212 8.48 6.275 6.275 0 0 1 8.48 2.212zm11.49 16.92l-4.999-5.2a8.453 8.453 0 0 0 1.99-5.451C16.96 3.804 13.156 0 8.48 0 3.803 0 0 3.804 0 8.48c0 4.677 3.804 8.481 8.48 8.481a8.39 8.39 0 0 0 4.859-1.535l5.037 5.24c.21.218.494.338.797.338a1.107 1.107 0 0 0 .797-1.873z"/></g></g></svg></a>
+        </div>
+      </div>
+      <div class="item-title">Сбалансированное питание HempSmoothie</div>
+      <div class="item-size"> Кэроб,одна порция</div>
+      <div class="item-price">80 руб.</div>
+    </div>
+  </div>
+</div>
+<!-- ----end----другие категории-->
+    <!-- end дополнительные товары-->
+    <!---->
+    <!-- модальные окна-->
+<div class="card-modal modal-consist mfp-hide" id="modal-consist">
+  <div class="consist-content">
+    <div class="consist-content__title">
+      <h2>Состав продукта</h2>
+      <h3>Масло конопляное Extra Virgin</h3>
+      <div class="hr"></div>
+    </div>
+    <div class="consist-content__text">
+      <h5>Состав:</h5>
+      <p>100% масло конопляное нерафинированное.</p>
+      <h5>Пищевая ценность на 100 гр. продукта:</h5>
+      <p><i>Ненасыщенные жирные кислоты:</i></p>
+      <p>линоленовая кислота (Омега-3) - 16,73 гр.</p>
+      <p>линоленовая кислота (Омега-6) - 50,93 гр.</p>
+      <p>олеиновая кислота (Омега-9) - 9,42 гр.</p>
+      <h5>Энергетическая ценность на 100 гр. продукта:</h5>
+      <p>900 ккал/3768 кДж.</p><br><br>
+      <p>
+        Конопляное масло получают из семечек конопли методом холодного отжима. Цвет - светло-зелёный, вкус - со слабовыраженной кислинкой и приятным ароматом.
+        Вплоть до середины XIX в. конопляное масло играло в рационе восточных славян ту же роль, какую сейчас играет подсолнечное, а жареные семена употреблялись вместо семечек.
+      </p><br>
+      <p>Семена растения, в отличие от соцветий и листьев, не содержат каннабиола, психотропного вещества, которое  оказывает наркотическое действие. Конопляное масло - уникальный пищевой продукт. Оно содержит большое количество ненасыщенных жирных кислот (линоленовая, олеиновая, а также стеариновая и пальмитиновая кислоты). Масло семечек конопли содержит ряд витаминов – А, группа В, Е, О, К. Также в состав данного продукта входят всевозможные  аминокислоты и микроэлементы. Конопляное масло содержит каротин, дубильные вещества и хлорофилл, который придает маслу зеленоватый цвет и обладает противоопухолевым действием.</p><br>
+      <p>Следует отметить, что масло конопляное является просто незаменимым для вегетарианцев или для людей, что соблюдают пост, поскольку оно помогает поддерживать человеческий организм в здоровом состоянии.</p><br>
+      <p>Применяется в кулинарии для заправки супов, соусов, в салаты, винегрет, тушеные овощи, каши и выпечку. Также широко используется в косметологии, медицине.</p>
+    </div>
+  </div>
+</div>
+<div class="card-modal modal-reviews mfp-hide" id="modal-reviews">
+  <div class="reviews-content js-reviews-content">
+    <div class="modal-reviews__head">
+      <input class="reviews-userName js-reviews-userName" type="text" name="userName" placeholder="Ваше имя..." value="">
+      <div class="dynamic-star-rating js-star-rating js-dynamic-star" data-rating="0" src-starfull="/assets/img/card-desc/star_yellow.svg" src-starempty="/assets/img/card-desc/star_grey.svg"></div>
+    </div>
+    <textarea class="modal-reviews__textarea js-reviews-comment" name="userComment" cols="30" rows="10" placeholder="Напишите отзыв о товаре..."></textarea>
+    <button class="product-card__btn js-reviews-btn" href="#reviews-success" disabled>Добавить отзыв</button>
+  </div>
+</div>
+<div class="card-modal modal-reviews-success mfp-hide" id="reviews-success">Отзыв успешно добавлен на сайт!</div>
+    <!-- end модальные окна-->
+    <!---->
+  </div>
+</div>
+  <script type="text/javascript" src="/assets/js/vendors.js"></script><script type="text/javascript" src="/assets/js/app.js"></script></body><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </html>

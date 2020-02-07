@@ -39,15 +39,20 @@
                     border-bottom: 1px solid rgba(112, 112, 112, 0.16);
                 }
 
+                h2,h3 {
+                    font-weight: 400;
+                    margin-bottom: 0;
+                }
+
                 h2 {
                     font-family: "Bloc";
                     font-size: 23px;
-                    font-weight: 400;
                     letter-spacing: 1.5px;
                     line-height: 32px;
                     color: $neutral-regular;
                 }
                 h3 {
+                    font-size: rem(16px);
                     color: $neutral-secondary;
                 }
 

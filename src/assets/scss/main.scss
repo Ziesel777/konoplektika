@@ -47,19 +47,19 @@ ul, li {
   list-style-type: none;
 }
 
-section, .section {
-  position: relative;
-  padding: 40px 0;
-  @media screen and (max-width: $desktopWidth) {
-    padding: 36px 0;
-  }
-  @media screen and (max-width: $desktopWidth) {
-    padding: 28px 0;
-  }
-  @media screen and (max-width: $desktopWidth) {
-    padding: 20px 0;
-  }
-}
+// section, .section {
+//   position: relative;
+//   padding: 40px 0;
+//   @media screen and (max-width: $desktopWidth) {
+//     padding: 36px 0;
+//   }
+//   @media screen and (max-width: $desktopWidth) {
+//     padding: 28px 0;
+//   }
+//   @media screen and (max-width: $desktopWidth) {
+//     padding: 20px 0;
+//   }
+// }
 
 .wrapper {
   display: flex;

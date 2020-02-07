@@ -4,6 +4,7 @@ import 'magnific-popup';
 $(() => {
 // Окно соства продукта
     $('.js-modal-consist').magnificPopup({
+		tClose: 'Закрыть (Esc)',
 		type: 'inline',
 		preloader: false,
 		focus: '#name',
@@ -24,6 +25,7 @@ $(() => {
 
 // Окно отзыва
 	$('.js-modal-reviews').magnificPopup({
+		tClose: 'Закрыть (Esc)',
 		type: 'inline',
 		preloader: false,
 		focus: '#name',

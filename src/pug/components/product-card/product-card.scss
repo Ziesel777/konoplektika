@@ -42,6 +42,10 @@
         color: $neutral-regular;
     }
 
+    h2,h3,h5,p,span {
+        font-family: $mainFontFamily;
+    }
+
     &__btn {
         display: inline-block;
         text-align: center;
@@ -69,6 +73,9 @@
         //     background-color: $success-color;
         //     color: $default-color;
         // }
+    }
+    .product-card__btn {
+        text-decoration: none;
     }
 }
 
