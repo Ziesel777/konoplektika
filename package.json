@@ -56,7 +56,7 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "magnific-popup": "^1.1.0",
     "sort-css-media-queries": "^1.5.0",
     "swiper": "^5.2.1",
